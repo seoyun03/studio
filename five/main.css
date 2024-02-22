@@ -1,0 +1,119 @@
+body {
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a[href="../one/index.html"] {
+  position: fixed;
+  left: 50%;
+  top: 30px; /* 수정: margin-top을 top으로 변경하고 값 조정 */
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 800;
+  z-index: 1;
+  color: #ffffff;
+  background-color: transparent; 
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#back img {
+  position: fixed; /* 수정: 이미지를 화면에 고정 */
+  top: 25px; /* 수정: 상단에서의 위치를 지정 */
+  left: 730px; /* 수정: 좌측에서의 위치를 지정 */
+  width: 10px; /* 크기 조정 */
+}
+
+#next img {
+  position: fixed; /* 수정: 이미지를 화면에 고정 */
+  top: 25px; /* 수정: 상단에서의 위치를 지정 */
+  right: 730px; /* 수정: 우측에서의 위치를 지정 */
+  width: 10px; /* 크기 조정 */
+}
+#textContainer {
+  width: 85%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.animated-text {
+  font-family: "roc-grotesk", sans-serif;
+  color: white;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 3;
+  display: inline; 
+  transition: all 0.5s ease;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes color-change {
+  0% { color: white; }
+  50% { color: blue; }
+  100% { color: white; }
+}
+
+@keyframes highlight {
+  from { background-color: transparent; }
+  to { background-color: yellow; }
+}
+
+@media screen and (max-width: 499px) {
+  #textContainer {
+    width: 85%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .animated-text {
+    font-family: "roc-grotesk", sans-serif;
+    color: white;
+    font-size: 10px;
+    text-align: justify;
+    line-height: 3;
+    display: inline; 
+    transition: all 0.5s ease;
+  }
+  
+  @keyframes twinkle {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }
+  
+  @keyframes color-change {
+    0% { color: white; }
+    50% { color: blue; }
+    100% { color: white; }
+  }
+  
+  @keyframes highlight {
+    from { background-color: transparent; }
+    to { background-color: yellow; }
+  }
+  #back img {
+    margin-top: 0px;
+    left: 77.5px;
+    width: 10px;
+    position: fixed;
+}
+
+#next img {
+    margin-top: 0px;
+    right: 69px;
+    width: 10px;
+    position: fixed;
+}
+
+  }

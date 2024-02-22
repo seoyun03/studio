@@ -1,0 +1,312 @@
+body {
+    background-color: rgb(4, 0, 255);
+}
+h1{
+    font-family: "roc-grotesk", sans-serif;
+    color: white;
+    margin-top: 120px;
+    font-size: 12px;
+    font-weight: 100;
+}
+
+.styled-line {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ffffff;
+    width: 90%;
+}
+
+.styled-line:nth-child(1) { bottom: 20px; }
+.styled-line:nth-child(2) { bottom: 100px; }
+.styled-line:nth-child(3) { bottom: 180px; }
+.styled-line:nth-child(4) { bottom: 260px; }
+.styled-line:nth-child(5) { bottom: 340px; }
+.styled-line:nth-child(6) { bottom: 420px; }
+.styled-line:nth-child(7) { bottom: 500px; }
+
+.text a {
+    text-decoration: none;
+    color:white;
+    
+  }
+  
+
+.one {
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 40px;
+    margin-top: 180px;
+    margin-left: 100px;
+    transition: transform 1s;
+    transform-origin: 150px;
+}
+
+.one:hover {
+    transform: rotate(360deg);
+    cursor: pointer;
+}
+
+
+.two {
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 40px;
+    margin-top: 22px;
+    margin-right: 150px;
+    float: right; 
+    transition: transform 0.5s ease; 
+}
+
+.two:hover {
+    animation: shrinkGrow 1s ease forwards;
+    cursor: pointer;
+}
+
+@keyframes shrinkGrow {
+    0% {
+        transform: scale(1); 
+    }
+    50% {
+        transform: scale(0.8); 
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+.three {
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 40px;
+    margin-top: 103px;
+    margin-right: 80px;
+    text-align: right;
+    animation: blink 3s ease-in-out 0s infinite;
+    cursor: pointer;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+
+@keyframes floating {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+    100% { transform: translateY(0); }
+}
+
+.four {
+    position: relative;
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 40px;
+    margin-top: 23px;
+    text-align: center;
+    animation: floating 2s ease-in-out infinite;
+    cursor: pointer;
+}
+
+.five {
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 40px;
+    margin-top: 25px;
+    text-align: left; 
+    display: inline-block; 
+    animation: slideLeftRight 2s infinite alternate linear;
+    cursor: pointer;
+}
+
+@keyframes slideLeftRight {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+.container {
+    position: relative;
+}
+
+.container {
+    position: relative;
+}
+
+.six {
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    font-size: 40px;
+    margin-top: 23px;
+    margin-right: 230px;
+    text-align: right; 
+    cursor: pointer;
+}
+
+.seven {
+    color: #ffffff;
+    font-family: "roc-grotesk", sans-serif;
+    margin-top: -50px;
+    margin-right: 450px;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: right;
+    transform: translateX(-100%); 
+    transition: transform 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    cursor: pointer;
+}
+
+.six:hover + .seven,
+.seven.visible {
+    transform: translateX(0%);
+    opacity: 1;
+    pointer-events: auto; 
+    cursor: pointer;
+}
+
+@media screen and (max-width: 499px) {
+    h1 {
+      font-family: "roc-grotesk", sans-serif;
+      color: white;
+      margin-top: 60px;
+      font-size: 8px;
+      font-weight: 100;
+    }
+    span {
+      font-size: 19px; /* Adjust the font size for smaller screens */
+    }
+    .one {
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        font-size: 20px;
+        margin-top: 75px;
+        transition: transform 1s;
+        transform-origin: 150px;
+    }
+    .one:hover {
+        transform: rotate(360deg);
+        cursor: pointer;
+        transform-origin: center;
+    }
+    
+    .two {
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        font-size: 20px;
+        margin-top: 55px;
+        margin-right: 150px;
+        float: left; 
+        transition: transform 0.5s ease; 
+        z-index: 20;
+    }
+    .two:hover {
+        animation: shrinkGrow 1s ease forwards;
+        cursor: pointer;
+    }
+    @keyframes shrinkGrow {
+        0% {
+            transform: scale(1); 
+        }
+        50% {
+            transform: scale(0.8); 
+        }
+        100% {
+            transform: scale(1.15);
+        }
+    }
+    
+    .three {
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        font-size: 20px;
+        margin-top: 137px;
+        margin-right: 80px;
+        text-align: right;
+        animation: blink 3s ease-in-out 0s infinite;
+        cursor: pointer;
+    }
+    
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        25%, 75% { opacity: 0; }
+        50% { opacity: 1; }
+    }
+    
+    
+    @keyframes floating {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(-7px); }
+        100% { transform: translateY(0); }
+    }
+    .four {
+        position: relative;
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        font-size: 20px;
+        margin-top: 50px;
+        text-align: center;
+        animation: floating 2s ease-in-out infinite;
+        cursor: pointer;
+    }
+    
+    .five {
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        font-size: 20px;
+        margin-top: 50px;
+        text-align: left; 
+        display: inline-block; 
+        animation: slideLeftRight 2s infinite alternate linear;
+        cursor: pointer;
+    }
+    
+    @keyframes slideLeftRight {
+        0% {
+            transform: translateX(0px); 
+        }
+        100% {
+            transform: translateX(500px);
+        }
+    }
+    .six {
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        font-size: 20px;
+        margin-top: 55px;
+        margin-right: 230px;
+        text-align: right; 
+        cursor: pointer;
+    }
+    
+    .seven {
+        color: #ffffff;
+        font-family: "roc-grotesk", sans-serif;
+        margin-top: -25px;
+        font-size: 20px;
+        margin-left: 40px;
+        font-weight: 800;
+        text-align: right;
+        transform: translateX(-100%); 
+        transition: transform 0.5s ease;
+        opacity: 0;
+        pointer-events: none;
+        cursor: pointer;
+    }
+    
+    .six:hover + .seven,
+    .seven.visible {
+        transform: translateX(0%);
+        opacity: 1;
+        pointer-events: auto; 
+        cursor: pointer;
+    }
+}

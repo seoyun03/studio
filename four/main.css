@@ -1,0 +1,222 @@
+
+
+body {
+    background-color: rgb(4, 0, 255);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+a[href="../one/index.html"] {
+  position: fixed;
+  left: 50%;
+  top: 30px; /* 수정: margin-top을 top으로 변경하고 값 조정 */
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 800;
+  z-index: 1;
+  color: #ffffff;
+  background-color: transparent; 
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#back img {
+  position: fixed; /* 수정: 이미지를 화면에 고정 */
+  top: 25px; /* 수정: 상단에서의 위치를 지정 */
+  left: 730px; /* 수정: 좌측에서의 위치를 지정 */
+  width: 10px; /* 크기 조정 */
+}
+
+#next img {
+  position: fixed; /* 수정: 이미지를 화면에 고정 */
+  top: 25px; /* 수정: 상단에서의 위치를 지정 */
+  right: 730px; /* 수정: 우측에서의 위치를 지정 */
+  width: 10px; /* 크기 조정 */
+}
+
+.container {
+    font-size: 20px;
+    font-family: "roc-grotesk", sans-serif;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 4;
+    margin: 100px auto;
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 150px auto; 
+  }
+  .text {
+    opacity: 0.1;
+    transition: opacity 0.2s ease;
+  }
+
+  .sentence1 {
+    color: rgb(255, 255, 255);
+    width: 70%;
+    margin-bottom: 190px;
+    line-height: 1.2;
+    font-size: 16px;
+  }
+  .sentence2 {
+    float: right;
+    width: 30%;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    font-size: 15px; 
+}
+  .sentence3 {
+    width: 80%;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 26px;
+  }
+  .sentence4 {
+    color:rgb(255, 255, 255);
+    margin-left: auto; 
+    margin-right: auto;
+    width: 50%;
+    margin-bottom: 80px;
+    line-height: 2.0;
+    font-size: 19px;
+  }
+  .sentence5 {
+    width: 70%;
+    margin-bottom: 50px;
+    line-height: 2.2;
+    font-size: 24px;
+  }
+  .sentence6 {
+    float: right;
+    width: 40%;
+    margin-bottom: 60px;
+    line-height: 2.4;
+    font-size: 13px;
+  }
+
+  .text {
+    opacity: 0.2; /* Initially hide all text */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.sentence1:hover,
+.sentence1:hover ~ .sentence2,
+.sentence2:hover ~ .sentence3,
+.sentence3:hover ~ .sentence4,
+.sentence4:hover ~ .sentence5,
+.sentence5:hover ~ .sentence6,
+.text:hover,
+.sentence1:hover ~ .sentence1,
+.sentence2:hover ~ .sentence2,
+.sentence3:hover ~ .sentence3,
+.sentence4:hover ~ .sentence4,
+.sentence5:hover ~ .sentence5,
+.sentence6:hover ~ .sentence6{
+    opacity: 1; /* Show the text on hover */}
+
+@media screen and (max-width: 499px) {
+  .container {
+    font-size: 15px;
+    font-family: "roc-grotesk", sans-serif;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 4;
+    margin: 100px auto;
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 80px auto; 
+  }
+  .text {
+    opacity: 0.1;
+    transition: opacity 0.2s ease;
+  }
+
+  .sentence1 {
+    color: rgb(255, 255, 255);
+    width: 70%;
+    margin-bottom: 190px;
+    line-height: 1.2;
+    font-size: 10px;
+  }
+  .sentence2 {
+    float: right;
+    width: 85%;
+    margin-bottom: 50px;
+    line-height: 1.5;
+    font-size: 15px; 
+}
+  .sentence3 {
+    width: 80%;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-size: 20px;
+  }
+  .sentence4 {
+    color:rgb(255, 255, 255);
+    margin-left: auto; 
+    margin-right: auto;
+    width: 70%;
+    margin-bottom: 80px;
+    line-height: 2.0;
+    font-size: 13px;
+  }
+  .sentence5 {
+    width: 80%;
+    margin-bottom: 50px;
+    line-height: 2.2;
+    font-size: 9px;
+  }
+  .sentence6 {
+    float: right;
+    width: 48%;
+    margin-bottom: 60px;
+    line-height: 2.4;
+    font-size: 13px;
+  }
+
+  .text {
+    opacity: 0.2; /* Initially hide all text */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+.sentence1:hover,
+.sentence1:hover ~ .sentence2,
+.sentence2:hover ~ .sentence3,
+.sentence3:hover ~ .sentence4,
+.sentence4:hover ~ .sentence5,
+.sentence5:hover ~ .sentence6,
+.text:hover,
+.sentence1:hover ~ .sentence1,
+.sentence2:hover ~ .sentence2,
+.sentence3:hover ~ .sentence3,
+.sentence4:hover ~ .sentence4,
+.sentence5:hover ~ .sentence5,
+.sentence6:hover ~ .sentence6{
+    opacity: 1; /* Show the text on hover */}
+
+
+    #back img {
+      margin-top: 0px;
+      left: 77.5px;
+      width: 10px;
+      position: fixed;
+  }
+  
+  #next img {
+      margin-top: 0px;
+      right: 69px;
+      width: 10px;
+      position: fixed;
+  }
+  
+
+}
+  

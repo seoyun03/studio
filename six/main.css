@@ -1,0 +1,298 @@
+a[href="../one/index.html"] {
+    position: fixed;
+    left: 50%;
+    top: 30px; /* 수정: margin-top을 top으로 변경하고 값 조정 */
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 800;
+    z-index: 1;
+    color: #ffffff;
+    background-color: transparent; 
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #back img {
+    position: fixed; /* 수정: 이미지를 화면에 고정 */
+    top: 25px; /* 수정: 상단에서의 위치를 지정 */
+    left: 730px; /* 수정: 좌측에서의 위치를 지정 */
+    width: 10px; /* 크기 조정 */
+  }
+  
+  #next img {
+    position: fixed; /* 수정: 이미지를 화면에 고정 */
+    top: 25px; /* 수정: 상단에서의 위치를 지정 */
+    right: 730px; /* 수정: 우측에서의 위치를 지정 */
+    width: 10px; /* 크기 조정 */
+  }
+
+body {
+    background-color: rgb(4, 0, 255);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.container {
+    font-size: 20px;
+    font-family: "roc-grotesk", sans-serif;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    line-height: 4;
+    margin: 100px auto;
+    width: 90%; 
+    display: flex;
+    flex-direction: column;
+    padding-top: 5px;
+    padding-bottom: 5px;
+} 
+
+.text {
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+    margin-bottom: 3px;
+    line-height: 3;
+    width: 100%;
+    position: relative;
+}
+
+.sentence1 {
+    animation: slideLeftRight1 5s infinite alternate linear;
+}
+
+@keyframes slideLeftRight1 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+
+.sentence2 {
+    animation: slideLeftRight2 4s infinite alternate linear;
+}
+
+@keyframes slideLeftRight2 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-500px);
+    }
+}
+.sentence3 {
+    animation: slideLeftRight1 3.6s infinite alternate linear;
+}
+
+@keyframes slideLeftRight3 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(500px);
+    }
+}
+.sentence4 {
+    animation: slideLeftRight2 3.2s infinite alternate linear;
+}
+
+@keyframes slideLeftRight4 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-500px);
+    }
+}
+.sentence5 {
+    animation: slideLeftRight1 5.6s infinite alternate linear;
+}
+
+@keyframes slideLeftRight5 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(900px);
+    }
+}
+.sentence6{
+    animation: slideLeftRight1 4.5s infinite alternate linear;
+}
+
+@keyframes slideLeftRight6 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(900px);
+    }
+}
+.sentence7 {
+    animation: slideLeftRight2 4.7s infinite alternate linear;
+}
+
+@keyframes slideLeftRight7 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-500px);
+    }
+}
+.sentence8 {
+    animation: slideLeftRight2 4s infinite alternate linear;
+}
+
+@keyframes slideLeftRight8 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-900px);
+    }
+}
+.sentence9 {
+    animation: slideLeftRight2 5s infinite alternate linear;
+}
+
+@keyframes slideLeftRight9 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-300px);
+    }
+}
+.sentence10{
+    animation: slideLeftRight1 4.3s infinite alternate linear;
+}
+
+@keyframes slideLeftRight10 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(900px);
+    }
+}
+.sentence11 {
+    animation: slideLeftRight2 4.6s infinite alternate linear;
+}
+
+@keyframes slideLeftRight11 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-1000px);
+    }
+}
+.sentence12{
+    animation: slideLeftRight1 5.1s infinite alternate linear;
+}
+
+@keyframes slideLeftRight12 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(900px);
+    }
+}
+.sentence13 {
+    animation: slideLeftRight2 4.1s infinite alternate linear;
+}
+
+@keyframes slideLeftRight13 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(900px);
+    }
+}
+.sentence14 {
+    animation: slideLeftRight2 5s infinite alternate linear;
+}
+
+@keyframes slideLeftRight14 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-900px);
+    }
+}
+.sentence15 {
+    animation: slideLeftRight2 5.4s infinite alternate linear;
+}
+
+@keyframes slideLeftRight15 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(-900px);
+    }
+}
+.sentence16{
+    animation: slideLeftRight1 4s infinite alternate linear;
+}
+
+@keyframes slideLeftRight16 {
+    0% {
+        transform: translateX(0px); 
+    }
+    100% {
+        transform: translateX(900px);
+    }
+}
+
+
+@media screen and (max-width: 499px) {
+    .container {
+        font-size: 8px; /* 폰트 크기를 조정합니다. */
+        font-family: "roc-grotesk", sans-serif;
+        color: white;
+        font-weight: 500;
+        text-align: center;
+        line-height: 1; /* 라인 높이를 1로 설정하여 한 줄로 표시될 수 있도록 합니다. */
+        margin: 100px auto;
+        width: 90%; 
+        display: flex;
+        flex-direction: column;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    } 
+    
+    .text {
+        border-bottom: 2px solid white;
+        padding-bottom: 5px;
+        margin-bottom: 20px; /* 줄 간격을 더 크게 조절합니다. */
+        line-height: 1; /* 라인 높이를 1로 설정하여 한 줄로 표시될 수 있도록 합니다. */
+        width: 100%;
+        position: relative;
+        white-space: nowrap; /* 텍스트가 한 줄로 나타나도록 합니다. */
+        overflow: hidden; /* 텍스트가 넘칠 경우 숨김 처리합니다. */
+        text-overflow: ellipsis; /* 넘치는 텍스트에 대해 마침표를 표시합니다. */
+        text-align: center; /* 텍스트를 가운데 정렬합니다. */
+    }
+    #back img {
+        margin-top: 0px;
+        left: 77.5px;
+        width: 10px;
+        position: fixed;
+    }
+    
+    #next img {
+        margin-top: 0px;
+        right: 69px;
+        width: 10px;
+        position: fixed;
+    }
+    
+}

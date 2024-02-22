@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="stylesheet" href="https://use.typekit.net/zqi0pcx.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../navstyle.css">
+  <link rel="icon" type="image/x-icon" href="">
+<title>on punctuation</title>
+
+</head>
+<body>
+  <a id="back" href="../two/index.html"><img src="../two/images/yellow.svg"/></a>
+  <a href="../one/index.html">on punctuation</a>
+  <a id="next" href="../four/index.html"><img src="../four/images/red.svg"/></a>
+
+	<h1> Press the Exclamation Mark </h1>
+
+  <img id="dispersionButton" src="images/mark.svg" alt="Dispersion Image">
+
+  <div id="dispersedContainer"></div>
+  
+
+  <script>
+    $(document).ready(function() {
+      $('#dispersionButton').click(function() {
+        var texts = [
+          'Exclamation Marks',
+          'have the same difficulty',
+          'and also quotation marks',
+          'they are unnecessary,',
+          'they are ugly,',
+          'they spoil the line of the writing or the printing',
+          'and anyway what is the use,',
+          'if you do not know that a question is a question',
+          'what is the use of its being a question.',
+          'The same thing is true of a quotation.',
+          'When I first began writing',
+          'question marks and quotation marks and exclamation points',
+          'and now anybody sees it that way.',
+          'Perhaps some day they will see it some other way',
+          'but not at any rate anybody can and does see it that way.',
+          'So there are the uninteresting things',
+          'in punctuation uninteresting',
+          'in a way that is perfectly obvious,',
+          'and so we do not have',
+          'to go any farther into that.',
+          'There are besides',
+          'dashes and dots,',
+          'and these might be interesting spaces',
+          'might be interesting.',
+          'They might if one felt',
+          'that way about them.'
+        ];
+  
+        // Generate three random indexes for three different texts
+        var index1 = Math.floor(Math.random() * texts.length);
+        var index2 = Math.floor(Math.random() * texts.length);
+        var index3 = Math.floor(Math.random() * texts.length);
+  
+        // Get three different random texts
+        var text1 = texts[index1];
+        var text2 = texts[index2];
+        var text3 = texts[index3];
+  
+        // Get three different random colors
+        var color1 = getRandomColor();
+        var color2 = getRandomColor();
+        var color3 = getRandomColor();
+  
+        // Create three text elements with different colors
+        createTextElement(text1, color1);
+        createTextElement(text2, color2);
+        createTextElement(text3, color3);
+      });
+  
+      // Function to create a text element with specified text and color
+      function createTextElement(text, color) {
+        var textElement = $('<div class="dispersed-text">' + text + '</div>');
+  
+        textElement.css({
+          top: Math.random() * $(window).height(),
+          left: Math.random() * $(window).width(),
+          color: color // Set the specified color for the text
+        });
+  
+        $('#dispersedContainer').append(textElement);
+  
+        var targetPosition = {
+          top: Math.random() * $(window).height(),
+          left: Math.random() * $(window).width()
+        };
+  
+        textElement.animate(targetPosition, 2000, function() {
+          $(this).remove(); // Remove the text element once animation is completed
+        });
+      }
+  
+      // Function to generate a random color
+      function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }
+    });
+  </script>
+</body>
+</html>

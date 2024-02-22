@@ -1,0 +1,438 @@
+a[href="../one/index.html"] {
+  position: fixed;
+  left: 50%;
+  top: 30px; /* 수정: margin-top을 top으로 변경하고 값 조정 */
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-family: "roc-grotesk", sans-serif;
+  font-weight: 800;
+  z-index: 1;
+  color: #ffffff;
+  background-color: transparent; 
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+#back img {
+  position: fixed; /* 수정: 이미지를 화면에 고정 */
+  top: 25px; /* 수정: 상단에서의 위치를 지정 */
+  left: 730px; /* 수정: 좌측에서의 위치를 지정 */
+  width: 10px; /* 크기 조정 */
+}
+
+#next img {
+  position: fixed; /* 수정: 이미지를 화면에 고정 */
+  top: -4.8px; /* 수정: 상단에서의 위치를 지정 */
+  right: -109px; /* 수정: 우측에서의 위치를 지정 */
+  width: 10px; /* 크기 조정 */
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    font-family: "roc-grotesk", sans-serif;
+    width: calc(100% - 20px); /* 100% width minus 10px from each side */
+    font-size: 5vh;
+    font-weight: 300;
+    position: fixed;
+    top: 10px;
+    left: 10px; /* 10px left margin */
+    right: 10px; /* 10px right margin */
+    z-index: 1000; /* Ensure the header is above other elements */
+  }
+  
+  header a {
+    color: white; 
+    text-decoration: none;
+  }
+  
+  div {
+      display: block;
+  }
+  body {
+      text-align: center;
+      background-color: black;
+      margin-top: -1vh;
+  }
+  
+  button{
+    font-family: "roc-grotesk", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  button:hover{
+    cursor: pointer;
+  }
+  
+  .btn1{
+    position: relative;
+    margin-top: 29vh;
+    font-size:3.5vw;
+    background-color: blue;
+    color: magenta;
+    padding: .25em;
+  }
+  
+  .btn1:hover{
+    background-color: magenta;
+    color: blue;
+  }
+  
+  .btn2{
+    position: relative;
+    margin-top: 30vh;
+    margin-left: 15vw;
+    font-size: 18px;
+    background-color: yellow;
+    color: rebeccapurple;
+    padding: .25em;
+  }
+  
+  .btn2:hover{
+    background-color: rebeccapurple;
+    color: yellow;
+  }
+  
+  .btn3{
+    position: relative;
+    top: -35vh;
+    margin-right: 2vw;
+    font-size: 20px;
+    background-color: orange;
+    color: lightblue;
+    padding: .25em;
+  }
+  
+  .btn3:hover{
+    background-color: lightblue;
+    color: orange;
+  }
+  
+  .btn4{
+    position: relative;
+    top: -80vh;
+    right: -55vw;
+    font-size: 20px;
+    background-color: green;
+    color: lightpink;
+    padding: .25em;
+  }
+  
+  .btn4:hover{
+    background-color: lightpink;
+    color: green;
+  }
+  
+  .btn5{
+    position: relative;
+    top: -73vh;
+    right: -45vw;
+    font-size: 10px;
+    background-color: mediumpurple;
+    color: #42280E;
+    padding: .25em;
+  }
+  
+  .btn5:hover{
+    background-color: #42280E;
+    color: mediumpurple;
+  }
+  
+  .btn6{
+    position: relative;
+    top: -500px;
+    margin-left: 10vw;
+    font-size: 25px;
+    background-color: red;
+    color: turquoise;
+    padding: .25em;
+  }
+  
+  .btn6:hover{
+    background-color: turquoise;
+    color: red;
+  }
+  
+  .btn7{
+    position: relative;
+    top: -110vh;
+    margin-left: 20vw;
+    font-size: 15px;
+    background-color: gray;
+    color: lightgreen;
+    padding: .22em;
+  }
+  
+  .btn7:hover{
+    background-color: lightgreen;
+    color: gray;
+  }
+  
+  .btn8{
+    position: relative;
+    top: -300px;
+    right: -.5vw;
+    font-size: 15px;
+    background-color: white;
+    color: black;
+    padding: .25em;
+    width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  
+  .btn8:hover{
+    background-color: black;
+    color: white;
+  }
+  
+  .btn9 {
+    position: relative;
+    top: -600px;
+    right: -.5vw;
+    font-size: 20px;
+    background-color: pink;
+    color: orangered;
+    padding: .25em;
+    width: 700px; /* Adjust the width as desired */
+  }
+
+  .btn9:hover{
+    background-color: orangered;
+    color: pink;
+  }
+
+  .btn10{
+    position: relative;
+    top: -1200px;
+    margin-right: 2vw;
+    font-size: 20px;
+    background-color: rgb(77, 255, 79);
+    color: rgb(192, 23, 200);
+    padding: .25em;
+    width: 800px;
+  }
+  
+  .btn10:hover{
+    background-color: rgb(192, 23, 200);
+    color: rgb(77, 255, 79);
+  }
+  
+  .btn11{
+    position: relative;
+    top: -1000px;
+    margin-right: 2vw;
+    font-size: 18px;
+    background-color: rgb(17, 255, 255);
+    color:rgb(255, 45, 234) ;
+    padding: .15em;
+    width: 1500px;
+  }
+  
+  .btn11:hover{
+    background-color:rgb(255, 45, 234);
+    color: rgb(17, 255, 255);
+  }
+  .btn12{
+    position: relative;
+    top: -800px;
+    margin-right: 2vw;
+    font-size: 18px;
+    background-color: rgb(86, 54, 7);
+    color: rgb(255, 254, 237);
+    padding: .15em;
+    width: 600px;
+    left: 300px;
+  }
+  
+  .btn12:hover{
+    background-color: rgb(255, 254, 237);
+    color: rgb(86, 54, 7);
+  }
+
+
+  .btn13{
+    position: relative;
+    top: -1200px;
+    margin-right: 2vw;
+    font-size: 18px;
+    background-color: rgb(139, 0, 182);
+    color: rgb(255, 77, 0);
+    padding: .15em;
+    width: 600px;
+    left: 1000px;
+  }
+  
+  .btn13:hover{
+    background-color:rgb(255, 77, 0);
+    color: rgb(139, 0, 182);
+  }
+
+  @media screen and (max-width: 499px){
+    .btn1{
+      bottom: -15vh;
+    }
+    .btn2{
+      bottom: 10vh;
+    }
+    .btn3{
+      bottom: -15vh;
+    }
+    .btn4{
+      top: -79vh;
+      left: 3vw;
+    }
+    .btn5{
+      bottom: -70vh;
+    }
+    .btn6{
+      top: -40vh;
+    }
+    .btn7{
+      top: -85vh;
+    }
+    .btn8{
+      top: -100vh;
+    }
+    .btn2{
+      position: relative;
+      margin-top: 30vh;
+      margin-left: 15vw;
+      font-size: 9px;
+      background-color: yellow;
+      color: rebeccapurple;
+      padding: .25em;
+    }
+    .btn3{
+      position: relative;
+      width:40%;
+      margin-top: -80px;
+      margin-right: 2vw;
+      font-size: 8px;
+      background-color: orange;
+      color: lightblue;
+      padding: .25em;
+    }
+    .btn4{
+      position: relative;
+      margin-top: 120px;
+      width: 80%;
+      right: -55vw;
+      font-size: 7px;
+      background-color: green;
+      color: lightpink;
+      padding: .25em;
+    }
+    .btn5{
+      position: relative;
+      top: -73vh;
+      right: 20px;
+      font-size: 12px;
+      background-color: mediumpurple;
+      color: #42280E;
+      padding: .25em;
+    }
+    .btn6{
+      position: relative;
+      top: -500px;
+      margin-left: 10vw;
+      width:45%;
+      font-size: 7px;
+      background-color: red;
+      color: turquoise;
+      padding: .25em;
+    }
+    .btn7{
+      position: relative;
+      top: -110vh;
+      margin-left: 20vw;
+      font-size: 15px;
+      background-color: gray;
+      color: lightgreen;
+      padding: .22em;
+    }
+    .btn8{
+      position: relative;
+      top: -680px;
+      right: -.5vw;
+      font-size: 8px;
+      background-color: white;
+      color: black;
+      padding: .25em;
+      width: 65%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    .btn9 {
+      position: relative;
+      top: -800px;
+      right: -.5vw;
+      font-size: 12px;
+      background-color: pink;
+      color: orangered;
+      padding: .25em;
+      width: 50%; /* Adjust the width as desired */
+    }
+
+    .btn10{
+      position: relative;
+      top: -1200px;
+      margin-right: 2vw;
+      font-size: 5px;
+      background-color: rgb(77, 255, 79);
+      color: rgb(192, 23, 200);
+      padding: .25em;
+      width: 70%;
+    }
+    .btn11{
+      position: relative;
+      top: -1000px;
+      margin-right: 2vw;
+      font-size: 18px;
+      background-color: rgb(17, 255, 255);
+      color:rgb(255, 45, 234) ;
+      padding: .15em;
+      width: 60%;
+    }
+    .btn12{
+      position: relative;
+      top: -1200px;
+      margin-right: 2vw;
+      font-size: 6px;
+      background-color: rgb(86, 54, 7);
+      color: rgb(255, 254, 237);
+      padding: .15em;
+      width: 80%;
+      left: 50px;
+    }
+    .btn13{
+      position: relative;
+      top: -1500px;
+      margin-right: 2vw;
+      font-size: 7px;
+      background-color: rgb(139, 0, 182);
+      color: rgb(255, 77, 0);
+      padding: .15em;
+      width: 55%;
+      left: 40px;
+    }
+    #back img {
+      margin-top: 0px;
+      left: 77.5px;
+      width: 10px;
+      position: fixed;
+  }
+  
+  #next img {
+      margin-top: 0px;
+      right: -118px;
+      width: 10px;
+      position: fixed;
+  }
+  
+  }
+  
+  
+  
+  
+  
