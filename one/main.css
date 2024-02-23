@@ -20,12 +20,12 @@ h1{
 }
 
 .styled-line:nth-child(1) { bottom: 20px; }
-.styled-line:nth-child(2) { bottom: 100px; }
-.styled-line:nth-child(3) { bottom: 180px; }
-.styled-line:nth-child(4) { bottom: 260px; }
-.styled-line:nth-child(5) { bottom: 340px; }
-.styled-line:nth-child(6) { bottom: 420px; }
-.styled-line:nth-child(7) { bottom: 500px; }
+.styled-line:nth-child(2) { bottom: 110px; }
+.styled-line:nth-child(3) { bottom: 200px; }
+.styled-line:nth-child(4) { bottom: 290px; }
+.styled-line:nth-child(5) { bottom: 380px; }
+.styled-line:nth-child(6) { bottom: 470px; }
+.styled-line:nth-child(7) { bottom: 560px; }
 
 .text a {
     text-decoration: none;
@@ -38,7 +38,7 @@ h1{
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif;
     font-size: 40px;
-    margin-top: 180px;
+    margin-top: 130px;
     margin-left: 100px;
     transition: transform 1s;
     transform-origin: 150px;
@@ -54,7 +54,7 @@ h1{
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif;
     font-size: 40px;
-    margin-top: 22px;
+    margin-top: 35px;
     margin-right: 150px;
     float: right; 
     transition: transform 0.5s ease; 
@@ -81,7 +81,7 @@ h1{
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif;
     font-size: 40px;
-    margin-top: 103px;
+    margin-top: 120px;
     margin-right: 80px;
     text-align: right;
     animation: blink 3s ease-in-out 0s infinite; /* 애니메이션 지속 시간을 8초로, 시작 딜레이를 5초로 설정 */
@@ -107,7 +107,7 @@ h1{
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif;
     font-size: 40px;
-    margin-top: 23px;
+    margin-top: 50px;
     text-align: center;
     animation: floating 2s ease-in-out infinite;
     cursor: pointer;
@@ -137,7 +137,7 @@ h1{
     color: #ffffff;
     font-family: "roc-grotesk", sans-serif;
     font-size: 40px;
-    margin-top: 23px;
+    margin-top: 40px;
     margin-right: 230px;
     text-align: right; 
     cursor: pointer;
