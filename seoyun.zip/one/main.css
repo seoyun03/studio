@@ -1,0 +1,47 @@
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+#next img {
+  position: fixed;
+  top: 20px; /* 위에서부터 20px 떨어져 있도록 조정 */
+  right: 20px; /* 오른쪽에서부터 20px 떨어져 있도록 조정 */
+}
+
+.text1 {
+  font-size: 130px;
+  font-family: "roc-grotesk", sans-serif;
+  color: rgb(1, 255, 18);
+  font-weight: 800;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+  @media screen and (max-width: 499px) {
+
+   
+    
+      /* Fix position of #next */
+      #next img {
+        top: 25px;
+        right: 69px; /* Adjust right position */
+        width: 10px;
+        position: fixed;
+        z-index: 20;
+      }
+
+}
+
+  
