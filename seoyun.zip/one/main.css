@@ -10,15 +10,16 @@ body {
 
 #next img {
   position: fixed;
-  top: 20px; /* 위에서부터 20px 떨어져 있도록 조정 */
-  right: 20px; /* 오른쪽에서부터 20px 떨어져 있도록 조정 */
+  top: 20px; 
+  right: 20px;
 }
 
 .text1 {
   font-size: 130px;
-  font-family: "roc-grotesk", sans-serif;
+  font-family: "elza", sans-serif;
+  font-weight: 700;
+  font-style: normal;
   color: rgb(1, 255, 18);
-  font-weight: 800;
   text-align: center;
   position: fixed;
   top: 50%;
@@ -36,7 +37,7 @@ body {
       /* Fix position of #next */
       #next img {
         top: 25px;
-        right: 69px; /* Adjust right position */
+        right: 69px;
         width: 10px;
         position: fixed;
         z-index: 20;

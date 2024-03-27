@@ -10,24 +10,59 @@ body {
 
 #back img {
   position: fixed;
-  top: 20px; /* 위에서부터 20px 떨어져 있도록 조정 */
-  left: 20px; /* 오른쪽에서부터 20px 떨어져 있도록 조정 */
+  top: 20px; 
+  left: 20px; 
   transform: rotate(180deg);
 }
 
 .text1 {
-  font-size: 20px;
-  font-family: "roc-grotesk", sans-serif;
+  font-size: 24px;
+  font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
-  font-weight: 300;
+  font-weight: 500;
+  line-height: 1.5; 
   position:absolute;
   top: 100px;
   left: 100px;
   max-width: 60%;
   
 }
-
-
+.text2 {
+  font-size: 24px;
+  font-family: "elza", sans-serif;
+  color: rgb(1, 255, 18);
+  font-weight: 500;
+  line-height: 1.5; 
+  position:absolute;
+  top: 560px;
+  left: 100px;
+  max-width: 60%;
+  text-decoration: underline;
+}
+.text3 {
+  font-size: 24px;
+  font-family: "elza", sans-serif;
+  color: rgb(1, 255, 18);
+  font-weight: 500;
+  line-height: 1.5; 
+  position:absolute;
+  top: 600px;
+  left: 100px;
+  max-width: 60%;
+  text-decoration: underline;
+}
+.text4 {
+  font-size: 24px;
+  font-family: "elza", sans-serif;
+  color: rgb(1, 255, 18);
+  font-weight: 500;
+  line-height: 1.5; 
+  position:absolute;
+  top: 640px;
+  left: 100px;
+  max-width: 60%;
+  text-decoration: underline;
+}
 
 
   @media screen and (max-width: 499px) {
