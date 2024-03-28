@@ -10,6 +10,7 @@ body {
   top: 20px;
   left: 20px;
   transform: rotate(180deg);
+  z-index: 1;
 }
 
 .text {
@@ -165,22 +166,80 @@ body {
 @media screen and (max-width: 499px) {
  
   .text {
-    font-size: 50px;
+    font-size: 55px;
     font-family: "elza", sans-serif;
     color: rgb(1, 255, 18);
     font-weight: 800;
     line-height: 1.5;
     position: absolute;
-    top: 60px;
-    left: 80px;
+    top: 15%; /* 상단 여백을 절반으로 조정 */
+    left: 50%; /* 좌측 여백을 절반으로 조정 */
+    transform: translate(-50%, -50%); /* 텍스트를 정확히 가운데로 이동 */
     max-width: 60%;
   }
   .horizontal-line {
     border-top: 2px solid rgb(1, 255, 18);
     height: 330px;
     position: absolute;
-    width: 80%;
+    width: 90%;
     top: 50%;
     transform: translateY(-50%);
   }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-top: 200px;
+    margin-bottom: 30px;
+    max-width: 96%;
+  }
+
+  .text-left {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-family: "elza", sans-serif;
+    font-size: 11px;
+    color: rgb(1, 255, 18);
+    font-weight: 800;
+    gap: 4x;
+    align-items: left;
+  }
+  
+  .text-left > div {
+    padding: 5.5px;
+  }
+  
+  .text-right {
+    display: grid;
+    font-size: 11px;
+    grid-template-columns: 1fr;
+    gap: 1px;
+    align-items: right;
+    text-align: right;
+    cursor: pointer;
+  }
+  
+  .text-right > div {
+    padding: 9px;
+    font-family: "elza", sans-serif;
+    color: rgb(1, 255, 18);
+    position: relative;
+    align-items: right;
+  }
+  
+  .text-right > div img {
+    display: none;
+    position: absolute;
+    top: -100px;
+    left: -100%;
+    width: 100%;
+    transition: opacity 0.5s;
+  }
+  
+  .text-right > div:hover img {
+    display: block;
+    opacity: 1;
+    z-index: 1;
+  }
+  
 }
