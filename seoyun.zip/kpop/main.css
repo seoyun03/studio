@@ -12,7 +12,7 @@ body {
   transform: rotate(180deg);
 }
 
-.text1 {
+.text {
   font-size: 100px;
   font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
@@ -33,46 +33,56 @@ body {
   transform: translateY(-50%);
 }
 
-
-
-.music-list {
-  display: flex;
-  flex-direction: column;
-  margin-top: 270px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 600px;
+  margin-top: 300px;
+  margin-bottom: 100px;
 }
 
-.music-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 23px;
-}
-
-.music-item h2 {
+.text-left {
+  display: grid;
+  grid-template-columns: 1fr;
   font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
-  flex-basis: 60%;
-  white-space: nowrap;
-  font-size: 18px;
-  margin-right: 600px;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-weight: 800;
+  gap: 5px;
+  align-items: left;
 }
 
-.music-item p {
+.text-left > div {
+  padding: 10px;
+}
+
+.text-right {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  align-items: flex-end;
+}
+
+.text-right > div {
+  padding: 10px;
   font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
-  font-size: 16px;
-  flex-basis: 40%;
-  text-align: left;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  position: relative;
+}
+.text-right > div img {
+  display: none;
+  position: absolute;
+  top: -200px; /* 위로 올리기 위해 음수 값으로 설정합니다. */
+  left: -130%;
+  width: 100%;
+  transition: opacity 0.2s;
 }
 
-.music-item:last-child {
-  margin-bottom: 0;
+.text-right > div:hover img {
+  display: block;
+  opacity: 1;
+  z-index: 1;
 }
+
 
 @media screen and (max-width: 499px) {
   #back img {
