@@ -1,4 +1,4 @@
-const jsonData = [
+[
   {
       "title": "No Role Modelz",
       "artist": "J.Cole",
@@ -112,17 +112,3 @@ const jsonData = [
       "source": "Apple Music"
   }
 ]
-const images = document.querySelectorAll('.gallery .image');
-
-images.forEach((image, index) => {
-  const tooltip = image.querySelector('.tooltip');
-  const data = jsonData[index];
-
-  tooltip.innerHTML = `
-    <p>Title: ${data.title}</p>
-    <p>Artist: ${data.artist}</p>
-    <p>When: ${new Date(data.when).toLocaleDateString()}</p>
-    <p>Where: ${data.where}</p>
-    <p>Source: ${data.source}</p>
-  `;
-});
