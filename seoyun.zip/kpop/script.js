@@ -140,7 +140,6 @@ const musicData = [
     "source": "TikTok"
     }
     ];
-
     function addMusicToList(musicItem) {
       const musicList = document.getElementById("musicList");
     
@@ -179,3 +178,5 @@ const musicData = [
     
     // musicData의 각 항목을 HTML에 추가
     musicData.forEach(addMusicToList);
+
+    

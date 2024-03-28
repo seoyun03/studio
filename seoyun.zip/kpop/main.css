@@ -1,17 +1,14 @@
-
-
 body {
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
 
 #back img {
   position: fixed;
-  top: 20px; 
-  left: 20px; 
+  top: 20px;
+  left: 20px;
   transform: rotate(180deg);
 }
 
@@ -20,8 +17,8 @@ body {
   font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
   font-weight: 800;
-  line-height: 1.5; 
-  position:absolute;
+  line-height: 1.5;
+  position: absolute;
   top: 60px;
   left: 100px;
   max-width: 60%;
@@ -32,21 +29,23 @@ body {
   height: 370px;
   position: absolute;
   width: 90%;
-  top: 50%; 
-  transform: translateY(-50%); 
+  top: 50%;
+  transform: translateY(-50%);
 }
+
+
 
 .music-list {
   display: flex;
   flex-direction: column;
-  margin-top: 270px; /* 전체적으로 아래로 내려가는 여백 추가 */
+  margin-top: 270px;
 }
 
 .music-item {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* 제목과 가수 정보를 위로 정렬 */
-  margin-bottom: 30px; /* 요소들 간의 간격을 늘림 */
+  align-items: flex-start;
+  margin-bottom: 23px;
 }
 
 .music-item h2 {
@@ -55,7 +54,7 @@ body {
   flex-basis: 60%;
   white-space: nowrap;
   font-size: 18px;
-  margin-right: 700px;
+  margin-right: 600px;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -72,40 +71,34 @@ body {
 }
 
 .music-item:last-child {
-  margin-bottom: 0; /* 마지막 요소의 하단 간격을 제거하여 전체적인 간격을 유지 */
+  margin-bottom: 0;
 }
 
-
-
-
-  @media screen and (max-width: 499px) {
-
-      #next img {
-        top: 25px;
-        right: 69px; 
-        width: 4px;
-        position: fixed;
-        z-index: 20;
-      }
-      .text1 {
-        font-size: 60px;
-        font-family: "elza", sans-serif;
-        color: rgb(1, 255, 18);
-        font-weight: 800;
-        line-height: 1.5; 
-        position:absolute;
-        top: 60px;
-        left: 80px;
-        max-width: 60%;
-      }
-      .horizontal-line {
-        border-top: 2px solid rgb(1, 255, 18);
-        height: 330px;
-        position: absolute;
-        width: 80%;
-        top: 50%; 
-        transform: translateY(-50%); 
+@media screen and (max-width: 499px) {
+  #back img {
+    top: 25px;
+    right: 69px;
+    width: 4px;
+    position: fixed;
+    z-index: 20;
+  }
+  .text1 {
+    font-size: 60px;
+    font-family: "elza", sans-serif;
+    color: rgb(1, 255, 18);
+    font-weight: 800;
+    line-height: 1.5;
+    position: absolute;
+    top: 60px;
+    left: 80px;
+    max-width: 60%;
+  }
+  .horizontal-line {
+    border-top: 2px solid rgb(1, 255, 18);
+    height: 330px;
+    position: absolute;
+    width: 80%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
-}
-
-  
