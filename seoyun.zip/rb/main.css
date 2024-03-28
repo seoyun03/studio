@@ -75,11 +75,24 @@ body {
   transition: opacity 0.3s ease-in-out; /* 부드러운 효과를 위한 트랜지션 */
 }
 
+
 .grid-item:hover .caption {
   opacity: 1; /* 호버할 때 캡션을 보이도록 함 */
 }
 
+.audio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
 
+.grid-item:hover .audio {
+  display: block;
+}
+.audio::-webkit-media-controls {
+  display: none !important;
+}
 
   @media screen and (max-width: 499px) {
 

@@ -38,7 +38,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 600px;
   margin-top: 300px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .text-left {
@@ -52,30 +52,38 @@ body {
 }
 
 .text-left > div {
-  padding: 10px;
+  padding: 5px;
 }
 
 .text-right {
   display: grid;
   grid-template-columns: 1fr;
   gap: 5px;
-  align-items: flex-end;
+  align-items: right;
+  
+}
+.text-right {
+  text-align: right;
+  cursor: pointer;
 }
 
 .text-right > div {
-  padding: 10px;
+  padding: 8px;
   font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
   position: relative;
+  align-items: right;
 }
+
 .text-right > div img {
   display: none;
   position: absolute;
-  top: -200px; /* 위로 올리기 위해 음수 값으로 설정합니다. */
+  top: -220px;
   left: -130%;
   width: 100%;
-  transition: opacity 0.2s;
+  transition: opacity 0.5s;
 }
+
 
 .text-right > div:hover img {
   display: block;
