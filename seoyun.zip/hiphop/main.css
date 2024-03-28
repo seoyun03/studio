@@ -17,6 +17,10 @@ a:hover {
   color: white;
   border-radius: 2px;
 }
+img {
+  width: 20px; /* 원하는 너비로 조절 */
+  height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+}
 
 .top-text-container {
   position: fixed; 
@@ -130,14 +134,6 @@ a:hover {
 
 
   @media screen and (max-width: 499px) {
-
-      #next img {
-        top: 25px;
-        right: 69px; 
-        width: 4px;
-        position: fixed;
-        z-index: 20;
-      }
       .text1 {
         font-size: 40px;
         font-family: "elza", sans-serif;
@@ -192,5 +188,37 @@ a:hover {
         transform: translateX(-50%);
         opacity: 0;
         transition: opacity 0.3s;
+      }
+
+      .top-text-container {
+        position: fixed; 
+        font-family: "elza", sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        color: rgb(1, 255, 18);
+        top: -3.6px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+      
+      }
+      .center {
+        display: block;
+        margin: 0 auto;
+        margin-left: 120px;
+      }
+      .right {
+        display: block;
+        margin: 0 auto;
+        margin-right: 1120px;
+        position: relative;
+      }
+      img {
+        width: 15px; /* 원하는 너비로 조절 */
+        height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
       }
     }

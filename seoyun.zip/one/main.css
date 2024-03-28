@@ -37,13 +37,31 @@ body {
    
     
       /* Fix position of #next */
-      #next img {
-        top: 25px;
-        right: 69px;
-        width: 10px;
+
+      .text1 {
+        font-size: 55px;
+        font-family: "elza", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+        color: rgb(1, 255, 18);
+        text-align: center;
         position: fixed;
-        z-index: 20;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
+
+      .right {
+        float: right;
+    
+      }
+      .right img {
+        width: 18px; /* 원하는 너비로 조절 */
+        height: auto; /* 비율을 유지하면서 너비에 맞게 자동으로 높이를 조절 */
+        margin-top: 322px;
+        margin-left: 320px;
+      }
+      
 
 }
 

@@ -18,7 +18,10 @@ a:hover {
   color: white;
   border-radius: 2px;
 }
-
+img {
+  width: 20px; /* 원하는 너비로 조절 */
+  height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+}
 .top-text-container {
   position: fixed; 
   font-family: "elza", sans-serif;
@@ -166,6 +169,26 @@ a:hover {
         opacity: 0; /* 초기에는 보이지 않도록 설정 */
         transition: opacity 0.3s ease-in-out;
         line-height: 1;
+      }
+      .top-text-container {
+        position: fixed; 
+        font-family: "elza", sans-serif;
+        font-weight: 800;
+        font-size: 13px;
+        color: rgb(1, 255, 18);
+        top: -3.6px;
+        left: 0;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+      
+      }
+      img {
+        width: 15px; /* 원하는 너비로 조절 */
+        height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
       }
 }
 
