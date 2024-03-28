@@ -41,15 +41,15 @@ img {
 
 
 .text1 {
-  font-size: 24px;
+  font-size: 23px;
   font-family: "elza", sans-serif;
   color: rgb(1, 255, 18);
   font-weight: 500;
-  line-height: 1.5; 
+  line-height: 1.8; 
   position:absolute;
   top: 100px;
   left: 100px;
-  max-width: 60%;
+  max-width: 70%;
   
 }
 .text2 {
@@ -60,7 +60,7 @@ img {
   line-height: 1.5; 
   position:absolute;
   top: 590px;
-  left: 100px;
+  right: 100px;
   max-width: 60%;
 }
 .text2 a {
@@ -75,7 +75,7 @@ img {
   line-height: 1.5; 
   position:absolute;
   top: 640px;
-  left: 100px;
+  right: 100px;
   max-width: 60%;
   text-decoration: underline;
 }
@@ -91,7 +91,7 @@ img {
   line-height: 1.5; 
   position:absolute;
   top: 690px;
-  left: 100px;
+  right: 100px;
   max-width: 60%;
   text-decoration: underline;
 }

@@ -119,11 +119,11 @@ images.forEach((image, index) => {
   const data = jsonData[index];
 
   tooltip.innerHTML = `
-    <p>Title: ${data.title}</p>
-    <p>Artist: ${data.artist}</p>
-    <p>Date: ${new Date(data.Date).toLocaleDateString()}</p>
-    <p>Location: ${data.Location}</p>
-    <p>Source: ${data.source}</p>
+  <p><strong>Title:</strong> ${data.title}</p>
+  <p><strong>Artist:</strong> ${data.artist}</p>
+  <p><strong>Date:</strong> ${new Date(data.Date).toLocaleDateString()}</p>
+  <p><strong>Location:</strong> ${data.Location}</p>
+  <p><strong>Source:</strong> ${data.source}</p>
   `;
 });
 
