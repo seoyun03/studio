@@ -34,10 +34,13 @@ body {
   font-weight: 500;
   line-height: 1.5; 
   position:absolute;
-  top: 560px;
+  top: 590px;
   left: 100px;
   max-width: 60%;
-  text-decoration: underline;
+}
+.text2 a {
+  color: inherit; /* 부모 요소의 텍스트 색상을 상속 */
+  text-decoration: underline; /* 밑줄 추가 */
 }
 .text3 {
   font-size: 24px;
@@ -46,10 +49,14 @@ body {
   font-weight: 500;
   line-height: 1.5; 
   position:absolute;
-  top: 600px;
+  top: 630px;
   left: 100px;
   max-width: 60%;
   text-decoration: underline;
+}
+.text3 a {
+  color: inherit; /* 부모 요소의 텍스트 색상을 상속 */
+  text-decoration: underline; /* 밑줄 추가 */
 }
 .text4 {
   font-size: 24px;
@@ -58,12 +65,15 @@ body {
   font-weight: 500;
   line-height: 1.5; 
   position:absolute;
-  top: 640px;
+  top: 670px;
   left: 100px;
   max-width: 60%;
   text-decoration: underline;
 }
-
+.text4 a {
+  color: inherit; /* 부모 요소의 텍스트 색상을 상속 */
+  text-decoration: underline; /* 밑줄 추가 */
+}
 
   @media screen and (max-width: 499px) {
 

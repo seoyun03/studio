@@ -1,0 +1,111 @@
+
+
+body {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+
+#back img {
+  position: fixed;
+  top: 20px; 
+  left: 20px; 
+  transform: rotate(180deg);
+}
+
+.text1 {
+  font-size: 100px;
+  font-family: "elza", sans-serif;
+  color: rgb(1, 255, 18);
+  font-weight: 800;
+  line-height: 1.5; 
+  position:absolute;
+  top: 60px;
+  left: 100px;
+  max-width: 60%;
+}
+
+.horizontal-line {
+  border-top: 2px solid rgb(1, 255, 18);
+  height: 370px;
+  position: absolute;
+  width: 90%;
+  top: 50%; 
+  transform: translateY(-50%); 
+}
+
+.music-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 270px; /* 전체적으로 아래로 내려가는 여백 추가 */
+}
+
+.music-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* 제목과 가수 정보를 위로 정렬 */
+  margin-bottom: 30px; /* 요소들 간의 간격을 늘림 */
+}
+
+.music-item h2 {
+  font-family: "elza", sans-serif;
+  color: rgb(1, 255, 18);
+  flex-basis: 60%;
+  white-space: nowrap;
+  font-size: 18px;
+  margin-right: 700px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.music-item p {
+  font-family: "elza", sans-serif;
+  color: rgb(1, 255, 18);
+  font-size: 16px;
+  flex-basis: 40%;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.music-item:last-child {
+  margin-bottom: 0; /* 마지막 요소의 하단 간격을 제거하여 전체적인 간격을 유지 */
+}
+
+
+
+
+  @media screen and (max-width: 499px) {
+
+      #next img {
+        top: 25px;
+        right: 69px; 
+        width: 4px;
+        position: fixed;
+        z-index: 20;
+      }
+      .text1 {
+        font-size: 60px;
+        font-family: "elza", sans-serif;
+        color: rgb(1, 255, 18);
+        font-weight: 800;
+        line-height: 1.5; 
+        position:absolute;
+        top: 60px;
+        left: 80px;
+        max-width: 60%;
+      }
+      .horizontal-line {
+        border-top: 2px solid rgb(1, 255, 18);
+        height: 330px;
+        position: absolute;
+        width: 80%;
+        top: 50%; 
+        transform: translateY(-50%); 
+}
+}
+
+  
