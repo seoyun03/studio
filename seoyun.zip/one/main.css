@@ -10,12 +10,14 @@ body {
 
 #next img {
   position: fixed;
-  top: 20px; 
-  right: 20px;
+  top: 420px; 
+  right: 320px;
 }
 
+
+
 .text1 {
-  font-size: 130px;
+  font-size: 180px;
   font-family: "elza", sans-serif;
   font-weight: 700;
   font-style: normal;
