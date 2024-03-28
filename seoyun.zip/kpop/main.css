@@ -41,6 +41,76 @@ body {
   margin-bottom: 50px;
 }
 
+.audio {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+.audio::-webkit-media-controls {
+  display: none !important;
+}
+
+.image-container1:hover .audio {
+  display: block;
+}
+.image-container2:hover .audio {
+  display: block;
+}
+.image-container3:hover .audio {
+  display: block;
+}
+.image-container4:hover .audio {
+  display: block;
+}
+.image-container5:hover .audio {
+  display: block;
+}
+.image-container6:hover .audio {
+  display: block;
+}
+.image-container7:hover .audio {
+  display: block;
+}
+.image-container8:hover .audio {
+  display: block;
+}
+.image-container9:hover .audio {
+  display: block;
+}
+.image-container10:hover .audio {
+  display: block;
+}
+.image-container11:hover .audio {
+  display: block;
+}
+.image-container12:hover .audio {
+  display: block;
+}
+.image-container13:hover .audio {
+  display: block;
+}
+.image-container14:hover .audio {
+  display: block;
+}
+.image-container15:hover .audio {
+  display: block;
+}
+.image-container16:hover .audio {
+  display: block;
+}
+.image-container17:hover .audio {
+  display: block;
+}
+.image-container18:hover .audio {
+  display: block;
+}
+.image-container19:hover .audio {
+  display: block;
+}
+.image-container20:hover .audio {
+  display: block;
+}
 .text-left {
   display: grid;
   grid-template-columns: 1fr;
@@ -93,15 +163,9 @@ body {
 
 
 @media screen and (max-width: 499px) {
-  #back img {
-    top: 25px;
-    right: 69px;
-    width: 4px;
-    position: fixed;
-    z-index: 20;
-  }
-  .text1 {
-    font-size: 60px;
+ 
+  .text {
+    font-size: 50px;
     font-family: "elza", sans-serif;
     color: rgb(1, 255, 18);
     font-weight: 800;
