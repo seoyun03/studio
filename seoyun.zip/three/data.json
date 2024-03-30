@@ -123,14 +123,6 @@
                 "image": "../kpop/assets/15.png"
             },
             {
-                "title": "Love wins all",
-                "artist": "IU",
-                "date": "2024-03-18T04:00:00.000Z",
-                "location": "10 W 32nd St",
-                "source": "Youtube",
-                "image": "../kpop/assets/16.png"
-            },
-            {
                 "title": "EASY",
                 "artist": "LE SSERAFIM",
                 "date": "2024-03-07T05:00:00.000Z",
@@ -153,6 +145,14 @@
                 "location": "65 5th Ave",
                 "source": "Apple Music",
                 "image": "../kpop/assets/19.png"
+            },
+            {
+                "title": "Drive mE cRaZy",
+                "artist": "GIRIBOY",
+                "date": "2024-03-20T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "TikTok",
+                "image": "../kpop/assets/20.png"
             }
         ]
     },
