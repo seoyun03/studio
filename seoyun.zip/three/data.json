@@ -1,0 +1,469 @@
+[
+    {
+        "genre": "kpop",
+        "playlist": [
+            {
+                "title": "한번만 (feat.YUMDDA)",
+                "artist": "Leellamarz & TOIL",
+                "date": "2024-03-02T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../kpop/assets/1.png"
+            },
+            {
+                "title": "Hijack",
+                "artist": "Heon Seo",
+                "date": "2024-03-02T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../kpop/assets/2.png"
+            },
+            {
+                "title": "I can't be cool (with leellamarz)",
+                "artist": "BOYCOLD",
+                "date": "2024-03-02T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Youtube",
+                "image": "../kpop/assets/3.png"
+            },
+            {
+                "title": "Love 119",
+                "artist": "RIIZE",
+                "date": "2024-03-02T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Youtube",
+                "image": "../kpop/assets/4.png"
+            },
+            {
+                "title": "Attraction (feat. Dynamic Duo)",
+                "artist": "BUMKEY",
+                "date": "2024-03-02T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Youtube",
+                "image": "../kpop/assets/5.png"
+            },
+            {
+                "title": "Pushin' N Pullin'",
+                "artist": "Red Velvet",
+                "date": "2024-03-10T05:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Youtube",
+                "image": "../kpop/assets/6.png"
+            },
+            {
+                "title": "TyTy",
+                "artist": "SOOJIN",
+                "date": "2024-03-10T05:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../kpop/assets/7.png"
+            },
+            {
+                "title": "STUPID IN LOVE (feat. HUHYUNJIN)",
+                "artist": "MAX",
+                "date": "2024-03-08T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Youtube",
+                "image": "../kpop/assets/8.png"
+            },
+            {
+                "title": "Super Shy",
+                "artist": "NewJeans",
+                "date": "2024-03-03T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Youtube",
+                "image": "../kpop/assets/9.png"
+            },
+            {
+                "title": "Thirsty",
+                "artist": "aespa",
+                "date": "2024-03-05T05:00:00.000Z",
+                "location": "10 W 32nd St",
+                "source": "Youtube",
+                "image": "../kpop/assets/10.png"
+            },
+            {
+                "title": "Cupid (Twin Ver.)",
+                "artist": "FIFTY FIFTY",
+                "date": "2024-03-06T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "TikTok",
+                "image": "../kpop/assets/11.png"
+            },
+            {
+                "title": "BODY",
+                "artist": "Highlight",
+                "date": "2024-03-07T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Youtube",
+                "image": "../kpop/assets/12.png"
+            },
+            {
+                "title": "Magnetic",
+                "artist": "ILLIT",
+                "date": "2024-03-25T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Instagram",
+                "image": "../kpop/assets/13.png"
+            },
+            {
+                "title": "음악의 신",
+                "artist": "SEVENTEEN",
+                "date": "2024-03-14T04:00:00.000Z",
+                "location": "10 W 32nd St",
+                "source": "Youtube",
+                "image": "../kpop/assets/14.png"
+            },
+            {
+                "title": "with me",
+                "artist": "0WAVE",
+                "date": "2024-03-15T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../kpop/assets/15.png"
+            },
+            {
+                "title": "Love wins all",
+                "artist": "IU",
+                "date": "2024-03-18T04:00:00.000Z",
+                "location": "10 W 32nd St",
+                "source": "Youtube",
+                "image": "../kpop/assets/16.png"
+            },
+            {
+                "title": "EASY",
+                "artist": "LE SSERAFIM",
+                "date": "2024-03-07T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Instagram",
+                "image": "../kpop/assets/17.png"
+            },
+            {
+                "title": "Smart",
+                "artist": "LE SSERAFIM",
+                "date": "2024-03-08T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Instagram",
+                "image": "../kpop/assets/18.png"
+            },
+            {
+                "title": "Hell yea",
+                "artist": "Leellamarz & TOIL",
+                "date": "2024-03-16T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../kpop/assets/19.png"
+            }
+        ]
+    },
+    {
+        "genre": "rb",
+        "playlist": [
+            {
+                "title": "Slow Motion",
+                "artist": "Matt Champion & JENNIE",
+                "date": "2024-03-14T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../rb/assests/1.png"
+            },
+            {
+                "title": "FRI(END)S",
+                "artist": "V",
+                "date": "2024-03-12T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Youtube",
+                "image": "../rb/assests/2.png"
+            },
+            {
+                "title": "Trap House (feat. Shoreline Mafia)",
+                "artist": "03 Greedo",
+                "date": "2024-03-18T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Spotify",
+                "image": "../rb/assests/3.png"
+            },
+            {
+                "title": "bye",
+                "artist": "Ariana Grande",
+                "date": "2024-03-18T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../rb/assests/4.png"
+            },
+            {
+                "title": "All My Love",
+                "artist": "Sabrina Claudio & Wale",
+                "date": "2024-03-13T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../rb/assests/5.png"
+            },
+            {
+                "title": "need u the most",
+                "artist": "Highvyn & Pixels",
+                "date": "2024-03-15T04:00:00.000Z",
+                "location": "JFK Airport",
+                "source": "Youtube",
+                "image": "../rb/assests/6.png"
+            },
+            {
+                "title": "Lostintranslation",
+                "artist": "Mixed Matches",
+                "date": "2024-03-16T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Spotify",
+                "image": "../rb/assests/7.png"
+            },
+            {
+                "title": "pocket locket",
+                "artist": "Alaina Castillo",
+                "date": "2024-03-08T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Instagram",
+                "image": "../rb/assests/8.png"
+            },
+            {
+                "title": "lavender (feat. Pink Sweat$)",
+                "artist": "JVKE",
+                "date": "2024-03-16T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Youtube",
+                "image": "../rb/assests/9.png"
+
+            },
+            {
+                "title": "IC+B",
+                "artist": "Thomas Ng",
+                "date": "2024-03-18T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../rb/assests/10.png"
+
+            },
+            {
+                "title": "Cold (feat. Thomas Ng & I AM LUU)",
+                "artist": "Seo actor & Dept",
+                "date": "2024-03-20T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "TikTok",
+                "image": "../rb/assests/11.png"
+
+            },
+            {
+                "title": "prove it",
+                "artist": "21 Savage & Summer Walker",
+                "date": "2024-03-20T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../rb/assests/12.png"
+
+            },
+            {
+                "title": "locationver u r",
+                "artist": "UMI & V",
+                "date": "2024-03-21T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../rb/assests/13.png"
+
+            },
+            {
+                "title": "Better With You",
+                "artist": "Jeff Bernat",
+                "date": "2024-03-22T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../rb/assests/14.png"
+
+            },
+            {
+                "title": "BABYBLUE",
+                "artist": "HNATA & Hanuel",
+                "date": "2024-03-24T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Spotify",
+                "image": "../rb/assests/15.png"
+
+            },
+            {
+                "title": "yes, and?",
+                "artist": "Ariana Grande",
+                "date": "2024-03-22T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Spotify",
+                "image": "../rb/assests/16.png"
+
+            },
+            {
+                "title": "I'll Kill You (feat. Jhené Aiko)",
+                "artist": "Summer Walker",
+                "date": "2024-03-23T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../rb/assests/17.png"
+
+            },
+            {
+                "title": "Personal",
+                "artist": "Kehlani",
+                "date": "2024-03-13T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../rb/assests/18.png"
+
+            },
+            {
+                "title": "Day 1 ◑",
+                "artist": "HONNE",
+                "date": "2024-03-14T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Spotify",
+                "image": "../rb/assests/19.png"
+
+            },
+            {
+                "title": "golden hour",
+                "artist": "JVKE",
+                "date": "2024-03-15T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../rb/assests/20.png"
+
+            }
+      ]
+    },
+    {
+        "genre": "hiphop",
+        "playlist": [
+            {
+                "title": "No Role Modelz",
+                "artist": "J.Cole",
+                "date": "2024-03-08T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/1.png"
+            },
+            {
+                "title": "What Would Pluto Do",
+                "artist": "Drake",
+                "date": "2024-03-08T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/2.png"
+            },
+            {
+                "title": "Talk to Me (feat. Drake)",
+                "artist": "Drakeo the Ruler",
+                "date": "2024-03-08T05:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/3.png"
+            },
+            {
+                "title": "Love Letter",
+                "artist": "Frostydasnomann",
+                "date": "2024-03-10T05:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Spotify",
+                "image": "../hiphop/assests/4.png"
+            },
+            {
+                "title": "Rich Flex",
+                "artist": "Drake & 21 Savage",
+                "date": "2024-03-11T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/5.png"
+            },
+            {
+                "title": "Loyal (feat. Lil Wayne & Tyga)",
+                "artist": "Chris Brown",
+                "date": "2024-03-11T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Spotify",
+                "image": "../hiphop/assests/6.png"
+            },
+            {
+                "title": "Bad Bad Bad",
+                "artist": "Young Thug",
+                "date": "2024-03-12T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/7.png"
+            },
+            {
+                "title": "You Got It",
+                "artist": "VEDO",
+                "date": "2024-03-13T04:00:00.000Z",
+                "location": "Los Angeles",
+                "source": "Instagram",
+                "image": "../hiphop/assests/8.png"
+            },
+            {
+                "title": "Easy Breezy",
+                "artist": "Kiana Ledé",
+                "date": "2024-03-14T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/9.png"
+            },
+            {
+                "title": "Body a Canvas",
+                "artist": "K CAMP",
+                "date": "2024-03-18T04:00:00.000Z",
+                "location": "Soho",
+                "source": "Spotify",
+                "image": "../hiphop/assests/10.png"
+            },
+            {
+                "title": "I Choose",
+                "artist": "Layton Greene",
+                "date": "2024-03-20T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/11.png"
+            },
+            {
+                "title": "Make Me Wanna",
+                "artist": "VEDO",
+                "date": "2024-03-20T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/12.png"
+            },
+            {
+                "title": "You",
+                "artist": "Jacquees",
+                "date": "2024-03-21T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "TikTok",
+                "image": "../hiphop/assests/13.png"
+            },
+            {
+                "title": "For The Night",
+                "artist": "Pop Smoke",
+                "date": "2024-03-22T04:00:00.000Z",
+                "location": "Soho",
+                "source": "Spotify",
+                "image": "../hiphop/assests/14.png"
+            },
+            {
+                "title": "Go Crazy",
+                "artist": "Chris Brown & Young Thug",
+                "date": "2024-03-24T04:00:00.000Z",
+                "location": "65 5th Ave",
+                "source": "Spotify",
+                "image": "../hiphop/assests/15.png"
+            },
+            {
+                "title": "Nonstop",
+                "artist": "Drake",
+                "date": "2024-03-24T04:00:00.000Z",
+                "location": "220 W 24th St",
+                "source": "Apple Music",
+                "image": "../hiphop/assests/16.png"
+            }
+          ]
+    }
+    ]

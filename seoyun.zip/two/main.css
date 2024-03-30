@@ -78,53 +78,6 @@ img {
   max-width: 70%;
   
 }
-.text2 {
-  font-size: 24px;
-  font-family: "elza", sans-serif;
-  color: rgb(1, 255, 18);
-  font-weight: 800;
-  line-height: 1.5; 
-  position:absolute;
-  top: 590px;
-  right: 100px;
-  max-width: 60%;
-}
-.text2 a {
-  color: inherit; /* 부모 요소의 텍스트 색상을 상속 */
-  text-decoration: underline; /* 밑줄 추가 */
-}
-.text3 {
-  font-size: 24px;
-  font-family: "elza", sans-serif;
-  color: rgb(1, 255, 18);
-  font-weight: 800;
-  line-height: 1.5; 
-  position:absolute;
-  top: 640px;
-  right: 100px;
-  max-width: 60%;
-  text-decoration: underline;
-}
-.text3 a {
-  color: inherit; /* 부모 요소의 텍스트 색상을 상속 */
-  text-decoration: underline; /* 밑줄 추가 */
-}
-.text4 {
-  font-size: 24px;
-  font-family: "elza", sans-serif;
-  color: rgb(1, 255, 18);
-  font-weight: 800;
-  line-height: 1.5; 
-  position:absolute;
-  top: 690px;
-  right: 100px;
-  max-width: 60%;
-  text-decoration: underline;
-}
-.text4 a {
-  color: inherit; /* 부모 요소의 텍스트 색상을 상속 */
-  text-decoration: underline; /* 밑줄 추가 */
-}
 
   @media screen and (max-width: 499px) {
 
