@@ -18,20 +18,25 @@ a:hover {
   color: white;
   border-radius: 2px;
 }
+img {
+  width: 20px; /* 원하는 너비로 조절 */
+  height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+}
 .top-text-container {
-  position: fixed;
+  position: fixed; 
   font-family: "elza", sans-serif;
   font-weight: 800;
   font-size: 20px;
   color: rgb(1, 255, 18);
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: -3.6px;
+  left: 0;
+  width: 100%;
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   z-index: 1;
+
 }
 .filter {
   position: fixed;
