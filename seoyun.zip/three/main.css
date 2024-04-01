@@ -60,6 +60,14 @@ border-radius: 1px;
 border: 2px solid rgb(1, 255, 18); 
 }
 
+.dashboard_inputs {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+}
+
 
 
 .text1 {
