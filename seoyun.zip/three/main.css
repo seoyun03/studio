@@ -1,210 +1,225 @@
 
 
 body {
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
 }
 
 
 a {
-  color: rgb(1, 255, 18);
-  text-decoration: none;
+color: rgb(1, 255, 18);
+text-decoration: none;
 }
 
 a:hover {
-  cursor: pointer;
-  color: white;
-  border-radius: 2px;
+cursor: pointer;
+color: white;
+border-radius: 2px;
 }
 img {
-  width: 20px; /* 원하는 너비로 조절 */
-  height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+width: 20px; /* 원하는 너비로 조절 */
+height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
 }
 .top-text-container {
-  position: fixed; 
-  font-family: "elza", sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  color: rgb(1, 255, 18);
-  top: -3.6px;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  z-index: 1;
+position: fixed; 
+font-family: "elza", sans-serif;
+font-weight: 800;
+font-size: 20px;
+color: rgb(1, 255, 18);
+top: -3.6px;
+left: 0;
+width: 100%;
+padding: 20px;
+box-sizing: border-box;
+display: flex;
+justify-content: space-between;
+z-index: 1;
 
 }
 .filter {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  text-align: center;
-  z-index: 2;
+position: fixed;
+top: 10%;
+left: 50%;
+transform: translate(-50%, 0);
+text-align: center;
+z-index: 2;
 }
 
 .filter a {
-  display: inline-block;
-  font-family: "elza", sans-serif;
-  font-size: 12px;
-  padding: 3px 10px;
-  margin: 0 10px; /* 왼쪽과 오른쪽에 10px의 여백 추가 */
-  background-color: rgba(1, 255, 18, 0); 
-  color: rgb(1, 255, 18);
-  text-decoration: none;
-  border-radius: 5px;
-  border: 2px solid rgb(1, 255, 18); 
+display: inline-block;
+font-family: "elza", sans-serif;
+font-size: 12px;
+padding: 3px 10px;
+margin: 0 10px; /* 왼쪽과 오른쪽에 10px의 여백 추가 */
+background-color: rgba(1, 255, 18, 0); 
+color: rgb(1, 255, 18);
+text-decoration: none;
+border-radius: 1px;
+border: 2px solid rgb(1, 255, 18); 
 }
 
 
 
 .text1 {
-  font-size: 100px;
-  font-family: "elza", sans-serif;
-  color: rgb(1, 255, 18);
-  font-weight: 800;
-  line-height: 1.5; 
-  position:absolute;
-  top: 60px;
-  left: 100px;
-  max-width: 60%;
+font-size: 100px;
+font-family: "elza", sans-serif;
+color: rgb(1, 255, 18);
+font-weight: 800;
+line-height: 1.5; 
+position:absolute;
+top: 60px;
+left: 100px;
+max-width: 60%;
 }
 
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 5px;
-  grid-row-gap: 20px; 
-  grid-column-gap: 0px; 
-  justify-content: center;
-  align-items: center; 
-  margin-top: 200px;
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-gap: 5px;
+grid-row-gap: 20px; 
+grid-column-gap: 0px; 
+justify-content: center;
+align-items: center; 
+margin-top: 200px;
 }
 .grid-item {
-  position: relative; /* 부모 요소에 상대적인 위치 설정 */
-  text-align: center; /* 이미지를 가운데 정렬 */
+position: relative; /* 부모 요소에 상대적인 위치 설정 */
+text-align: center; /* 이미지를 가운데 정렬 */
 }
 
 .grid-item img {
-  width: 70%; 
-  height: auto; 
-  transition: transform .3s ease, opacity 0.2s ease; /* 이미지 크기 변경 및 투명도 변화 시 부드럽게 변화하도록 설정 */
+width: 70%; 
+height: auto; 
+transition: transform .3s ease, opacity 0.2s ease; /* 이미지 크기 변경 및 투명도 변화 시 부드럽게 변화하도록 설정 */
 }
 
 .grid-item:hover img {
-  transform: scale(1.5); /* hover 상태에서 이미지 크기를 확대 */
-  opacity: 0.5; /* hover 상태에서 이미지의 투명도를 줄임 */
+transform: scale(1.5); /* hover 상태에서 이미지 크기를 확대 */
+opacity: 0.5; /* hover 상태에서 이미지의 투명도를 줄임 */
 }
 .caption {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "elza", sans-serif;
-  font-size: 13px;
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  opacity: 0; /* 초기에는 보이지 않도록 설정 */
-  transition: opacity 0.3s ease-in-out; /* 부드러운 효과를 위한 트랜지션 */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-family: "elza", sans-serif;
+font-size: 13px;
+color: white;
+padding: 10px;
+border-radius: 5px;
+opacity: 0; /* 초기에는 보이지 않도록 설정 */
+transition: opacity 0.3s ease-in-out; /* 부드러운 효과를 위한 트랜지션 */
 }
 
 
 .grid-item:hover .caption {
-  opacity: 1; /* 호버할 때 캡션을 보이도록 함 */
+opacity: 1; /* 호버할 때 캡션을 보이도록 함 */
 }
 
 .audio {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  display: none;
+position: absolute;
+bottom: 0;
+left: 0;
+display: none;
 }
 
 .grid-item:hover .audio {
-  display: block;
+display: block;
 }
 .audio::-webkit-media-controls {
-  display: none !important;
+display: none !important;
 }
 
-  @media screen and (max-width: 499px) {
+@media screen and (max-width: 499px) {
 
-      #next img {
-        top: 25px;
-        right: 69px; 
-        width: 4px;
-        position: fixed;
-        z-index: 20;
-      }
-      .text1 {
-        font-size: 65px;
-        font-family: "elza", sans-serif;
-        color: rgb(1, 255, 18);
-        font-weight: 800;
-        line-height: 1.5;
-        position: absolute;
-        top: 15%; /* 상단 여백을 절반으로 조정 */
-        left: 50%; /* 좌측 여백을 절반으로 조정 */
-        transform: translate(-50%, -50%); /* 텍스트를 정확히 가운데로 이동 */
-        max-width: 60%;
-      }
-      .horizontal-line {
-        border-top: 2px solid rgb(1, 255, 18);
-        height: 330px;
-        position: absolute;
-        width: 90%;
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      .grid-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 1px;
-        grid-row-gap: 10px; 
-        grid-column-gap: 0px; 
-        justify-content: center;
-        align-items: center; 
-        margin-top: 200px;
-      }
-      .caption {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: "elza", sans-serif;
-        font-size: 8px;
-        color: white;
-        padding: 5px;
-        opacity: 0; /* 초기에는 보이지 않도록 설정 */
-        transition: opacity 0.3s ease-in-out;
-        line-height: 1;
-      }
-      .top-text-container {
-        position: fixed; 
-        font-family: "elza", sans-serif;
-        font-weight: 800;
-        font-size: 13px;
-        color: rgb(1, 255, 18);
-        top: -3.6px;
-        left: 0;
-        width: 100%;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
-        z-index: 1;
-      
-      }
-      img {
-        width: 15px; /* 원하는 너비로 조절 */
-        height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
-      }
+    .text1 {
+      font-size: 65px;
+      font-family: "elza", sans-serif;
+      color: rgb(1, 255, 18);
+      font-weight: 800;
+      line-height: 1.5;
+      position: fixed;
+      top: 15%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 60%;
+    }
+    .horizontal-line {
+      border-top: 2px solid rgb(1, 255, 18);
+      height: 330px;
+      position: absolute;
+      width: 90%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 1px;
+      grid-row-gap: 10px; 
+      grid-column-gap: 0px; 
+      justify-content: center;
+      align-items: center; 
+      margin-top: 130px;
+    }
+    .caption {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: "elza", sans-serif;
+      font-size: 8px;
+      color: white;
+      padding: 5px;
+      opacity: 0; /* 초기에는 보이지 않도록 설정 */
+      transition: opacity 0.3s ease-in-out;
+      line-height: 1;
+    }
+    .top-text-container {
+      position: fixed; 
+      font-family: "elza", sans-serif;
+      font-weight: 800;
+      font-size: 13px;
+      color: rgb(1, 255, 18);
+      top: -3.6px;
+      left: 0;
+      width: 100vw;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    
+    }
+    img {
+      width: 15px; /* 원하는 너비로 조절 */
+      height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+    }
+
+    .filter {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, 0);
+      text-align: center;
+      z-index: 2;
+    }
+    
+    .filter a {
+      display: inline-block;
+      font-family: "elza", sans-serif;
+      font-size: 9px;
+      padding: 3px 5px;
+      margin: 0 3px; /* 왼쪽과 오른쪽에 10px의 여백 추가 */
+      background-color: rgba(1, 255, 18, 0); 
+      color: rgb(1, 255, 18);
+      text-decoration: none;
+      border-radius: 1px;
+      border: 2px solid rgb(1, 255, 18); 
+    }
+    
 }
 
-  
