@@ -5,12 +5,6 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(items); // 데이터 로그로 확인
     const musicData = items;
 
-    // 초기에는 원이 보이지 않도록 스타일 설정
-    const circle = document.createElement('div');
-    circle.classList.add('circle');
-    document.body.appendChild(circle);
-    circle.style.display = 'none';
-
     function filterMusic(genre) {
       const gridContainer = document.querySelector('.grid-container');
       gridContainer.innerHTML = '';
@@ -38,13 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
         gridContainer.appendChild(gridItem);
       });
 
-      // kpop 필터링 시 원 추가
-      if (genre === 0) {
-        circle.style.display = 'block';
-      } else {
-        // kpop 필터링이 아닐 때는 원 제거
-        circle.style.display = 'none';
-      }
     }
 
     const filterButtons = document.querySelectorAll('.filter a');
@@ -52,12 +39,12 @@ document.addEventListener("DOMContentLoaded", function() {
       button.addEventListener('click', function(event) {
         event.preventDefault();
         const genre = parseInt(this.dataset.index);
-        console.log(genre); // 장르 로그로 확인
+        console.log(genre); 
         filterMusic(genre);
       });
     });
 
-    // 슬라이더 변경 이벤트 처리
+
     const rangeInputs = document.querySelectorAll('.rangeInput');
     rangeInputs.forEach(input => {
       input.addEventListener('input', function() {
@@ -79,19 +66,19 @@ document.addEventListener("DOMContentLoaded", function() {
     function getColor(value) {
       switch (value) {
         case '1':
-          return 'red';
+          return 'rgb(1, 255, 18)';
         case '2':
-          return 'blue';
+          return 'rgb(255, 255, 255)';
         case '3':
-          return 'green';
+          return 'rgb(225, 225, 225)';
         case '4':
-          return 'yellow';
+          return 'rgb(150, 150, 150)';
         case '5':
-          return 'orange';
+          return 'rgb(120, 120, 120)';
         case '6':
-          return 'purple';
+          return 'rgb(0, 0, 0)';
         default:
-          return 'black';
+          return 'rgb(0, 0, 0)';
       }
     }
   });

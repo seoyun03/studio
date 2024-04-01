@@ -68,6 +68,9 @@ border: 2px solid rgb(1, 255, 18);
   padding: 10px;
 }
 
+.dashboard_inputs {
+  transition: background-color 1s, color 1s;
+}
 
 
 .text1 {
