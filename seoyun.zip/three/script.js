@@ -81,6 +81,7 @@ document.addEventListener("DOMContentLoaded", function() {
           return 'rgb(0, 0, 0)';
       }
     }
+    
   });
 });
 
