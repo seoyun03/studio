@@ -81,6 +81,20 @@ document.addEventListener("DOMContentLoaded", function() {
           return 'rgb(0, 0, 0)';
       }
     }
+
+    document.querySelectorAll('.filter a').forEach(function(element) {
+      element.addEventListener('click', function(event) {
+        // 이전에 활성화된 버튼의 색상 클래스를 모두 제거합니다.
+        document.querySelectorAll('.filter a').forEach(function(el) {
+          el.classList.remove('active-kpop', 'active-rb', 'active-hiphop');
+        });
+    
+        // 클릭된 버튼에 해당하는 데이터 속성을 기반으로 색상 클래스를 추가합니다.
+        const genre = this.getAttribute('data-genre');
+        this.classList.add(`active-${genre}`);
+      });
+    });
+    
     
   });
 });
