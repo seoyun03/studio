@@ -41,58 +41,32 @@ document.addEventListener("DOMContentLoaded", function() {
         const genre = parseInt(this.dataset.index);
         console.log(genre); 
         filterMusic(genre);
-      });
-    });
-
-
-    const rangeInputs = document.querySelectorAll('.rangeInput');
-    rangeInputs.forEach(input => {
-      input.addEventListener('input', function() {
-        const prefix = this.getAttribute('data-class-prefix');
-        const value = this.value;
-
-        if (prefix === 't_color-') {
-          document.body.style.color = getColor(value);
-          const elements = document.querySelectorAll(`[data-class-prefix="${prefix}"]`);
-          elements.forEach(element => {
-            element.style.color = getColor(value);
-          });
-        } else if (prefix === 'bg_color-') {
-          document.body.style.backgroundColor = getColor(value);
-        }
-      });
-    });
-
-    function getColor(value) {
-      switch (value) {
-        case '1':
-          return 'rgb(1, 255, 18)';
-        case '2':
-          return 'rgb(255, 255, 255)';
-        case '3':
-          return 'rgb(225, 225, 225)';
-        case '4':
-          return 'rgb(150, 150, 150)';
-        case '5':
-          return 'rgb(120, 120, 120)';
-        case '6':
-          return 'rgb(0, 0, 0)';
-        default:
-          return 'rgb(0, 0, 0)';
-      }
-    }
-
-    document.querySelectorAll('.filter a').forEach(function(element) {
-      element.addEventListener('click', function(event) {
+        
         // 이전에 활성화된 버튼의 색상 클래스를 모두 제거합니다.
         document.querySelectorAll('.filter a').forEach(function(el) {
           el.classList.remove('active-kpop', 'active-rb', 'active-hiphop');
         });
     
         // 클릭된 버튼에 해당하는 데이터 속성을 기반으로 색상 클래스를 추가합니다.
-        const genre = this.getAttribute('data-genre');
-        this.classList.add(`active-${genre}`);
+        const genreName = this.getAttribute('data-genre');
+        this.classList.add(`active-${genreName}`);
       });
+    });
+
+    const rangeInput = document.querySelector('.rangeInput');
+    const gridContainer = document.querySelector('.grid-container');
+    
+    rangeInput.addEventListener('input', function() {
+        const prefix = this.getAttribute('data-class-prefix');
+        const value = this.value;
+    
+        if (prefix === 'zoom') {
+            const scaleValue = 0.1 * parseInt(value);
+            // 그리드 컨테이너의 클래스를 변경하여 그리드 레이아웃을 조정합니다.
+            gridContainer.classList.remove('grid-container'); // 기존 클래스 제거
+            gridContainer.classList.add('vertical-grid'); // 새로운 클래스 추가
+            gridContainer.style.transition = 'all 0.5s ease'; // transition 효과 추가
+        }
     });
     
     

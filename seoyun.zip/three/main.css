@@ -87,6 +87,20 @@ border: 2px solid rgb(1, 255, 18);
   transition: background-color 0.6s, color 0.6s;
 }
 
+.grid-container {
+    /* 그리드 컨테이너의 스타일 */
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 5px;
+    grid-row-gap: 10px; 
+    grid-column-gap: 0px; 
+    justify-content: center;
+    align-items: center; 
+    margin-top: 200px;
+    /* transition 효과 */
+    transition: all 0.5s ease;
+}
+
 
 .text1 {
 font-size: 100px;
@@ -126,6 +140,10 @@ transition: transform .3s ease, opacity 0.2s ease; /* 이미지 크기 변경 �
 transform: scale(1.5); /* hover 상태에서 이미지 크기를 확대 */
 opacity: 0.5; /* hover 상태에서 이미지의 투명도를 줄임 */
 }
+
+
+
+
 .caption {
 position: absolute;
 top: 50%;
