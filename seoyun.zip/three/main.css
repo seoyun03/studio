@@ -144,12 +144,12 @@ border: 2px solid rgb(1, 255, 18);
   display: flex;
   flex-wrap: nowrap;
   justify-content: flex-end;
-  margin-top: 400px;
+  margin-top: 280px;
+  overflow: hidden; 
 }
-
 .gallery {
   display: flex;
-  animation: marquee 20s linear infinite;
+  animation: marquee 100s linear infinite; 
 }
 
 .image {
@@ -157,8 +157,8 @@ border: 2px solid rgb(1, 255, 18);
   position: relative;
 }
 .image img {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
@@ -166,8 +166,28 @@ border: 2px solid rgb(1, 255, 18);
 }
 .image:hover img {
   transform: scale(1.1);
-  cursor: pointer; /* 호버할 때 커서 모양을 변경합니다. */
 }
+
+/* 갤러리 애니메이션 */
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* 갤러리 호버 시 애니메이션 일시 정지 */
+.gallery:hover {
+  animation-play-state: paused;
+}
+
+/* 갤러리 호버 해제 시 애니메이션 다시 시작 */
+.gallery:not(:hover) {
+  animation-play-state: running;
+}
+
 
 
 .text1 {

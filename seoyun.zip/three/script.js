@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
       const grid = document.querySelector('.grid-container');
 
       console.log('items', items);
+      
 
       const renderItem = (song, type) => {
         const gridItem = document.createElement('div');
