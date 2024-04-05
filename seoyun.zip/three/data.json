@@ -8,7 +8,8 @@
                 "date": "2024-03-02T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../kpop/assets/1.png"
+                "image": "../kpop/assets/1.png",
+                "audio": "../kpop/assets/1.mp3"
             },
             {
                 "title": "Hijack",

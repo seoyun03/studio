@@ -3,8 +3,8 @@
 body {
   background-color: rgb(0, 0, 0);
   display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  justify-content: center; 
+  align-items: center; 
 }
 
 
@@ -19,9 +19,14 @@ color: white;
 border-radius: 2px;
 }
 img {
-width: 20px; /* 원하는 너비로 조절 */
-height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+width: 20px; 
+height: auto; 
 }
+
+.hidden{
+  display: none!important;
+}
+
 .top-text-container {
 position: fixed; 
 font-family: "elza", sans-serif;
@@ -52,7 +57,7 @@ display: inline-block;
 font-family: "elza", sans-serif;
 font-size: 12px;
 padding: 3px 10px;
-margin: 0 10px; /* 왼쪽과 오른쪽에 10px의 여백 추가 */
+margin: 0 10px;
 background-color: rgba(1, 255, 18, 0); 
 color: rgb(1, 255, 18);
 text-decoration: none;
@@ -87,8 +92,43 @@ border: 2px solid rgb(1, 255, 18);
   transition: background-color 0.6s, color 0.6s;
 }
 
+.rangeInput {
+  /* 슬라이더의 트랙 (슬라이더 바) */
+  --range-color: #afafaf;
+  --range-thumb-color: #2980b9;
+  --range-thumb-size: 10px;
+  --range-thumb-border: 2px solid #2980b9;
+  --range-thumb-hover-color: #2c3e50;
+  --range-thumb-hover-border: 2px solid #2c3e50;
+  --range-thumb-active-color: #1abc9c;
+  --range-thumb-active-border: 2px solid #1abc9c;
+}
+
+.rangeInput::-webkit-slider-runnable-track {
+  background: var(--range-color);
+}
+
+.rangeInput::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: var(--range-thumb-size);
+  height: var(--range-thumb-size);
+  border: var(--range-thumb-border);
+  background: var(--range-thumb-color);
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.rangeInput::-webkit-slider-thumb:hover {
+  background: var(--range-thumb-hover-color);
+  border-color: var(--range-thumb-hover-border);
+}
+
+.rangeInput::-webkit-slider-thumb:active {
+  background: var(--range-thumb-active-color);
+  border-color: var(--range-thumb-active-border);
+}
+
 .grid-container {
-    /* 그리드 컨테이너의 스타일 */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 5px;
@@ -97,10 +137,36 @@ border: 2px solid rgb(1, 255, 18);
     justify-content: center;
     align-items: center; 
     margin-top: 200px;
-    /* transition 효과 */
     transition: all 0.5s ease;
 }
 
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 400px;
+}
+
+.gallery {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+.image {
+  margin: 10px;
+  position: relative;
+}
+.image img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease; 
+}
+.image:hover img {
+  transform: scale(1.1);
+}
 
 .text1 {
 font-size: 100px;
@@ -126,19 +192,19 @@ align-items: center;
 margin-top: 200px;
 }
 .grid-item {
-position: relative; /* 부모 요소에 상대적인 위치 설정 */
-text-align: center; /* 이미지를 가운데 정렬 */
+position: relative;
+text-align: center; 
 }
 
 .grid-item img {
 width: 70%; 
 height: auto; 
-transition: transform .3s ease, opacity 0.2s ease; /* 이미지 크기 변경 및 투명도 변화 시 부드럽게 변화하도록 설정 */
+transition: transform .3s ease, opacity 0.2s ease;
 }
 
 .grid-item:hover img {
-transform: scale(1.5); /* hover 상태에서 이미지 크기를 확대 */
-opacity: 0.5; /* hover 상태에서 이미지의 투명도를 줄임 */
+transform: scale(1.5);
+opacity: 0.5;
 }
 
 
@@ -154,13 +220,13 @@ font-size: 13px;
 color: white;
 padding: 10px;
 border-radius: 5px;
-opacity: 0; /* 초기에는 보이지 않도록 설정 */
-transition: opacity 0.3s ease-in-out; /* 부드러운 효과를 위한 트랜지션 */
+opacity: 0; 
+transition: opacity 0.3s ease-in-out;
 }
 
 
 .grid-item:hover .caption {
-opacity: 1; /* 호버할 때 캡션을 보이도록 함 */
+opacity: 1; 
 }
 
 .audio {
@@ -218,7 +284,7 @@ display: none !important;
       font-size: 8px;
       color: white;
       padding: 5px;
-      opacity: 0; /* 초기에는 보이지 않도록 설정 */
+      opacity: 0; 
       transition: opacity 0.3s ease-in-out;
       line-height: 1;
     }
@@ -239,8 +305,8 @@ display: none !important;
     
     }
     img {
-      width: 15px; /* 원하는 너비로 조절 */
-      height: auto; /* 너비에 맞게 자동으로 높이를 조절하여 비율을 유지 */
+      width: 15px; 
+      height: auto; 
     }
 
     .filter {
@@ -257,7 +323,7 @@ display: none !important;
       font-family: "elza", sans-serif;
       font-size: 9px;
       padding: 3px 5px;
-      margin: 0 3px; /* 왼쪽과 오른쪽에 10px의 여백 추가 */
+      margin: 0 3px; 
       background-color: rgba(1, 255, 18, 0); 
       color: rgb(1, 255, 18);
       text-decoration: none;
