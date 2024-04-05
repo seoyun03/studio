@@ -157,8 +157,8 @@ border: 2px solid rgb(1, 255, 18);
   position: relative;
 }
 .image img {
-  width: 20px;
-  height: 20px;
+  width: 10px;
+  height: 10px;
   object-fit: cover;
   border-radius: 5px;
   cursor: pointer;
@@ -166,7 +166,9 @@ border: 2px solid rgb(1, 255, 18);
 }
 .image:hover img {
   transform: scale(1.1);
+  cursor: pointer; /* 호버할 때 커서 모양을 변경합니다. */
 }
+
 
 .text1 {
 font-size: 100px;

@@ -17,7 +17,8 @@
                 "date": "2024-03-02T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../kpop/assets/2.png"
+                "image": "../kpop/assets/2.png",
+                "audio": "../kpop/assets/2.mp3"
             },
             {
                 "title": "I can't be cool (with leellamarz)",
@@ -25,7 +26,8 @@
                 "date": "2024-03-02T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Youtube",
-                "image": "../kpop/assets/3.png"
+                "image": "../kpop/assets/3.png",
+                "audio": "../kpop/assets/3.mp3"
             },
             {
                 "title": "Love 119",
@@ -33,7 +35,8 @@
                 "date": "2024-03-02T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Youtube",
-                "image": "../kpop/assets/4.png"
+                "image": "../kpop/assets/4.png",
+                "audio": "../kpop/assets/4.mp3"
             },
             {
                 "title": "Attraction (feat. Dynamic Duo)",
@@ -41,7 +44,8 @@
                 "date": "2024-03-02T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Youtube",
-                "image": "../kpop/assets/5.png"
+                "image": "../kpop/assets/5.png",
+                "audio": "../kpop/assets/5.mp3"
             },
             {
                 "title": "Pushin' N Pullin'",
@@ -49,7 +53,8 @@
                 "date": "2024-03-10T05:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Youtube",
-                "image": "../kpop/assets/6.png"
+                "image": "../kpop/assets/6.png",
+                "audio": "../kpop/assets/6.mp3"
             },
             {
                 "title": "TyTy",
@@ -57,7 +62,8 @@
                 "date": "2024-03-10T05:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../kpop/assets/7.png"
+                "image": "../kpop/assets/7.png",
+                "audio": "../kpop/assets/7.mp3"
             },
             {
                 "title": "STUPID IN LOVE (feat. HUHYUNJIN)",
@@ -65,7 +71,8 @@
                 "date": "2024-03-08T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Youtube",
-                "image": "../kpop/assets/8.png"
+                "image": "../kpop/assets/8.png",
+                "audio": "../kpop/assets/8.mp3"
             },
             {
                 "title": "Super Shy",
@@ -73,7 +80,8 @@
                 "date": "2024-03-03T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Youtube",
-                "image": "../kpop/assets/9.png"
+                "image": "../kpop/assets/9.png",
+                "audio": "../kpop/assets/9.mp3"
             },
             {
                 "title": "Thirsty",
@@ -81,7 +89,8 @@
                 "date": "2024-03-05T05:00:00.000Z",
                 "location": "10 W 32nd St",
                 "source": "Youtube",
-                "image": "../kpop/assets/10.png"
+                "image": "../kpop/assets/10.png",
+                "audio": "../kpop/assets/10.mp3"
             },
             {
                 "title": "Cupid (Twin Ver.)",
@@ -89,7 +98,8 @@
                 "date": "2024-03-06T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "TikTok",
-                "image": "../kpop/assets/11.png"
+                "image": "../kpop/assets/11.png",
+                "audio": "../kpop/assets/11.mp3"
             },
             {
                 "title": "BODY",
@@ -97,7 +107,8 @@
                 "date": "2024-03-07T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Youtube",
-                "image": "../kpop/assets/12.png"
+                "image": "../kpop/assets/12.png",
+                "audio": "../kpop/assets/12.mp3"
             },
             {
                 "title": "Magnetic",
@@ -105,7 +116,8 @@
                 "date": "2024-03-25T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Instagram",
-                "image": "../kpop/assets/13.png"
+                "image": "../kpop/assets/13.png",
+                "audio": "../kpop/assets/13.mp3"
             },
             {
                 "title": "음악의 신",
@@ -113,7 +125,8 @@
                 "date": "2024-03-14T04:00:00.000Z",
                 "location": "10 W 32nd St",
                 "source": "Youtube",
-                "image": "../kpop/assets/14.png"
+                "image": "../kpop/assets/14.png",
+                "audio": "../kpop/assets/14.mp3"
             },
             {
                 "title": "with me",
@@ -121,7 +134,8 @@
                 "date": "2024-03-15T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../kpop/assets/15.png"
+                "image": "../kpop/assets/15.png",
+                "audio": "../kpop/assets/15.mp3"
             },
             {
                 "title": "EASY",
@@ -129,7 +143,8 @@
                 "date": "2024-03-07T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Instagram",
-                "image": "../kpop/assets/17.png"
+                "image": "../kpop/assets/17.png",
+                "audio": "../kpop/assets/17.mp3"
             },
             {
                 "title": "Smart",
@@ -137,7 +152,8 @@
                 "date": "2024-03-08T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Instagram",
-                "image": "../kpop/assets/18.png"
+                "image": "../kpop/assets/18.png",
+                "audio": "../kpop/assets/18.mp3"
             },
             {
                 "title": "Hell yea",
@@ -145,7 +161,8 @@
                 "date": "2024-03-16T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../kpop/assets/19.png"
+                "image": "../kpop/assets/19.png",
+                "audio": "../kpop/assets/19.mp3"
             },
             {
                 "title": "Drive mE cRaZy",
@@ -153,7 +170,8 @@
                 "date": "2024-03-20T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "TikTok",
-                "image": "../kpop/assets/20.png"
+                "image": "../kpop/assets/20.png",
+                "audio": "../kpop/assets/20.mp3"
             }
         ]
     },
@@ -166,7 +184,8 @@
                 "date": "2024-03-14T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../rb/assets/1.png"
+                "image": "../rb/assets/1.png",
+                "audio": "../rb/assets/1.mp3"
             },
             {
                 "title": "FRI(END)S",
@@ -174,7 +193,8 @@
                 "date": "2024-03-12T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Youtube",
-                "image": "../rb/assets/2.png"
+                "image": "../rb/assets/2.png",
+                "audio": "../rb/assets/2.mp3"
             },
             {
                 "title": "Trap House (feat. Shoreline Mafia)",
@@ -182,7 +202,8 @@
                 "date": "2024-03-18T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Spotify",
-                "image": "../rb/assets/3.png"
+                "image": "../rb/assets/3.png",
+                "audio": "../rb/assets/3.mp3"
             },
             {
                 "title": "bye",
@@ -190,7 +211,8 @@
                 "date": "2024-03-18T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../rb/assets/4.png"
+                "image": "../rb/assets/4.png",
+                "audio": "../rb/assets/4.mp3"
             },
             {
                 "title": "All My Love",
@@ -198,7 +220,8 @@
                 "date": "2024-03-13T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../rb/assets/5.png"
+                "image": "../rb/assets/5.png",
+                "audio": "../rb/assets/5.mp3"
             },
             {
                 "title": "need u the most",
@@ -206,7 +229,8 @@
                 "date": "2024-03-15T04:00:00.000Z",
                 "location": "JFK Airport",
                 "source": "Youtube",
-                "image": "../rb/assets/6.png"
+                "image": "../rb/assets/6.png",
+                "audio": "../rb/assets/6.mp3"
             },
             {
                 "title": "Lostintranslation",
@@ -214,7 +238,8 @@
                 "date": "2024-03-16T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Spotify",
-                "image": "../rb/assets/7.png"
+                "image": "../rb/assets/7.png",
+                "audio": "../rb/assets/7.mp3"
             },
             {
                 "title": "pocket locket",
@@ -222,7 +247,8 @@
                 "date": "2024-03-08T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Instagram",
-                "image": "../rb/assets/8.png"
+                "image": "../rb/assets/8.png",
+                "audio": "../rb/assets/8.mp3"
             },
             {
                 "title": "lavender (feat. Pink Sweat$)",
@@ -230,7 +256,8 @@
                 "date": "2024-03-16T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Youtube",
-                "image": "../rb/assets/9.png"
+                "image": "../rb/assets/9.png",
+                "audio": "../rb/assets/9.mp3"
 
             },
             {
@@ -239,7 +266,8 @@
                 "date": "2024-03-18T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../rb/assets/10.png"
+                "image": "../rb/assets/10.png",
+                "audio": "../rb/assets/10.mp3"
 
             },
             {
@@ -248,7 +276,8 @@
                 "date": "2024-03-20T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "TikTok",
-                "image": "../rb/assets/11.png"
+                "image": "../rb/assets/11.png",
+                "audio": "../rb/assets/11.mp3"
 
             },
             {
@@ -257,7 +286,8 @@
                 "date": "2024-03-20T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../rb/assets/12.png"
+                "image": "../rb/assets/12.png",
+                "audio": "../rb/assets/12.mp3"
 
             },
             {
@@ -266,7 +296,8 @@
                 "date": "2024-03-21T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../rb/assets/13.png"
+                "image": "../rb/assets/13.png",
+                "audio": "../rb/assets/13.mp3"
 
             },
             {
@@ -275,7 +306,8 @@
                 "date": "2024-03-22T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../rb/assets/14.png"
+                "image": "../rb/assets/14.png",
+                "audio": "../rb/assets/14.mp3"
 
             },
             {
@@ -284,7 +316,8 @@
                 "date": "2024-03-24T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Spotify",
-                "image": "../rb/assets/15.png"
+                "image": "../rb/assets/15.png",
+                "audio": "../rb/assets/15.mp3"
 
             },
             {
@@ -293,7 +326,8 @@
                 "date": "2024-03-22T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Spotify",
-                "image": "../rb/assets/16.png"
+                "image": "../rb/assets/16.png",
+                "audio": "../rb/assets/16.mp3"
 
             },
             {
@@ -302,7 +336,8 @@
                 "date": "2024-03-23T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../rb/assets/17.png"
+                "image": "../rb/assets/17.png",
+                "audio": "../rb/assets/17.mp3"
 
             },
             {
@@ -311,7 +346,8 @@
                 "date": "2024-03-13T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../rb/assets/18.png"
+                "image": "../rb/assets/18.png",
+                "audio": "../rb/assets/18.mp3"
 
             },
             {
@@ -320,7 +356,8 @@
                 "date": "2024-03-14T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Spotify",
-                "image": "../rb/assets/19.png"
+                "image": "../rb/assets/19.png",
+                "audio": "../rb/assets/19.mp3"
 
             },
             {
@@ -329,7 +366,8 @@
                 "date": "2024-03-15T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../rb/assets/20.png"
+                "image": "../rb/assets/20.png",
+                "audio": "../rb/assets/20.mp3"
 
             }
       ]
@@ -343,7 +381,8 @@
                 "date": "2024-03-08T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/1.png"
+                "image": "../hiphop/assets/1.png",
+                "audio": "../hiphop/assets/1.mp3"
             },
             {
                 "title": "What Would Pluto Do",
@@ -351,7 +390,8 @@
                 "date": "2024-03-08T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/2.png"
+                "image": "../hiphop/assets/2.png",
+                "audio": "../hiphop/assets/2.mp3"
             },
             {
                 "title": "Talk to Me (feat. Drake)",
@@ -359,7 +399,8 @@
                 "date": "2024-03-08T05:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/3.png"
+                "image": "../hiphop/assets/3.png",
+                "audio": "../hiphop/assets/3.mp3"
             },
             {
                 "title": "Love Letter",
@@ -367,7 +408,8 @@
                 "date": "2024-03-10T05:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Spotify",
-                "image": "../hiphop/assets/4.png"
+                "image": "../hiphop/assets/4.png",
+                "audio": "../hiphop/assets/4.mp3"
             },
             {
                 "title": "Rich Flex",
@@ -375,7 +417,8 @@
                 "date": "2024-03-11T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/5.png"
+                "image": "../hiphop/assets/5.png",
+                "audio": "../hiphop/assets/5.mp3"
             },
             {
                 "title": "Loyal (feat. Lil Wayne & Tyga)",
@@ -383,7 +426,8 @@
                 "date": "2024-03-11T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Spotify",
-                "image": "../hiphop/assets/6.png"
+                "image": "../hiphop/assets/6.png",
+                "audio": "../hiphop/assets/6.mp3"
             },
             {
                 "title": "Bad Bad Bad",
@@ -391,7 +435,8 @@
                 "date": "2024-03-12T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/7.png"
+                "image": "../hiphop/assets/7.png",
+                "audio": "../hiphop/assets/7.mp3"
             },
             {
                 "title": "You Got It",
@@ -399,7 +444,8 @@
                 "date": "2024-03-13T04:00:00.000Z",
                 "location": "Los Angeles",
                 "source": "Instagram",
-                "image": "../hiphop/assets/8.png"
+                "image": "../hiphop/assets/8.png",
+                "audio": "../hiphop/assets/8.mp3"
             },
             {
                 "title": "Easy Breezy",
@@ -407,7 +453,8 @@
                 "date": "2024-03-14T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/9.png"
+                "image": "../hiphop/assets/9.png",
+                "audio": "../hiphop/assets/9.mp3"
             },
             {
                 "title": "Body a Canvas",
@@ -415,7 +462,8 @@
                 "date": "2024-03-18T04:00:00.000Z",
                 "location": "Soho",
                 "source": "Spotify",
-                "image": "../hiphop/assets/10.png"
+                "image": "../hiphop/assets/10.png",
+                "audio": "../hiphop/assets/10.mp3"
             },
             {
                 "title": "I Choose",
@@ -423,7 +471,8 @@
                 "date": "2024-03-20T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/11.png"
+                "image": "../hiphop/assets/11.png",
+                "audio": "../hiphop/assets/11.mp3"
             },
             {
                 "title": "Make Me Wanna",
@@ -431,7 +480,8 @@
                 "date": "2024-03-20T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/12.png"
+                "image": "../hiphop/assets/12.png",
+                "audio": "../hiphop/assets/12.mp3"
             },
             {
                 "title": "You",
@@ -439,7 +489,8 @@
                 "date": "2024-03-21T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "TikTok",
-                "image": "../hiphop/assets/13.png"
+                "image": "../hiphop/assets/13.png",
+                "audio": "../hiphop/assets/13.mp3"
             },
             {
                 "title": "For The Night",
@@ -447,7 +498,8 @@
                 "date": "2024-03-22T04:00:00.000Z",
                 "location": "Soho",
                 "source": "Spotify",
-                "image": "../hiphop/assets/14.png"
+                "image": "../hiphop/assets/14.png",
+                "audio": "../hiphop/assets/14.mp3"
             },
             {
                 "title": "Go Crazy",
@@ -455,7 +507,8 @@
                 "date": "2024-03-24T04:00:00.000Z",
                 "location": "65 5th Ave",
                 "source": "Spotify",
-                "image": "../hiphop/assets/15.png"
+                "image": "../hiphop/assets/15.png",
+                "audio": "../hiphop/assets/15.mp3"
             },
             {
                 "title": "Nonstop",
@@ -463,7 +516,8 @@
                 "date": "2024-03-24T04:00:00.000Z",
                 "location": "220 W 24th St",
                 "source": "Apple Music",
-                "image": "../hiphop/assets/16.png"
+                "image": "../hiphop/assets/16.png",
+                "audio": "../hiphop/assets/16.mp3"
             }
           ]
     }
