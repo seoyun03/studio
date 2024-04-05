@@ -43,12 +43,6 @@ document.addEventListener("DOMContentLoaded", function() {
         gridItem.addEventListener('mouseenter', (e) => playAudio(e.target))
         gridItem.addEventListener('mouseleave', (e) => pauseAudio(e.target))
       }
-      musicData.forEach((genre) => {
-        genre.playlist.forEach(song => {
-          renderItem(song, 'marquee');
-          renderItem(song, 'grid');
-        });
-      });
       
 
       console.log('musicData', musicData);
