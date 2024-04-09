@@ -92,41 +92,7 @@ border: 2px solid rgb(1, 255, 18);
   transition: background-color 0.6s, color 0.6s;
 }
 
-.rangeInput {
-  /* 슬라이더의 트랙 (슬라이더 바) */
-  --range-color: #afafaf;
-  --range-thumb-color: #2980b9;
-  --range-thumb-size: 10px;
-  --range-thumb-border: 2px solid #2980b9;
-  --range-thumb-hover-color: #2c3e50;
-  --range-thumb-hover-border: 2px solid #2c3e50;
-  --range-thumb-active-color: #1abc9c;
-  --range-thumb-active-border: 2px solid #1abc9c;
-}
 
-.rangeInput::-webkit-slider-runnable-track {
-  background: var(--range-color);
-}
-
-.rangeInput::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: var(--range-thumb-size);
-  height: var(--range-thumb-size);
-  border: var(--range-thumb-border);
-  background: var(--range-thumb-color);
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
-}
-
-.rangeInput::-webkit-slider-thumb:hover {
-  background: var(--range-thumb-hover-color);
-  border-color: var(--range-thumb-hover-border);
-}
-
-.rangeInput::-webkit-slider-thumb:active {
-  background: var(--range-thumb-active-color);
-  border-color: var(--range-thumb-active-border);
-}
 
 .grid-container {
     display: grid;
@@ -168,7 +134,7 @@ border: 2px solid rgb(1, 255, 18);
   transform: scale(1.1);
 }
 
-/* 갤러리 애니메이션 */
+
 @keyframes marquee {
   0% {
     transform: translateX(100%);
@@ -178,12 +144,10 @@ border: 2px solid rgb(1, 255, 18);
   }
 }
 
-/* 갤러리 호버 시 애니메이션 일시 정지 */
 .gallery:hover {
   animation-play-state: paused;
 }
 
-/* 갤러리 호버 해제 시 애니메이션 다시 시작 */
 .gallery:not(:hover) {
   animation-play-state: running;
 }
