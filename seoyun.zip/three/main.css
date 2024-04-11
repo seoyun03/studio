@@ -68,16 +68,19 @@ border: 2px solid rgb(1, 255, 18);
 .filter a.active-kpop {
   background-color:rgb(1, 255, 18);
   color: black;
+  cursor: pointer;
 }
 
 .filter a.active-rb {
   background-color:rgb(1, 255, 18); 
   color: black;
+  cursor: pointer;
 }
 
 .filter a.active-hiphop {
   background-color: rgb(1, 255, 18);
   color: black;
+  cursor: pointer;
 }
 
 .dashboard_inputs {
@@ -176,10 +179,12 @@ grid-column-gap: 0px;
 justify-content: center;
 align-items: center; 
 margin-top: 200px;
+cursor: pointer;
 }
 .grid-item {
 position: relative;
 text-align: center; 
+cursor: pointer;
 }
 
 .grid-item img {
