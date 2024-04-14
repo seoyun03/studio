@@ -85,10 +85,12 @@ border: 2px solid rgb(1, 255, 18);
 
 .dashboard_inputs {
   position: fixed;
-  top: 50px;
-  left: 0;
-  width: 100%;
+  top: 130px; /* 원하는 수직 위치로 조정 */
+  left: 50%;
   padding: 10px;
+  transform: translateX(-50%);
+  transition: background-color 0.6s, color 0.6s;
+  z-index: 999;
 }
 
 .dashboard_inputs {
@@ -181,6 +183,7 @@ align-items: center;
 margin-top: 200px;
 cursor: pointer;
 }
+
 .grid-item {
 position: relative;
 text-align: center; 
@@ -197,9 +200,6 @@ transition: transform .3s ease, opacity 0.2s ease;
 transform: scale(1.5);
 opacity: 0.5;
 }
-
-
-
 
 .caption {
 position: absolute;
@@ -236,26 +236,7 @@ display: none !important;
 
 @media screen and (max-width: 499px) {
 
-    .text1 {
-      font-size: 65px;
-      font-family: "elza", sans-serif;
-      color: rgb(1, 255, 18);
-      font-weight: 800;
-      line-height: 1.5;
-      position: fixed;
-      top: 15%; 
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-width: 60%;
-    }
-    .horizontal-line {
-      border-top: 2px solid rgb(1, 255, 18);
-      height: 330px;
-      position: absolute;
-      width: 90%;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+
     .grid-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -266,6 +247,11 @@ display: none !important;
       align-items: center; 
       margin-top: 130px;
     }
+
+    .grid-item:hover img {
+      transform: scale(1.2);
+      opacity: 0.5;
+      }
     .caption {
       position: absolute;
       top: 50%;
@@ -321,6 +307,33 @@ display: none !important;
       border-radius: 1px;
       border: 2px solid rgb(1, 255, 18); 
     }
+    .dashboard_inputs {
+      position: fixed;
+      top: 100px; 
+      left: 50%;
+      padding: 10px;
+      transform: translateX(-50%);
+      transition: background-color 0.6s, color 0.6s;
+      z-index: 999;
+    }
+    
+    .gallery-container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: flex-end;
+      margin-top: 200px;
+      overflow: hidden; 
+    }
+    .gallery {
+      display: flex;
+      animation: marquee 120s linear infinite; 
+}
+    .gallery img {
+      width: 400px; /* 원하는 가로 크기로 조정 */
+      height: auto; /* 세로 크기를 자동으로 맞추어 비율 유지 */
+    }
+
+    
     
 }
 
