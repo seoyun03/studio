@@ -24,11 +24,6 @@ body {
   max-height: 100%;
 }
 
-/* openpage.html을 감싸는 div 요소의 스타일 */
-.openpage-container {
-  display: none; /* 초기에는 보이지 않도록 설정 */
-}
-
 #clock {
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 20px;
