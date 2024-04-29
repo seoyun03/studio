@@ -24,7 +24,10 @@ function toggleBox() {
       box.style.display = 'none';
   }
 }
-setTimeout(function() {
-  document.querySelector(".gif-container").style.display = "none";
-  document.querySelector(".openpage-container").style.display = "block";
-}, 9000); // 5000 밀리초 = 5초
+
+  setTimeout(function() {
+    document.querySelector(".gif-container").style.display = "none";
+    document.querySelector(".openpage-container").style.display = "block";
+  }, 9500); // 9500 milliseconds = 9.5 seconds
+
+  

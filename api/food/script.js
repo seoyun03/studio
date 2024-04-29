@@ -107,8 +107,17 @@ container.addEventListener("click", (event) => {
     const backgroundImgSrc = backgroundImages[clickedImageSrc];
 
     if (backgroundImgSrc) {
-      const backgroundImg = document.querySelector(".background-image");
-      backgroundImg.setAttribute("src", backgroundImgSrc);
+      // 모든 배경 이미지를 선택
+      const backgroundImgs = document.querySelectorAll(".background-image");
+      // 각각의 배경 이미지에 대해 속성 변경
+      backgroundImgs.forEach((backgroundImg) => {
+        // 해당 이미지와 일치하는 배경 이미지인 경우에만 속성 변경
+        if (backgroundImg.getAttribute("src") === backgroundImgSrc) {
+          backgroundImg.style.display = "block";
+        } else {
+          backgroundImg.style.display = "none";
+        }
+      });
     }
 
     const clickedImage = event.target;
@@ -120,3 +129,4 @@ container.addEventListener("click", (event) => {
     }, 100);
   }
 });
+

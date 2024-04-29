@@ -36,9 +36,6 @@ document.querySelectorAll('.image img').forEach(img => {
 
 
 
-
-
-
 const API_KEY = '1e31db4e8ad797fd878b7b6dd3106430';
 const california = {lat: '34.0522', lon: '-118.2437'};
 const southkorea = {lat: '37.5519', lon: '126.9918'};
