@@ -222,6 +222,11 @@ body {
   top: 380px;
   left: 730px;
 }
+.image img:nth-child(14) {
+  position: absolute;
+  top: 550px;
+  left: 470px;
+}
 .image img:hover {
   transform: scale(1.07);
 }
@@ -263,7 +268,7 @@ body {
   line-height: 0.5;
   position: fixed;
   top: 50%;
-  left: 30%;
+  left: 15%;
   transform: translate(-50%, -50%);
   border: 2px solid #afafaf;
   border-color: #afafaf;
@@ -361,8 +366,8 @@ body {
   height: 200px;
   line-height: 0.5;
   position: fixed;
-  top: 20%;
-  left: 70%;
+  top: 50%;
+  left: 60%;
   transform: translate(-50%, -50%);
   border: 2px solid #afafaf;
   border-color: #afafaf;
@@ -427,7 +432,7 @@ body {
   line-height: 0.5;
   position: fixed;
   top: 20%;
-  left: 15%;
+  left: 20%;
   transform: translate(-50%, -50%);
   border: 2px solid #afafaf;
   border-color: #afafaf;
@@ -460,7 +465,7 @@ body {
   line-height: 0.5;
   position: fixed;
   top: 75%;
-  left: 60%;
+  left: 90%;
   transform: translate(-50%, -50%);
   border: 2px solid #afafaf;
   border-color: #afafaf;
@@ -492,8 +497,8 @@ body {
   height: 180px;
   line-height: 0.5;
   position: fixed;
-  top: 70%;
-  left: 80%;
+  top: 40%;
+  right: 1%;
   transform: translate(-50%, -50%);
   border: 2px solid #afafaf;
   border-color: #afafaf;
@@ -662,6 +667,37 @@ body {
   z-index: 999;
 }
 .spain-info::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: -2px;
+  width: 100%;
+  height: 18px;
+  border: 2px solid #afafaf;
+  border-color: #afafaf;
+  background-color: #0b00aa; 
+}
+.brazil-info {
+  font-family: 'Pixelify Sans', sans-serif;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  display: inline-block;
+  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  width: 300px;
+  height: 200px;
+  line-height: 0.5;
+  position: fixed;
+  top: 75%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #afafaf;
+  border-color: #afafaf;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+.brazil-info::before {
   content: '';
   display: block;
   position: absolute;

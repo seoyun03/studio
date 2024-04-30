@@ -50,7 +50,7 @@ const russia = {lat: '55.7558', lon: '37.6176'};
 const germany = {lat: '51.1657', lon: '10.4515'};
 const mexico = {lat: '19.4326', lon: '-99.1332'};
 const spain = {lat: '41.3851', lon: '2.1734'};
-
+const brazil = {lat: '-14.2350', lon: '-51.9253'};
 
 
 const getLocationData = (location) => {
@@ -146,6 +146,10 @@ document.querySelector('.image img:nth-child(13)').addEventListener('click', fun
   event.stopPropagation();
   toggleWeatherInfo(spain, 'spain');
 });
+document.querySelector('.image img:nth-child(14)').addEventListener('click', function(event) {
+  event.stopPropagation();
+  toggleWeatherInfo(brazil, 'brazil');
+});
 
 
 
@@ -194,14 +198,14 @@ function startFallingAnimation(country) {
       "../api/assets/ice2.png",
       "../api/assets/ice3.png",
       "../api/assets/ice4.png",
-      "../api/assets/ice5.png",
+      "../api/assets/ice5.png"
     ],
     "russia": [
       "../api/assets/ice1.png",
       "../api/assets/ice2.png",
       "../api/assets/ice3.png",
       "../api/assets/ice4.png",
-      "../api/assets/ice5.png",
+      "../api/assets/ice5.png"
     ],
     "germany": [
       "../api/assets/soup1.png",
@@ -224,6 +228,11 @@ function startFallingAnimation(country) {
       "../api/assets/soup3.png"
     ],
     "spain": [
+      "../api/assets/meatball2.png",
+      "../api/assets/meatball3.png",
+      "../api/assets/pasta1.png"
+    ],
+    "brazil": [
       "../api/assets/soup1.png",
       "../api/assets/soup2.png",
       "../api/assets/soup3.png"
@@ -297,6 +306,9 @@ document.getElementById('australia').addEventListener('click', () => {
 });
 document.getElementById('spain').addEventListener('click', () => {
   startFallingAnimation("spain");
+});
+document.getElementById('brazil').addEventListener('click', () => {
+  startFallingAnimation("brazil");
 });
 
 
