@@ -23,6 +23,18 @@ function toggleBox() {
   }
 }
 
+var isPlaying = false; // 음악이 현재 재생 중인지 여부를 저장하는 변수
+
+function toggleMusic() {
+    var audio = document.getElementById('bg-music');
+    if (isPlaying) {
+        audio.pause(); // 음악을 멈춤
+    } else {
+        audio.play(); // 음악을 재생
+    }
+    isPlaying = !isPlaying; // 재생 상태를 토글
+}
+
 const cursor = document.querySelector('.cursor');
 document.addEventListener('mousemove', (e) => {
   cursor.style.left = e.pageX - cursor.offsetWidth / 2 + 'px'; // Set the cursor's left position
@@ -74,6 +86,22 @@ const images = [
   "../food/assets/meatball.png",
   "../food/assets/icecream.png",
   "../food/assets/soup.png",
+  "../assets/egg1.png",
+  "../assets/egg2.png",
+  "../assets/egg3.png",
+  "../assets/egg4.png",
+  "../assets/ice1.png",
+  "../assets/ice2.png",
+  "../assets/ice3.png",
+  "../assets/ice4.png",
+  "../assets/ice5.png",
+  "../assets/ice6.png",
+  "../assets/meatball2.png",
+  "../assets/meatball3.png",
+  "../assets/pasta1.png",
+  "../assets/soup1.png",
+  "../assets/soup2.png",
+  "../assets/soup3.png",
 ];
 
 // Start the falling animation with the provided images
@@ -96,9 +124,25 @@ container.addEventListener("click", (event) => {
 });
 const backgroundImages = {
   "../food/assets/sunnysideup.png": "../food/assets/sunny.jpg",
+  "../assets/egg1.png": "../food/assets/sunny.jpg",
+  "../assets/egg2.png": "../food/assets/sunny.jpg",
+  "../assets/egg3.png": "../food/assets/sunny.jpg",
+  "../assets/egg4.png": "../food/assets/sunny.jpg",
   "../food/assets/meatball.png": "../food/assets/rainy.jpg",
+  "../assets/meatball2.png": "../food/assets/rainy.jpg",
+  "../assets/meatball3.png": "../food/assets/rainy.jpg",
+  "../assets/pasta1.png": "../food/assets/rainy.jpg",
   "../food/assets/icecream.png": "../food/assets/snowy.jpg",
-  "../food/assets/soup.png": "../food/assets/cloudy.jpg"
+  "../assets/ice1.png": "../food/assets/snowy.jpg",
+  "../assets/ice2.png": "../food/assets/snowy.jpg",
+  "../assets/ice3.png": "../food/assets/snowy.jpg",
+  "../assets/ice4.png": "../food/assets/snowy.jpg",
+  "../assets/ice5.png": "../food/assets/snowy.jpg",
+  "../assets/ice6.png": "../food/assets/snowy.jpg",
+  "../food/assets/soup.png": "../food/assets/cloudy.jpg",
+  "../assets/soup1.png": "../food/assets/cloudy.jpg",
+  "../assets/soup2.png": "../food/assets/cloudy.jpg",
+  "../assets/soup3.png": "../food/assets/cloudy.jpg"
 };
 
 container.addEventListener("click", (event) => {

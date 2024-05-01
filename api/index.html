@@ -4,7 +4,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&amp;display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <title>jsondata</title>
 
     <link rel="stylesheet" type="text/css" href="./main.css" />
@@ -53,6 +54,10 @@
       </div>
     </div>
     
+    <div class=" mobile-only">
+      <!-- 내용 -->
+    </div>
+    
     
     <div class="image">
       <img id="california" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('california')">
@@ -78,7 +83,7 @@
 
 
     
-  <div class="weather-info">
+ <div class="weather-info">
       <div class="california-info" style="display: none;">
       <span class="close-btn" onclick="closePopup()"></span>
       <h2>CALIFORNIA</h2>

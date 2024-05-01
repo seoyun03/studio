@@ -3,6 +3,31 @@ body {
   display: flex;
 }
 
+.button-container {
+  position: relative;
+  z-index: 9999;
+}
+
+button {
+  position: absolute;
+  top: 5px; /* 버튼을 위로 올릴 거리 */
+  left: 30px; /* 버튼을 왼쪽으로 이동할 거리 */
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  z-index: 9999;
+}
+
+button img {
+  width: 20px;
+  height: auto;
+  cursor: pointer;
+
+}
+
+
+
+
 .back {
   width: 100vw;
   height: 100vh;
