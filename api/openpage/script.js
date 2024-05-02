@@ -30,4 +30,8 @@ function toggleBox() {
     document.querySelector(".openpage-container").style.display = "block";
   }, 9500); // 9500 milliseconds = 9.5 seconds
 
-  
+  function openImage() {
+    var aboutImage = document.getElementById('about');
+    var caption = aboutImage.querySelector('.caption');
+    caption.innerHTML = '<img src="../openpage/assets/note.png">';
+  }

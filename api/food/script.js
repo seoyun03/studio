@@ -35,11 +35,25 @@ function toggleMusic() {
     isPlaying = !isPlaying; // 재생 상태를 토글
 }
 
-const cursor = document.querySelector('.cursor');
-document.addEventListener('mousemove', (e) => {
-  cursor.style.left = e.pageX - cursor.offsetWidth / 2 + 'px'; // Set the cursor's left position
-  cursor.style.top = e.pageY - cursor.offsetHeight / 2 + 'px'; // Set the cursor's top position
+// "ok" 이미지를 클릭하면 실행될 함수
+document.querySelector('.ok img').addEventListener('click', function() {
+  // "alarm" 요소 숨기기
+  document.querySelector('.alarm').style.display = 'none';
+  // "ok" 요소 숨기기
+  document.querySelector('.ok').style.display = 'none';
 });
+
+
+const cursor = document.querySelector('.cursor');
+const image = document.querySelector('.cursor img');
+
+document.addEventListener('mousemove', (e) => {
+  // Set the cursor's left position so that the image's center aligns with the cursor's x position
+  cursor.style.left = e.pageX - image.width / 15 + 'px'; 
+  // Set the cursor's top position so that the image's center aligns with the cursor's y position
+  cursor.style.top = e.pageY - image.height / 15 + 'px'; 
+});
+
 
 const pan = document.querySelector(".image img");
 const container = document.querySelector(".falling-images-container");

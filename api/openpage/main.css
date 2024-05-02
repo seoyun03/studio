@@ -9,9 +9,9 @@ body {
 
 #clock {
   font-family: 'Pixelify Sans', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   position: absolute;
-  top: 3px; 
+  top: 4px; 
   right: 20px; 
   color: #000000;
 }
@@ -24,31 +24,31 @@ body {
   cursor: pointer;
 }
 
-.image-item {
+.image-box {
   text-align: center;
   margin-right: 10px;
 }
 
-.image-item img {
-  width: 120px;
-  height: 120px;
+.image-box img {
+  width: 140px;
+  height: 140px;
   margin-bottom: 20px;
   cursor: pointer;
   transition: transform 0.3s ease; /* 확대 효과를 0.3초 동안 부드럽게 적용 */
 }
 
-.image-item img:hover {
+.image-box img:hover {
   transform: scale(1.3); /* 이미지를 1.1배 확대합니다. */
 }
 
-
-.image-item p {
+.image-box .caption {
   margin-top: -35px; /* 이미지와 텍스트 사이의 간격을 줄입니다. */
   font-family: 'Pixelify Sans', sans-serif;
   font-size: 14px;
   color: white;
   cursor: pointer;
 }
+
 
 
 .background {
@@ -75,78 +75,251 @@ body {
   position: absolute;
   top: -10px; 
   width: 100%;
-  height: 30px;
+  height: 40px;
   background-color: #afafaf; 
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
+.text {
+  margin-top: 50px; /* 원하는 만큼 아래로 내리세요 */
+  margin-left: 30px;
+}
 
-.first {
+
+p {
   font-family: 'Pixelify Sans', sans-serif;
-  color: white;
-  font-size: 20px;
+  font-size: 30px;
+
+  margin-top: 20px; /* 간격을 줄입니다. */
+  white-space: nowrap;
   overflow: hidden;
-  border-right: .15em solid rgb(255, 255, 255);
-  white-space: nowrap; 
-  margin: 0; 
-  margin-top: 50px;
-  margin-left: 20px;
-  letter-spacing: .10em; 
-  animation: typing 7s steps(30, end), blink-caret .5s step-end infinite; 
-  text-align: left;
+  opacity: 0;
+  color: rgb(255, 255, 255);
 }
 
-/* 타이핑 효과 애니메이션 키프레임 설정 */
-@keyframes typing {
-  from {
-    width: 0;
+
+
+#one{
+   animation: type 1.8s steps(40, end) forwards;
+}
+
+p:nth-child(2) {
+  animation: type2 1.8s steps(40, end) forwards;
+  animation-delay: 2s;
+}
+p:nth-child(3) {
+  animation: type3 1.8s steps(40, end) forwards;
+  animation-delay: 4.3s;
+}
+
+
+@keyframes type {
+  0% {
+    opacity: 1;
+    width: 0px;
+    border-right: .2em solid #ffffff;
   }
-  to {
-    width: 100%;
+
+  99% {
+    border-right: .2em solid #ffffff;
+  }
+
+  100% {
+    width: 30em;
+    border: 0;
+    opacity: 1;
+  }
+}
+@keyframes type2 {
+  0% {
+    opacity: 1;
+    width: 0px;
+    border-right: .2em solid #ffffff;
+  }
+
+  99% {
+    border-right: .2em solid #ffffff;
+  }
+
+  100% {
+    width: 17em;
+    border: 0;
+    opacity: 1;
+  }
+}
+  @keyframes type3 {
+  0% {
+    opacity: 1;
+    width: 0px;
+    border-right: .2em solid #ffffff;
+  }
+
+  99% {
+    border-right: .2em solid #ffffff;
+  }
+
+  100% {
+    width: 30em;
+    border: 0;
+    opacity: 1;
   }
 }
 
-/* 깜빡이는 커서 효과 애니메이션 키프레임 설정 */
-@keyframes blink-caret {
-  from, to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: rgb(255, 255, 255);
-  }
-  51% {
-    border-color: white; /* 커서가 깜빡이는 동안 텍스트 색상과 같도록 지정 */
-  }
-}
 
 
 
 @media screen and (max-width: 499px) {
+  .text {
+    margin-top: 40px; /* 원하는 만큼 아래로 내리세요 */
+    margin-left: 8px;
+  }
+  
+  
+  p {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    margin-top: 10px; /* 간격을 줄입니다. */
+    white-space: nowrap;
+    overflow: hidden;
+    opacity: 0;
+    color: rgb(255, 255, 255);
+  }
+  
+  
+  
+  #one{
+     animation: type 1.8s steps(40, end) forwards;
+  }
+  
+  p:nth-child(2) {
+    animation: type2 1.8s steps(40, end) forwards;
+    animation-delay: 2s;
+  }
+  p:nth-child(3) {
+    animation: type3 1.8s steps(40, end) forwards;
+    animation-delay: 4.3s;
+  }
+  
+  
+  @keyframes type {
+    0% {
+      opacity: 1;
+      width: 0px;
+      border-right: .2em solid #ffffff;
+    }
+  
+    99% {
+      border-right: .2em solid #ffffff;
+    }
+  
+    100% {
+      width: 30em;
+      border: 0;
+      opacity: 1;
+    }
+  }
+  @keyframes type2 {
+    0% {
+      opacity: 1;
+      width: 0px;
+      border-right: .2em solid #ffffff;
+    }
+  
+    99% {
+      border-right: .2em solid #ffffff;
+    }
+  
+    100% {
+      width: 17em;
+      border: 0;
+      opacity: 1;
+    }
+  }
+    @keyframes type3 {
+    0% {
+      opacity: 1;
+      width: 0px;
+      border-right: .2em solid #ffffff;
+    }
+  
+    99% {
+      border-right: .2em solid #ffffff;
+    }
+  
+    100% {
+      width: 28em;
+      border: 0;
+      opacity: 1;
+    }
+  }
 
-
-    .filter {
-      position: fixed;
-      top: 10%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      text-align: center;
-      z-index: 2;
-      }
-      
-      .filter a {
-      display: inline-block;
-      font-family: "elza", sans-serif;
-      font-size: 9px;
-      padding: 3px 10px;
-      margin: 0 10px;
-      background-color: rgba(1, 255, 18, 0); 
-      color: #f74c25;
-      text-decoration: none;
-      border-radius: 50px;
-      border: 1px solid #f74c25; 
-      }
-      
-
+  .image {
+    position: absolute;
+    bottom: 50px; /* 요소를 아래로 10px 이동시킵니다. */
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .image-box {
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .image-box img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* 확대 효과를 0.3초 동안 부드럽게 적용 */
+  }
+  
+  .image-box img:hover {
+    transform: scale(1.3); /* 이미지를 1.1배 확대합니다. */
+  }
+  
+  .image-box .caption {
+    margin-top: -35px; /* 이미지와 텍스트 사이의 간격을 줄입니다. */
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+  }
+  #clock {
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 25px;
+    position: absolute;
+    top: 4px; 
+    right: 20px; 
+    color: #000000;
+  }
     
+  .background {
+    width: 100vw; 
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; 
+    top: 10;
+    left: 0;
+    z-index: -99;
+  }
+
+  .background img {
+    width: 120vw; 
+    height: 120vh;
+    object-fit: contain;
+  }
+
+  .background::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px; 
+    width: 100%;
+    height: 40px;
+    background-color: #afafaf; 
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
 }
 
