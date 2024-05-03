@@ -35,6 +35,10 @@ document.querySelectorAll('.image img').forEach(img => {
 });
 
 
+function closePopup(btn) {
+  var parentInfo = btn.parentElement;
+  parentInfo.style.display = 'none';
+}
 
 
 

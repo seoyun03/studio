@@ -18,7 +18,7 @@
     <div class="background">
       <img src="../api/assets/map.png">
     </div>
-
+    <div class="bar"></div>
     <audio id="clickSound">
       <source src="../api/assets/click.mov" type="audio/mpeg">
     </audio>
@@ -54,11 +54,7 @@
       </div>
     </div>
     
-    <div class=" mobile-only">
-      <!-- 내용 -->
-    </div>
-    
-    
+
     <div class="image">
       <img id="california" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('california')">
       <img id="southkorea" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('southkorea')">
@@ -85,99 +81,87 @@
     
  <div class="weather-info">
       <div class="california-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
+        <span class="close-btn california-close-btn" onclick="closePopup(this)"></span>
       <h2>CALIFORNIA</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="southkorea-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
+      <span class="close-btn southkorea-close-btn" onclick="closePopup(this)"></span>
       <h2>SOUTH KOREA</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="unitedstates-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>UNITED STATES</h2>
+      <span class="close-btn unitedstates-close-btn" onclick="closePopup(this)"></span>      <h2>UNITED STATES</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="china-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>CHINA</h2>
+      <span class="close-btn china-close-btn" onclick="closePopup(this)"></span>      <h2>CHINA</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="unitedkingdom-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>UNITED KINGDOM</h2>
+      <span class="close-btn unitedkingdom-close-btn" onclick="closePopup(this)"></span>      <h2>UNITED KINGDOM</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="canada-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>CANADA</h2>
+      <span class="close-btn canada-close-btn" onclick="closePopup(this)"></span>      <h2>CANADA</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="australia-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>AUSTRALIA</h2>
+      <span class="close-btn australia-close-btn" onclick="closePopup(this)"></span>      <h2>AUSTRALIA</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="japan-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>JAPAN</h2>
+      <span class="close-btn japan-close-btn" onclick="closePopup(this)"></span>      <h2>JAPAN</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="france-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>FRANCE</h2>
+      <span class="close-btn france-close-btn" onclick="closePopup(this)"></span>      <h2>FRANCE</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="russia-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>RUSSIA</h2>
+      <span class="close-btn russia-close-btn" onclick="closePopup(this)"></span>      <h2>RUSSIA</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="germany-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>GERMANY</h2>
+      <span class="close-btn germany-close-btn" onclick="closePopup(this)"></span>      <h2>GERMANY</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="mexico-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>MEXICO</h2>
+      <span class="close-btn mexico-close-btn" onclick="closePopup(this)"></span>      <h2>MEXICO</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="spain-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>SPAIN</h2>
+      <span class="close-btn spain-close-btn" onclick="closePopup(this)"></span>      <h2>SPAIN</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
     </div>
     <div class="brazil-info" style="display: none;">
-      <span class="close-btn" onclick="closePopup()"></span>
-      <h2>BRAZIL</h2>
+      <span class="close-btn brazil-close-btn" onclick="closePopup(this)"></span>      <h2>BRAZIL</h2>
       <p>TEMP: <span class="temperature"></span>℃</p>
       <p>RH: <span class="humidity"></span>%</p>
       <p>WEP: <span class="weather"></span></p>
