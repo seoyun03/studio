@@ -313,50 +313,32 @@ document.getElementById('brazil').addEventListener('click', () => {
   startFallingAnimation("brazil");
 });
 
-let initialTouches = null;
-let initialScale = 1;
-let currentScale = 1;
-let initialX = null;
-let initialY = null;
-let offsetX = 0;
-let offsetY = 0;
+let isDragging = false;
+let startX = 0;
+let startY = 0;
+let translateX = 0;
+let translateY = 0;
 
 const mapImg = document.querySelector('.background img');
 
 mapImg.addEventListener('touchstart', function(event) {
-  if (event.touches.length === 1) {
-    initialTouches = event.touches;
-    initialX = event.touches[0].clientX - offsetX;
-    initialY = event.touches[0].clientY - offsetY;
-  } else if (event.touches.length === 2) {
-    initialTouches = event.touches;
-    initialScale = currentScale;
-  }
+  isDragging = true;
+  startX = event.touches[0].clientX;
+  startY = event.touches[0].clientY;
 });
 
 mapImg.addEventListener('touchmove', function(event) {
-  if (initialTouches) {
-    if (event.touches.length === 1) {
-      const dx = event.touches[0].clientX - initialX;
-      const dy = event.touches[0].clientY - initialY;
-      offsetX = event.touches[0].clientX - dx;
-      offsetY = event.touches[0].clientY - dy;
-      mapImg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${currentScale})`;
-    } else if (event.touches.length === 2) {
-      const currentDistance = Math.hypot(
-        event.touches[0].clientX - event.touches[1].clientX,
-        event.touches[0].clientY - event.touches[1].clientY
-      );
-      const initialDistance = Math.hypot(
-        initialTouches[0].clientX - initialTouches[1].clientX,
-        initialTouches[0].clientY - initialTouches[1].clientY
-      );
-      currentScale = initialScale * (currentDistance / initialDistance);
-      mapImg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${currentScale})`;
-    }
+  if (isDragging) {
+    const deltaX = event.touches[0].clientX - startX;
+    const deltaY = event.touches[0].clientY - startY;
+    translateX += deltaX;
+    translateY += deltaY;
+    mapImg.style.transform = `translate(${translateX}px, ${translateY}px)`;
+    startX = event.touches[0].clientX;
+    startY = event.touches[0].clientY;
   }
 });
 
-mapImg.addEventListener('touchend', function(event) {
-  initialTouches = null;
+mapImg.addEventListener('touchend', function() {
+  isDragging = false;
 });
