@@ -318,6 +318,12 @@ let startX = 0;
 let startY = 0;
 let translateX = 0;
 let translateY = 0;
+let lastMoveTime = 0;
+let lastMoveX = 0;
+let lastMoveY = 0;
+let velocityX = 0;
+let velocityY = 0;
+let requestId = null;
 
 const mapImg = document.querySelector('.background img');
 
@@ -325,14 +331,26 @@ mapImg.addEventListener('touchstart', function(event) {
   isDragging = true;
   startX = event.touches[0].clientX;
   startY = event.touches[0].clientY;
+  lastMoveTime = performance.now();
+  cancelAnimationFrame(requestId);
 });
 
 mapImg.addEventListener('touchmove', function(event) {
   if (isDragging) {
+    const currentTime = performance.now();
+    const deltaTime = currentTime - lastMoveTime;
+    lastMoveTime = currentTime;
     const deltaX = event.touches[0].clientX - startX;
     const deltaY = event.touches[0].clientY - startY;
     translateX += deltaX;
     translateY += deltaY;
+    const currentMoveX = event.touches[0].clientX - lastMoveX;
+    const currentMoveY = event.touches[0].clientY - lastMoveY;
+    lastMoveX = event.touches[0].clientX;
+    lastMoveY = event.touches[0].clientY;
+    const smoothFactor = 0.9; // 부드러운 이동을 위한 상수
+    velocityX = smoothFactor * (currentMoveX / deltaTime) + (1 - smoothFactor) * velocityX;
+    velocityY = smoothFactor * (currentMoveY / deltaTime) + (1 - smoothFactor) * velocityY;
     mapImg.style.transform = `translate(${translateX}px, ${translateY}px)`;
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
@@ -341,4 +359,18 @@ mapImg.addEventListener('touchmove', function(event) {
 
 mapImg.addEventListener('touchend', function() {
   isDragging = false;
+  if (Math.abs(velocityX) > 0.1 || Math.abs(velocityY) > 0.1) {
+    animateMap();
+  }
 });
+
+function animateMap() {
+  translateX += velocityX * 30;
+  translateY += velocityY * 30;
+  velocityX *= 0.95;
+  velocityY *= 0.95;
+  mapImg.style.transform = `translate(${translateX}px, ${translateY}px)`;
+  if (Math.abs(velocityX) > 0.1 || Math.abs(velocityY) > 0.1) {
+    requestId = requestAnimationFrame(animateMap);
+  }
+}
