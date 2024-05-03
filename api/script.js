@@ -313,43 +313,50 @@ document.getElementById('brazil').addEventListener('click', () => {
   startFallingAnimation("brazil");
 });
 
-
-let initialTouch = null;
+let initialTouches = null;
 let initialScale = 1;
 let currentScale = 1;
+let initialX = null;
+let initialY = null;
+let offsetX = 0;
+let offsetY = 0;
 
-document.querySelector('.background img').addEventListener('touchstart', function(event) {
-  if (event.touches.length === 2) {
-    // 두 개의 손가락으로 터치하면 초기 터치 정보 저장
-    initialTouch = event.touches;
+const mapImg = document.querySelector('.background img');
+
+mapImg.addEventListener('touchstart', function(event) {
+  if (event.touches.length === 1) {
+    initialTouches = event.touches;
+    initialX = event.touches[0].clientX - offsetX;
+    initialY = event.touches[0].clientY - offsetY;
+  } else if (event.touches.length === 2) {
+    initialTouches = event.touches;
     initialScale = currentScale;
-  } else {
-    // 그 외의 경우 초기 터치 정보 null로 설정
-    initialTouch = null;
   }
 });
 
-document.querySelector('.background img').addEventListener('touchmove', function(event) {
-  if (initialTouch && event.touches.length === 2) {
-    // 두 개의 손가락으로 터치한 경우
-    const currentTouch = event.touches;
-    const dx = currentTouch[0].clientX - initialTouch[0].clientX;
-    const dy = currentTouch[0].clientY - initialTouch[0].clientY;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-
-    const initialDistance = Math.sqrt(
-      (initialTouch[0].clientX - initialTouch[1].clientX) ** 2 +
-      (initialTouch[0].clientY - initialTouch[1].clientY) ** 2
-    );
-
-    currentScale = initialScale * (distance / initialDistance);
-    document.querySelector('.background img').style.transform = `scale(${currentScale})`;
+mapImg.addEventListener('touchmove', function(event) {
+  if (initialTouches) {
+    if (event.touches.length === 1) {
+      const dx = event.touches[0].clientX - initialX;
+      const dy = event.touches[0].clientY - initialY;
+      offsetX = event.touches[0].clientX - dx;
+      offsetY = event.touches[0].clientY - dy;
+      mapImg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${currentScale})`;
+    } else if (event.touches.length === 2) {
+      const currentDistance = Math.hypot(
+        event.touches[0].clientX - event.touches[1].clientX,
+        event.touches[0].clientY - event.touches[1].clientY
+      );
+      const initialDistance = Math.hypot(
+        initialTouches[0].clientX - initialTouches[1].clientX,
+        initialTouches[0].clientY - initialTouches[1].clientY
+      );
+      currentScale = initialScale * (currentDistance / initialDistance);
+      mapImg.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${currentScale})`;
+    }
   }
 });
 
-document.querySelector('.background img').addEventListener('touchend', function(event) {
-  // 터치 종료 시 초기 터치 정보 초기화
-  initialTouch = null;
+mapImg.addEventListener('touchend', function(event) {
+  initialTouches = null;
 });
-
-
