@@ -184,19 +184,9 @@ container.addEventListener("click", (event) => {
   }
 });
 
-// Function to hide all alarms
-function hideAllAlarms() {
-  const alarms = document.querySelectorAll('.alarm');
-  alarms.forEach((alarm) => {
-      alarm.style.display = "none";
+document.querySelector('.ok').addEventListener('click', function() {
+  var alarmElements = document.querySelectorAll('.alarm');
+  alarmElements.forEach(function(element) {
+      element.style.display = 'none';
   });
-}
-
-// Function to handle OK button click event
-function handleOkButtonClick() {
-  hideAllAlarms(); // Hide all alarms
-}
-
-// Example of how to add event listener to the OK button
-const okButton = document.getElementById('okButton'); // Replace 'okButton' with the actual ID of your OK button
-okButton.addEventListener('click', handleOkButtonClick);
+});
