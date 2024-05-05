@@ -24,13 +24,7 @@
         Score: <span id="score">0</span>
     </div>
     <div class="bar"></div>
-    <!-- 배경화면 선택 -->
-    <div class="back">
-        <img src="../game/assets/sunny.jpg" class="background-image sunny">
-        <img src="../game/assets/rainy.jpg" class="background-image rainy">
-        <img src="../game/assets/snowy.jpg" class="background-image snowy">
-        <img src="../game/assets/cloudy.jpg" class="background-image cloudy">
-    </div>
+
 
     <!-- 커서 이미지 -->
     <div class="cursor">
@@ -43,14 +37,27 @@
             <img src="../assets/arrow1.png">
         </a>
     </div>
-
-    <!-- 알람 이미지 -->
-    <div class="alarm">
-        <img src="../game/assets/alarm.png" class="alarm-img sunny">
-        <img src="../game/assets/alarm_rain.png" class="alarm-img rainy">
-        <img src="../game/assets/alarm_cloud.png" class="alarm-img cloudy">
-        <img src="../game/assets/alarm_snow.png" class="alarm-img snowy">
+    <!-- 배경화면 선택 -->
+    <div class="back">
+        <img src="../game/assets/sunny.jpg" class="background-image sunny" onclick="updateAlarm('sunny')">
+        <img src="../game/assets/rainy.jpg" class="background-image rainy" onclick="updateAlarm('rainy')">
+        <img src="../game/assets/snowy.jpg" class="background-image snowy" onclick="updateAlarm('snowy')">
+        <img src="../game/assets/cloudy.jpg" class="background-image cloudy" onclick="updateAlarm('cloudy')">
     </div>
+    <div class="alarm sunny">
+        <img src="../game/assets/alarm.png">
+    </div>
+    <div class="alarm rainy">
+        <img src="../game/assets/alarm_rain.png">
+    </div>
+    <div class="alarm snowy">
+        <img src="../game/assets/alarm_snow.png">
+    </div>
+    <div class="alarm cloudy">
+        <img src="../game/assets/alarm_cloud.png">
+    </div>
+      
+  
 
     <!-- 확인 버튼 -->
     <div class="ok">

@@ -35,12 +35,13 @@ function toggleMusic() {
   isPlaying = !isPlaying; // 재생 상태를 토글
 }
 
+// "ok" 이미지를 클릭하면 실행될 함수
 document.querySelector('.ok img').addEventListener('click', function() {
+  // "alarm" 요소 숨기기
   document.querySelector('.alarm').style.display = 'none';
+  // "ok" 요소 숨기기
   document.querySelector('.ok').style.display = 'none';
 });
-
-
 
 const cursor = document.querySelector('.cursor');
 const image = document.querySelector('.cursor img');
@@ -53,78 +54,47 @@ document.addEventListener('mousemove', (e) => {
 });
 
 
-const pan = document.querySelector(".image img");
-const audio = new Audio("../game/assets/click.mov"); 
 
-let currentBackgroundIndex = 0; 
-let score = 0; 
+
+const pan = document.querySelector(".image img");
+const audio = new Audio("../game/assets/click.mov"); // Path to your sound file
+
+let currentBackgroundIndex = 0; // Index to keep track of current background
+let score = 0; // Initialize score
 const scoreDisplay = document.getElementById("score");
 
 const container = document.querySelector(".falling-images-container");
-const maxFallingImages = 50; 
-
-
+const maxFallingImages = 50; // Maximum number of falling images
 let fallingAnimationInterval;
 
-
-
 function startFallingAnimation(images) {
-  if (!images || images.length === 0) {
-      return;
-  }
+    if (!images || images.length === 0) {
+        return;
+    }
 
-  let fallingImagesCount = 0; // Initialize the count of falling images
+    let fallingImagesCount = 0; // Initialize the count of falling images
 
-  fallingAnimationInterval = setInterval(() => {
-      if (fallingImagesCount >= maxFallingImages) {
-          return; // Stop creating new images if the maximum count is reached
-      }
+    fallingAnimationInterval = setInterval(() => {
+        if (fallingImagesCount >= maxFallingImages) {
+            return; // Stop creating new images if the maximum count is reached
+        }
 
-      const image = document.createElement("img");
-      const randomIndex = Math.floor(Math.random() * images.length);
-      image.src = images[randomIndex].src; // Get source directly from images array
-      
-      // Set dataset for target using the index of the image in the array
-      image.dataset.target = randomIndex; 
-      
-      image.classList.add("falling-image");
-      image.style.left = `${Math.random() * 90 + 1}vw`;
-      container.appendChild(image);
+        const image = document.createElement("img");
+        const randomIndex = Math.floor(Math.random() * images.length);
+        image.src = images[randomIndex].src; // Get source directly from images array
+        image.dataset.target = images[randomIndex].target; // Set dataset for target
+        image.classList.add("falling-image");
+        image.style.left = `${Math.random() * 90 + 1}vw`;
+        container.appendChild(image);
 
-      fallingImagesCount++; // Increment the count of falling images
+        fallingImagesCount++; // Increment the count of falling images
 
-      setTimeout(() => {
-          container.removeChild(image);
-          fallingImagesCount--;
-      }, 3000);
-  }, 300);
+        setTimeout(() => {
+            container.removeChild(image);
+            fallingImagesCount--;
+        }, 4000);
+    }, 400);
 }
-
-
-container.addEventListener("click", (event) => {
-  // Check if the clicked element is an image inside the container
-  if (event.target.tagName.toLowerCase() === "img" && event.target.classList.contains("falling-image")) {
-      const clickedImage = event.target;
-      const clickedImageTarget = parseInt(clickedImage.dataset.target); // Get the target class of the clicked image
-
-      // Increase score if the clicked image's target matches the current background index
-      if (clickedImageTarget === currentBackgroundIndex) {
-          score++; // Increase score
-      } else {
-          score = Math.max(score - 1, 0); // Decrease score but keep it >= 0
-      }
-
-      scoreDisplay.textContent = score; // Update score display
-
-      clickedImage.classList.toggle("clicked");
-      audio.play();
-
-      setTimeout(() => {
-          container.removeChild(clickedImage);
-      }, 100);
-  }
-});
-
 
 
 // Example usage
@@ -156,86 +126,77 @@ startFallingAnimation(images);
 
 
 
-
-
-// Function to set a random background and corresponding icons
 function setRandomBackground() {
-    const backgrounds = document.querySelectorAll('.back img');
-    const icons = document.querySelectorAll('.falling-images-container img');
-    
-    // Hide all backgrounds and icons
-    backgrounds.forEach((img) => {
-        img.style.display = "none";
-    });
-    icons.forEach((icon) => {
-        icon.style.display = "none";
-    });
-
-    // Get a random index for the background
-    currentBackgroundIndex = Math.floor(Math.random() * backgrounds.length);
-    backgrounds[currentBackgroundIndex].style.display = "block";
-    
-    // Show icons corresponding to the current background
-    const currentIconClass = backgrounds[currentBackgroundIndex].classList[1]; // Get class of current background
-    icons.forEach((icon) => {
-        if (icon.classList.contains(currentIconClass)) {
-            icon.style.display = "block";
-        }
-    });
-}
-
-
-// Start the falling animation and set random background on page load
-window.onload = function() {
-  startFallingAnimation(images);
-  setRandomBackground();
-};
-
-// Set random background every time the page is refreshed
-window.onbeforeunload = setRandomBackground;
-
-
-
-
-// Background images mapping
-const backgroundImages = {
-  sunny: "../game/assets/sunny.jpg",
-  rainy: "../game/assets/rainy.jpg",
-  snowy: "../game/assets/snowy.jpg",
-  cloudy: "../game/assets/cloudy.jpg"
-};
-
-// Show initial background
-changeBackground();
-
-// Change background every time the page is loaded or refreshed
-window.onload = changeBackground;
-
-
-// Function to change background and show corresponding alarm image
-function changeBackground() {
   const backgrounds = document.querySelectorAll('.back img');
-  const alarmImages = document.querySelectorAll('.alarm-img');
+  const alarms = document.querySelectorAll('.alarm');
 
-  // Hide all backgrounds and alarm images
-  backgrounds.forEach((bg) => {
-      bg.style.display = "none";
-  });
-  alarmImages.forEach((img) => {
+  // Hide all backgrounds and alarms
+  backgrounds.forEach((img) => {
       img.style.display = "none";
+  });
+  alarms.forEach((alarm) => {
+      alarm.style.display = "none";
   });
 
   // Get a random index for the background
-  const randomIndex = Math.floor(Math.random() * backgrounds.length);
-  const currentBackground = backgrounds[randomIndex];
-  currentBackground.style.display = "block";
-
-  // Show alarm image corresponding to the current background
-  const currentBackgroundClass = currentBackground.classList[1]; // Get class of current background
-  alarmImages.forEach((img) => {
-      if (img.classList.contains(currentBackgroundClass)) {
-          img.style.display = "block";
+  currentBackgroundIndex = Math.floor(Math.random() * backgrounds.length);
+  backgrounds[currentBackgroundIndex].style.display = "block";
+  
+  // Show alarm corresponding to the current background
+  const currentBackgroundClass = backgrounds[currentBackgroundIndex].classList[1]; // Get class of current background
+  alarms.forEach((alarm) => {
+      if (alarm.classList.contains(currentBackgroundClass)) {
+          alarm.style.display = "block";
       }
   });
 }
 
+
+// Show initial background on page load
+window.onload = setRandomBackground;
+
+// Change background every time the page is refreshed
+window.onbeforeunload = setRandomBackground;
+
+// Start the falling animation with the provided images
+startFallingAnimation(images);
+
+// Add event listener to the container to handle clicks on falling images
+container.addEventListener("click", (event) => {
+  // Check if the clicked element is an image inside the container
+  if (event.target.tagName.toLowerCase() === "img" && event.target.classList.contains("falling-image")) {
+      const clickedImage = event.target;
+      const clickedImageSrc = clickedImage.getAttribute("src");
+      const clickedImageTarget = parseInt(clickedImage.dataset.target); // Convert to integer
+
+      // Check if clicked image target matches the current background
+      if (clickedImageTarget === currentBackgroundIndex) {
+          score++; // Increase score
+          scoreDisplay.textContent = score; // Update score display
+      }
+
+      clickedImage.classList.toggle("clicked");
+      audio.play();
+
+      setTimeout(() => {
+          container.removeChild(clickedImage);
+      }, 100);
+  }
+});
+
+// Function to hide all alarms
+function hideAllAlarms() {
+  const alarms = document.querySelectorAll('.alarm');
+  alarms.forEach((alarm) => {
+      alarm.style.display = "none";
+  });
+}
+
+// Function to handle OK button click event
+function handleOkButtonClick() {
+  hideAllAlarms(); // Hide all alarms
+}
+
+// Example of how to add event listener to the OK button
+const okButton = document.getElementById('okButton'); // Replace 'okButton' with the actual ID of your OK button
+okButton.addEventListener('click', handleOkButtonClick);

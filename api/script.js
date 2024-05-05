@@ -264,8 +264,8 @@ function startFallingAnimation(country) {
 
     setTimeout(() => {
       container.removeChild(image);
-    }, 4000); // Remove the image after 3 seconds
-  }, 400); // Generate a new image every 0.5 seconds
+    }, 1000);
+  }, 400); 
 }
 
 function stopFallingAnimation() {
