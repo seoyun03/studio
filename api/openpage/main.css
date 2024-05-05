@@ -24,6 +24,23 @@ body {
   object-fit: contain;
 }
 
+.background1 img {
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
 .wallpaper {
   width: 100vw; /* 화면 너비에 꽉 차도록 설정 */
   height: 100vh; /* 화면 높이에 꽉 차도록 설정 */
