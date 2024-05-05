@@ -16,42 +16,43 @@
 
 
   
-    <div id="clock"></div>
+ 
 
-    <div class="background">
+
+    <div class="background1">
+      <img src="../openpage/assets/title.png">
     </div>
-
+    <div class="wallpaper">
+      <img src="../openpage/assets/wallpaper.png">
+    </div>
     
     
-    <div class="image" onclick="openImage()">
-      <div class="image-box" id="about">
+    <div class="image">
+      <div class="image-box" id="about" onclick="toggleImage('note.png')">
         <img src="../openpage/assets/find.png">
         <div class="caption">ABOUT</div>
       </div>
+      
       <div class="image-box">
         <a href="../index.html">
           <img src="../openpage/assets/file.png">
           <div class="caption">WORLD MAP</div>
         </a>
       </div>
+    
       <div class="image-box">
-        <a href="../food/index.html">
+        <a href="../game/index.html">
           <img src="../openpage/assets/game.png">
-          <div class="caption">SKYSNACKS</div>
+          <div class="caption">cLiCk</div>
         </a>
       </div>
     </div>
     
-    
-    <div class="text" id="text1">
-      <p id="one">Hi! Welcome to a magical world where food rains from the sky.</p>
-      <p>This is a modern play on 'SkySnacks'.</p>
-      <p>Ready to enjoy the fun of weather and food together?</p>
+    <div id="overlay" onclick="toggleImage('')">
+      <img id="overlay-image" src="">
     </div>
     
 
-    
-    
     
   </body>
 </html>

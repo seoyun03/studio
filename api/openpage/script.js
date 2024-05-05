@@ -25,13 +25,17 @@ function toggleBox() {
   }
 }
 
-  setTimeout(function() {
-    document.querySelector(".gif-container").style.display = "none";
-    document.querySelector(".openpage-container").style.display = "block";
-  }, 9500); // 9500 milliseconds = 9.5 seconds
 
-  function openImage() {
-    var aboutImage = document.getElementById('about');
-    var caption = aboutImage.querySelector('.caption');
-    caption.innerHTML = '<img src="../openpage/assets/note.png">';
+ 
+function toggleImage(imageName) {
+  var overlay = document.getElementById("overlay");
+  var overlayImage = document.getElementById("overlay-image");
+  
+  if (imageName !== '') {
+    overlayImage.src = "../openpage/assets/" + imageName;
+    overlay.style.display = "block";
+  } else {
+    overlay.style.display = "none";
   }
+}
+

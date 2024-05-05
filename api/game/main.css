@@ -43,7 +43,7 @@ button img {
 
 .ok {
   position: absolute;
-  top: 56%;
+  top: 59%;
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
@@ -228,7 +228,7 @@ button img {
   
   .ok {
     position: absolute;
-    top: 56%;
+    top: 57%;
     left: 50%;
     transform: translate(-50%, -50%);
     cursor: pointer;
@@ -314,3 +314,15 @@ button img {
   }
 }
 
+.scoreboard {
+  position: fixed;
+  font-family: 'Pixelify Sans', sans-serif;
+  top: 50px;
+  left: 10px;
+  font-size: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.626);
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 2;
+}

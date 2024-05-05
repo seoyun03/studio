@@ -155,78 +155,78 @@ body {
   padding: 5px;
 }
 
-.image img:nth-child(1) {
+#california {
   position: absolute;
   top: 370px;
-  left: 260px;
+  left: 15vw;
 }
 
-.image img:nth-child(2) {
+#southkorea {
   position: absolute;
   top: 420px;
-  right: 310px;
+  right: 20vw;
 }
 
-.image img:nth-child(3) {
+#unitedstates {
   position: absolute;
   top: 350px;
-  left: 420px;
+  left: 25vw;
 }
 
-.image img:nth-child(4) {
+#china {
   position: absolute;
   top: 360px;
   right: 450px;
 }
 
-.image img:nth-child(5) {
+#unitedkingdom {
   position: absolute;
   top: 250px;
   left: 680px;
 }
 
-.image img:nth-child(6) {
+#canada {
   position: absolute;
   top: 250px;
-  left: 440px;
+  left: 25vw;
 }
-.image img:nth-child(7) {
+#australia {
   position: absolute;
   top: 650px;
-  right: 240px;
+  right: 15vw;
 }
-.image img:nth-child(8) {
+#japan {
   position: absolute;
   top: 350px;
   right: 280px;
 
 }
-.image img:nth-child(9) {
+#france {
   position: absolute;
   top: 350px;
   left: 650px;
 }
-.image img:nth-child(10) {
+#russia {
   position: absolute;
   top: 250px;
   right: 500px;
 }
-.image img:nth-child(11) {
+#germany {
   position: absolute;
   top: 300px;
   right: 760px;
 }
-.image img:nth-child(12) {
+#mexico {
   position: absolute;
   top: 460px;
   left: 400px;
 }
-.image img:nth-child(13) {
+#spain {
   position: absolute;
   top: 380px;
   left: 730px;
 }
-.image img:nth-child(14) {
+#brazil {
   position: absolute;
   top: 550px;
   left: 470px;
@@ -236,7 +236,7 @@ body {
 }
 
 
-/* x 버튼 스타일 */
+
 .close-btn {
   position: absolute;
   top: -16.5px;
@@ -251,7 +251,6 @@ body {
   line-height: 12px; /* 높이와 같게 설정 */
 }
 
-/* x 버튼 아이콘 스타일 */
 .close-btn::before {
   content: 'x';
   font-size: 18px;
@@ -776,6 +775,46 @@ body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     position: fixed;
     z-index: -1;
+  }
+  
+  .button {
+    position: relative; 
+    top: -4px; 
+    left: 40px;
+    width: 10px;
+    height: auto;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .button img {
+    top: 0px;
+    width: 60px; 
+    height: auto;
+    border-bottom: black;
+    z-index: 9999;
+    cursor: pointer;
+  }
+  
+  .button1 {
+    display: inline-block;
+    margin-left: -8px; /* 왼쪽으로 이동 */
+    margin-top: -4px; /* 위로 이동 */
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .button1 a {
+    display: block;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  
+  .button1 img {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    z-index: 9999;
   }
   
   

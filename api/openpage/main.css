@@ -5,40 +5,77 @@ body {
   display: flex;
 }
 
+.background1 {
+  width: 50vw; 
+  height: 50vh; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  top: 38%; /* 화면 세로 중앙에 위치 */
+  left: 50%; /* 화면 가로 중앙에 위치 */
+  transform: translate(-50%, -50%); /* 요소의 가로와 세로 중앙을 화면의 가로와 세로 중앙에 맞춤 */
+  z-index: 1;
+}
 
+.background1 img {
+  max-width: 100%; /* 이미지가 부모 요소의 너비를 초과하지 않도록 함 */
+  max-height: 100%; /* 이미지가 부모 요소의 높이를 초과하지 않도록 함 */
+  object-fit: contain;
+}
 
-#clock {
-  font-family: 'Pixelify Sans', sans-serif;
-  font-size: 25px;
-  position: absolute;
-  top: 4px; 
-  right: 20px; 
-  color: #000000;
+.wallpaper {
+  width: 100vw; /* 화면 너비에 꽉 차도록 설정 */
+  height: 100vh; /* 화면 높이에 꽉 차도록 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  top: 0; /* 화면 맨 위에 위치 */
+  left: 0; /* 화면 맨 왼쪽에 위치 */
+  z-index: -1; /* 요소를 화면 뒤에 위치시킴 */
+  opacity: 60%;
+
+}
+
+.wallpaper img {
+  width: 100%; /* 부모 요소에 맞춰진 이미지 너비 */
+  height: 100%; /* 부모 요소에 맞춰진 이미지 높이 */
+  object-fit: cover; /* 이미지가 부모 요소를 완전히 덮도록 설정 */
 }
 
 
+
+
+
 .image {
-  position: fixed;
-  bottom: 40px; /* 요소를 아래로 10px 이동시킵니다. */
-  right: 0;
+  position: absolute;
+  bottom: 20%; /* 요소를 아래로 50px 이동시킵니다. */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 }
 
 .image-box {
   text-align: center;
-  margin-right: 10px;
+  margin: 0 auto; /* 좌우 여백을 auto로 설정하여 가운데 정렬합니다. */
 }
+
 
 .image-box img {
-  width: 140px;
-  height: 140px;
-  margin-bottom: 20px;
+  width: 200px; /* 너비를 180px로 조정 */
+  height: 200px; /* 높이를 180px로 조정 */
+  margin-right: 10px;
   cursor: pointer;
-  transition: transform 0.3s ease; /* 확대 효과를 0.3초 동안 부드럽게 적용 */
+  transition: transform 0.3s ease;
 }
 
+
 .image-box img:hover {
-  transform: scale(1.3); /* 이미지를 1.1배 확대합니다. */
+  transform: scale(1.3); /* 이미지를 1.3배 확대합니다. */
 }
 
 .image-box .caption {
@@ -49,225 +86,48 @@ body {
   cursor: pointer;
 }
 
-
-
-.background {
-  width: 100vw; 
-  height: 100vh; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed; 
-  top: 10;
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
   left: 0;
-  z-index: -99;
-}
-
-.background img {
-  width: 120vw; 
-  height: 120vh;
-  object-fit: contain;
-}
-
-.background::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -10px; 
   width: 100%;
-  height: 40px;
-  background-color: #afafaf; 
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  text-align: center;
 }
 
-.text {
-  margin-top: 50px; /* 원하는 만큼 아래로 내리세요 */
-  margin-left: 30px;
+#overlay img {
+  max-width: 80%;
+  max-height: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-
-p {
-  font-family: 'Pixelify Sans', sans-serif;
-  font-size: 30px;
-
-  margin-top: 20px; /* 간격을 줄입니다. */
-  white-space: nowrap;
-  overflow: hidden;
-  opacity: 0;
-  color: rgb(255, 255, 255);
-}
-
-
-
-#one{
-   animation: type 1.8s steps(40, end) forwards;
-}
-
-p:nth-child(2) {
-  animation: type2 1.8s steps(40, end) forwards;
-  animation-delay: 2s;
-}
-p:nth-child(3) {
-  animation: type3 1.8s steps(40, end) forwards;
-  animation-delay: 4.3s;
-}
-
-
-@keyframes type {
-  0% {
-    opacity: 1;
-    width: 0px;
-    border-right: .2em solid #ffffff;
-  }
-
-  99% {
-    border-right: .2em solid #ffffff;
-  }
-
-  100% {
-    width: 30em;
-    border: 0;
-    opacity: 1;
-  }
-}
-@keyframes type2 {
-  0% {
-    opacity: 1;
-    width: 0px;
-    border-right: .2em solid #ffffff;
-  }
-
-  99% {
-    border-right: .2em solid #ffffff;
-  }
-
-  100% {
-    width: 17em;
-    border: 0;
-    opacity: 1;
-  }
-}
-  @keyframes type3 {
-  0% {
-    opacity: 1;
-    width: 0px;
-    border-right: .2em solid #ffffff;
-  }
-
-  99% {
-    border-right: .2em solid #ffffff;
-  }
-
-  100% {
-    width: 30em;
-    border: 0;
-    opacity: 1;
-  }
-}
 
 
 
 
 @media screen and (max-width: 499px) {
-  .text {
-    margin-top: 40px; /* 원하는 만큼 아래로 내리세요 */
-    margin-left: 8px;
-  }
-  
-  
-  p {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 12px;
-    margin-top: 10px; /* 간격을 줄입니다. */
-    white-space: nowrap;
-    overflow: hidden;
-    opacity: 0;
-    color: rgb(255, 255, 255);
-  }
-  
-  
-  
-  #one{
-     animation: type 1.8s steps(40, end) forwards;
-  }
-  
-  p:nth-child(2) {
-    animation: type2 1.8s steps(40, end) forwards;
-    animation-delay: 2s;
-  }
-  p:nth-child(3) {
-    animation: type3 1.8s steps(40, end) forwards;
-    animation-delay: 4.3s;
-  }
-  
-  
-  @keyframes type {
-    0% {
-      opacity: 1;
-      width: 0px;
-      border-right: .2em solid #ffffff;
-    }
-  
-    99% {
-      border-right: .2em solid #ffffff;
-    }
-  
-    100% {
-      width: 30em;
-      border: 0;
-      opacity: 1;
-    }
-  }
-  @keyframes type2 {
-    0% {
-      opacity: 1;
-      width: 0px;
-      border-right: .2em solid #ffffff;
-    }
-  
-    99% {
-      border-right: .2em solid #ffffff;
-    }
-  
-    100% {
-      width: 17em;
-      border: 0;
-      opacity: 1;
-    }
-  }
-    @keyframes type3 {
-    0% {
-      opacity: 1;
-      width: 0px;
-      border-right: .2em solid #ffffff;
-    }
-  
-    99% {
-      border-right: .2em solid #ffffff;
-    }
-  
-    100% {
-      width: 28em;
-      border: 0;
-      opacity: 1;
-    }
-  }
 
   .image {
     position: absolute;
-    bottom: 50px; /* 요소를 아래로 10px 이동시킵니다. */
-    right: 10px;
+    bottom: 30%; /* 요소를 아래로 10px 이동시킵니다. */
     cursor: pointer;
+    z-index: 1;
   }
   
   .image-box {
     text-align: center;
-    margin-right: 10px;
   }
   
   .image-box img {
     width: 90px;
     height: 90px;
+    margin-left: 10px;
     margin-bottom: 20px;
     cursor: pointer;
     transition: transform 0.3s ease; /* 확대 효과를 0.3초 동안 부드럽게 적용 */
@@ -284,42 +144,35 @@ p:nth-child(3) {
     color: white;
     cursor: pointer;
   }
-  #clock {
-    font-family: 'Pixelify Sans', sans-serif;
-    font-size: 25px;
-    position: absolute;
-    top: 4px; 
-    right: 20px; 
-    color: #000000;
+
+  .wallpaper {
+    width: 100vw; /* 화면 너비에 꽉 차도록 설정 */
+    height: 100vh; /* 화면 높이에 꽉 차도록 설정 */
+    z-index: -1;
   }
+  
+  .wallpaper img {
+    width: 100%; /* 부모 요소에 맞춰진 이미지 너비 */
+    height: 100%; /* 부모 요소에 맞춰진 이미지 높이 */
     
-  .background {
-    width: 100vw; 
-    height: 100vh; 
+  }
+  .background1 {
+    width: 70vw; 
+    height: 70vh; 
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed; 
-    top: 10;
-    left: 0;
-    z-index: -99;
+    top: 38%; /* 화면 세로 중앙에 위치 */
+    left: 50%; /* 화면 가로 중앙에 위치 */
+    transform: translate(-50%, -50%); /* 요소의 가로와 세로 중앙을 화면의 가로와 세로 중앙에 맞춤 */
+    z-index: 1;
   }
-
-  .background img {
-    width: 120vw; 
-    height: 120vh;
+  
+  .background1 img {
+    max-width: 100%; /* 이미지가 부모 요소의 너비를 초과하지 않도록 함 */
+    max-height: 100%; /* 이미지가 부모 요소의 높이를 초과하지 않도록 함 */
     object-fit: contain;
-  }
-
-  .background::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: -10px; 
-    width: 100%;
-    height: 40px;
-    background-color: #afafaf; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 }
 
