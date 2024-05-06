@@ -761,8 +761,8 @@ body {
   }
   
   .background img {
-    width: 150vw; 
-    height: 150vh;
+    width: 200vw; 
+    height: 200vh;
     object-fit: contain;
   }
 
