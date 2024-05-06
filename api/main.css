@@ -6,6 +6,7 @@ body {
 }
 
 
+
 .background {
   width: 100vw; 
   height: 100vh; 
@@ -23,6 +24,8 @@ body {
   height: 90vh;
   object-fit: contain;
 }
+
+
 
 .bar {
   content: '';
@@ -758,8 +761,8 @@ body {
   }
   
   .background img {
-    width: 90vw; 
-    height: 90vh;
+    width: 150vw; 
+    height: 150vh;
     object-fit: contain;
   }
 
