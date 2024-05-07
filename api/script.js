@@ -35,11 +35,11 @@ document.querySelectorAll('.image img').forEach(img => {
 });
 
 
-function closePopup(btn) {
-  var parentInfo = btn.parentElement;
-  parentInfo.style.display = 'none';
+function closePopup(element) {
+  const popup = element.parentElement;
+  popup.style.display = "none";
+  stopFallingAnimation(); // 떨어지는 애니메이션을 멈추는 함수 호출
 }
-
 
 
 const API_KEY = '1e31db4e8ad797fd878b7b6dd3106430';
@@ -159,7 +159,6 @@ document.querySelector('.image img:nth-child(14)').addEventListener('click', fun
 
 
 
-
 let fallingAnimationInterval;
 
 function startFallingAnimation(country) {
@@ -173,7 +172,7 @@ function startFallingAnimation(country) {
       "../api/assets/meatball2.png",
       "../api/assets/meatball3.png",
       "../api/assets/pasta1.png"
-    ],
+    ],    
     "southkorea": [
       "../api/assets/egg1.png",
       "../api/assets/egg2.png",
@@ -242,8 +241,6 @@ function startFallingAnimation(country) {
       "../api/assets/soup2.png",
       "../api/assets/soup3.png"
     ]
-    
-    
   };
 
   const container = document.querySelector(".falling-images-container");
@@ -257,18 +254,31 @@ function startFallingAnimation(country) {
     const image = document.createElement("img");
     const randomIndex = Math.floor(Math.random() * countryImages.length);
     image.src = countryImages[randomIndex];
-    image.classList.add("falling-image");
+    image.classList.add("falling-image"); // 클래스 설정 추가
     image.style.left = `${Math.random() * 90 + 1}vw`;
     container.appendChild(image);
 
     setTimeout(() => {
       container.removeChild(image);
     }, 1000);
-  }, 400); 
+  }, 400);
 }
 
 function stopFallingAnimation() {
   clearInterval(fallingAnimationInterval);
+  const container = document.querySelector(".falling-images-container");
+  const fallingImages = container.querySelectorAll(".falling-image");
+  fallingImages.forEach(image => {
+    clearTimeout(image.dataset.timer);
+    container.removeChild(image);
+  });
+}
+
+
+function closePopup(element) {
+  const popup = element.parentElement;
+  popup.style.display = "none";
+  stopFallingAnimation(); // 떨어지는 애니메이션을 멈추는 함수 호출
 }
 
 

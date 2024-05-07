@@ -191,3 +191,25 @@ document.querySelector('.ok').addEventListener('click', function() {
   });
 });
 
+// 시작 시간 설정 (30초)
+var timeLimit = 30;
+
+// 시간을 나타내는 요소
+var timeLimitDisplay = document.getElementById('time-limit');
+
+// 시간을 1초마다 감소시키고 화면에 업데이트하는 함수
+function updateTimer() {
+    if (timeLimit > 0) {
+        timeLimit--; // 시간 감소
+        timeLimitDisplay.textContent = "TIME LIMIT: " + timeLimit; // 화면 업데이트
+    } else {
+        // 시간이 다 되면 게임 종료
+        clearInterval(timerInterval); // 타이머 중지
+        // 여기에 게임 종료 처리 추가
+        alert("Time's up!");
+        // 예를 들어 게임 종료 후 어떤 작업을 수행하거나 다른 함수를 호출할 수 있습니다.
+    }
+}
+
+// 1초마다 updateTimer 함수 호출하여 시간 업데이트
+var timerInterval = setInterval(updateTimer, 1000);
