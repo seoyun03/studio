@@ -164,14 +164,16 @@ let fallingAnimationInterval;
 function startFallingAnimation(country) {
   const images = {
     "unitedkingdom": [
-      "../api/assets/meatball2.png",
-      "../api/assets/meatball3.png",
-      "../api/assets/pasta1.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ],
     "france": [
-      "../api/assets/meatball2.png",
-      "../api/assets/meatball3.png",
-      "../api/assets/pasta1.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ],    
     "southkorea": [
       "../api/assets/egg1.png",
@@ -221,9 +223,10 @@ function startFallingAnimation(country) {
       "../api/assets/soup3.png"
     ],
     "china": [
-      "../api/assets/soup1.png",
-      "../api/assets/soup2.png",
-      "../api/assets/soup3.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ],
     "australia": [
       "../api/assets/soup1.png",
@@ -236,9 +239,10 @@ function startFallingAnimation(country) {
       "../api/assets/pasta1.png"
     ],
     "brazil": [
-      "../api/assets/soup1.png",
-      "../api/assets/soup2.png",
-      "../api/assets/soup3.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ]
   };
 
@@ -268,8 +272,8 @@ function stopFallingAnimation() {
   const container = document.querySelector(".falling-images-container");
   const fallingImages = container.querySelectorAll(".falling-image");
   fallingImages.forEach(image => {
-    clearTimeout(image.dataset.timer);
-    container.removeChild(image);
+    clearTimeout(image.dataset.timer); // 기존 코드: 이미지의 타이머를 클리어하는 부분
+    container.removeChild(image); // 이미지를 제거하는 부분 추가
   });
 }
 
