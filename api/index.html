@@ -15,11 +15,26 @@
   </head>
   <body>
 
+    
     <div class="background" id="mapContainer">
       <img src="../api/assets/map.png" id="map" class="image">
-      <!-- 다른 이미지 요소들도 필요에 따라 추가하세요 -->
+      <div class="image">
+        <img id="california" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('california')">
+        <img id="southkorea" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('southkorea')">
+        <img id="unitedstates" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('unitedstates')">
+        <img id="china" src="../api/assets/soup.png" onclick="toggleWeatherInfo('china')">
+        <img id="unitedkingdom" src="../api/assets/meatball.png" onclick="startFallingAnimation('unitedkingdom')">
+        <img id="canada" src="../api/assets/icecream.png" onclick="toggleWeatherInfo('canada')">
+        <img id="australia" src="../api/assets/soup.png" onclick="toggleWeatherInfo('australia')">
+        <img id="japan" src="../api/assets/soup.png" onclick="toggleWeatherInfo('japan')">
+        <img id="france" src="../api/assets/meatball.png" onclick="startFallingAnimation('france')">
+        <img id="russia" src="../api/assets/icecream.png" onclick="toggleWeatherInfo('russia')">
+        <img id="germany" src="../api/assets/soup.png" onclick="toggleWeatherInfo('germany')">
+        <img id="mexico" src="../api/assets/soup.png" onclick="toggleWeatherInfo('mexico')">
+        <img id="spain" src="../api/assets/meatball.png" onclick="toggleWeatherInfo('spain')">
+        <img id="brazil" src="../api/assets/soup.png" onclick="toggleWeatherInfo('brazil')">
+      </div>
     </div>
-    
   
     <div class="bar"></div>
     <audio id="clickSound">
@@ -58,26 +73,17 @@
     </div>
     
 
-    <div class="image">
-      <img id="california" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('california')">
-      <img id="southkorea" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('southkorea')">
-      <img id="unitedstates" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('unitedstates')">
-      <img id="china" src="../api/assets/soup.png" onclick="toggleWeatherInfo('china')">
-      <img id="unitedkingdom" src="../api/assets/meatball.png" onclick="startFallingAnimation('unitedkingdom')">
-      <img id="canada" src="../api/assets/icecream.png" onclick="toggleWeatherInfo('canada')">
-      <img id="australia" src="../api/assets/soup.png" onclick="toggleWeatherInfo('australia')">
-      <img id="japan" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('japan')">
-      <img id="france" src="../api/assets/meatball.png" onclick="startFallingAnimation('france')">
-      <img id="russia" src="../api/assets/icecream.png" onclick="toggleWeatherInfo('russia')">
-      <img id="germany" src="../api/assets/soup.png" onclick="toggleWeatherInfo('germany')">
-      <img id="mexico" src="../api/assets/soup.png" onclick="toggleWeatherInfo('mexico')">
-      <img id="spain" src="../api/assets/meatball.png" onclick="toggleWeatherInfo('spain')">
-      <img id="brazil" src="../api/assets/soup.png" onclick="toggleWeatherInfo('brazil')">
-
-    </div>
     <div class="falling-images-container"></div>
 
-  
+    <div class="none">
+      <img id="donut" src="../api/assets/donut.png">
+      <img id="donut1" src="../api/assets/donut.png">
+      <img id="jelly" src="../api/assets/jelly.png">
+      <img id="jelly1" src="../api/assets/jelly.png">
+      <img id="banana" src="../api/assets/banana.png">
+      <img id="banana1" src="../api/assets/banana.png">
+    </div>
+    
    
 
 

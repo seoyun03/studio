@@ -186,10 +186,9 @@ function startFallingAnimation(country) {
       "../api/assets/egg4.png",
     ],
     "japan": [
-      "../api/assets/egg1.png",
-      "../api/assets/egg2.png",
-      "../api/assets/egg3.png",
-      "../api/assets/egg4.png",
+      "../api/assets/soup1.png",
+      "../api/assets/soup2.png",
+      "../api/assets/soup3.png"
     ],
     "unitedstates": [
       "../api/assets/egg1.png",
@@ -326,6 +325,7 @@ document.getElementById('brazil').addEventListener('click', () => {
   startFallingAnimation("brazil");
 });
 
+
 let isDragging = false;
 let startX = 0;
 let startY = 0;
@@ -338,7 +338,8 @@ let velocityX = 0;
 let velocityY = 0;
 let requestId = null;
 
-const mapImg = document.querySelector('.background img');
+const mapImg = document.querySelector('.background img#map');
+const images = document.querySelectorAll('.image img');
 
 mapImg.addEventListener('touchstart', function(event) {
   isDragging = true;
@@ -361,12 +362,13 @@ mapImg.addEventListener('touchmove', function(event) {
     const currentMoveY = event.touches[0].clientY - lastMoveY;
     lastMoveX = event.touches[0].clientX;
     lastMoveY = event.touches[0].clientY;
-    const smoothFactor = 0.9; // 부드러운 이동을 위한 상수
+    const smoothFactor = 0.9; // 이동을 더 부드럽게 만들기 위해 상수 조정
     velocityX = smoothFactor * (currentMoveX / deltaTime) + (1 - smoothFactor) * velocityX;
     velocityY = smoothFactor * (currentMoveY / deltaTime) + (1 - smoothFactor) * velocityY;
     mapImg.style.transform = `translate(${translateX}px, ${translateY}px)`;
     startX = event.touches[0].clientX;
     startY = event.touches[0].clientY;
+    animateMap(); // 이미지 이동 로직 추가
   }
 });
 
@@ -378,13 +380,18 @@ mapImg.addEventListener('touchend', function() {
 });
 
 function animateMap() {
-  translateX += velocityX * 30;
-  translateY += velocityY * 30;
+  translateX += velocityX * 3; // 속도를 더 낮춤
+  translateY += velocityY * 3; // 속도를 더 낮춤
   velocityX *= 0.95;
   velocityY *= 0.95;
   mapImg.style.transform = `translate(${translateX}px, ${translateY}px)`;
   if (Math.abs(velocityX) > 0.1 || Math.abs(velocityY) > 0.1) {
     requestId = requestAnimationFrame(animateMap);
   }
+  
+  images.forEach(image => {
+    const offsetX = translateX * (image.dataset.offsetX || 1); // 이미지마다 고유한 offsetX 값 적용 가능
+    const offsetY = translateY * (image.dataset.offsetY || 1); // 이미지마다 고유한 offsetY 값 적용 가능
+    image.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+  });
 }
-

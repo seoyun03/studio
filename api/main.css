@@ -238,7 +238,81 @@ body {
   transform: scale(1.07);
 }
 
+#jelly {
+  position: absolute;
+  top: 190px;
+  left: 650px;
+  width: 50px;
+}
+#jelly img {
+  position: absolute;
+  top: 300px;
+  left: 600px;
+  width: 20px;
+}
 
+#jelly1{
+  position: absolute;
+  top: 240px;
+  width: 80px;
+  right: 300px;
+}
+#jelly1 img {
+  position: absolute;
+  top: 300px;
+  right: 300px;
+  width: 80px;
+}
+
+#banana {
+  position: absolute;
+  top: 250px;
+  left: 300px;
+  width: 50px;
+}
+#banana img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 20px;
+}
+#banana1 {
+  position: absolute;
+  top: 700px;
+  left: 450px;
+  width: 50px;
+}
+#banana1 img {
+  position: absolute;
+  top: 300px;
+  left: 0px;
+  width: 20px;
+}
+
+#donut {
+  position: relative;
+  top: 300px;
+  left: 300px;
+  width: 100px;
+}
+#donut img {
+  position: relative;
+  top: 300px;
+  left: 0px;
+  width: 100px;
+}
+#donut1 {
+  position: relative;
+  top: 100px;
+  left: 500px;
+  width: 140px;
+}
+#donut1 img {
+  position: relative;
+  top: 300px;
+  left: 0px;
+  width: 140px;
+}
 
 .close-btn {
   position: absolute;
@@ -782,7 +856,7 @@ body {
     #california {
       position: absolute;
       top: 300px;
-      left: 0px;
+      left: -30px;
     }
     
     #southkorea {
@@ -833,7 +907,7 @@ body {
     }
     #russia {
       position: absolute;
-      top: 300px;
+      top: 250px;
       right: 30px;
     }
     #germany {
@@ -859,7 +933,9 @@ body {
     .image img:hover {
       transform: scale(1.07);
     }
-
+    .none {
+      display: none;
+    }
     .weather-info {
       position: absolute;
       top: 50%;
