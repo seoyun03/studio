@@ -862,7 +862,7 @@ body {
     #southkorea {
       position: absolute;
       top: 300px;
-      right: 0px;
+      right: -10px;
     }
     
     #unitedstates {
@@ -874,12 +874,12 @@ body {
     #china {
       position: absolute;
       top: 40vh;
-      right: 25vw;
+      right: 30px;
     }
     
     #unitedkingdom {
       position: absolute;
-      top: 30vh;
+      top: 250px;
       left: 40vw;
     }
     
@@ -890,45 +890,45 @@ body {
     }
     #australia {
       position: absolute;
-      top: 420px;
-      right: -30px;
+      top: 410px;
+      right: -50px;
     }
 
     #japan {
       position: absolute;
-      top: 300px;
-      right: -20px;
+      top: 280px;
+      right: -40px;
     }
 
     #france {
       position: absolute;
-      top: 330px;
-      left: 38vw;
+      top: 270px;
+      left: 120px;
     }
     #russia {
       position: absolute;
-      top: 250px;
-      right: 30px;
+      top: 220px;
+      right: 70px;
     }
     #germany {
       position: absolute;
-      top: 250px;
-      right: 45vw;
+      top: 290px;
+      right: 140px;
     }
     #mexico {
       position: absolute;
       top: 330px;
-      left: 40px;
+      left: 20px;
     }
     #spain {
       position: absolute;
-      top: 45vh;
-      left: 44vw;
+      top: 310px;
+      left: 120px;
     }
     #brazil {
       position: absolute;
       top: 380px;
-      left: 50px;
+      left: 30px;
     }
     .image img:hover {
       transform: scale(1.07);
