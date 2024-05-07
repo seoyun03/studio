@@ -746,190 +746,132 @@ body {
 
 
 @media screen and (max-width: 499px) {
+  
 
-
-  .background {
-    width: 100vw; 
-    height: 100vh; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed; 
-    top: 10;
-    left: 90;
-    z-index: -99;
-  }
-  
-  .background img {
-    width: 200vw; 
-    height: 200vh;
-    object-fit: contain;
-  }
-
-  .bar {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0px; 
-    margin-left: -10px;
-    width: 120%;
-    height: 38px;
-    background-color: #afafaf; 
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    z-index: -1;
-  }
-  
-  .button {
-    position: relative; 
-    top: -4px; 
-    left: 40px;
-    width: 10px;
-    height: auto;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  
-  .button img {
-    top: 0px;
-    width: 60px; 
-    height: auto;
-    border-bottom: black;
-    z-index: 9999;
-    cursor: pointer;
-  }
-  
-  .button1 {
-    display: inline-block;
-    margin-left: -8px; /* 왼쪽으로 이동 */
-    margin-top: -4px; /* 위로 이동 */
-    cursor: pointer;
-    z-index: 9999;
-  }
-  
-  .button1 a {
-    display: block;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  
-  .button1 img {
-    width: 30px;
-    height: auto;
-    cursor: pointer;
-    z-index: 9999;
-  }
-  
-  
-  .image {
-    position: flex;
-  }
-  
-  .image img {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    z-index: 100;
-    padding: 5px;
-  }
-    
-    .image img:nth-child(1) {
-      position: absolute;
-      top: 370px;
-      left: 300px;
+    .background {
+      width: 100vw; 
+      height: 100vh; 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed; 
+      top: 10;
+      left: 90;
+      z-index: -99;
     }
-    
-    .image img:nth-child(2) {
-      position: absolute;
-      top: 420px;
-      right: 350px;
+
+    .background img {
+      width: 120vw; 
+      height: 120vh;
+      object-fit: contain;
     }
-    
-    .image img:nth-child(3) {
+
+    .image {
+      position: flex;
+    }
+
+    .image img {
+      width: 80px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      z-index: 100;
+      padding: 5px;
+    }
+
+    #california {
       position: absolute;
       top: 350px;
-      left: 520px;
+      left: 0px;
     }
     
-    .image img:nth-child(4) {
-      position: absolute;
-      top: 360px;
-      right: 450px;
-    }
-    
-    .image img:nth-child(5) {
-      position: absolute;
-      top: 280px;
-      left: 710px;
-    }
-    
-    .image img:nth-child(6) {
-      position: absolute;
-      top: 250px;
-      left: 480px;
-    }
-    .image img:nth-child(7) {
-      position: absolute;
-      top: 650px;
-      right: 300px;
-    }
-    .image img:nth-child(8) {
+    #southkorea {
       position: absolute;
       top: 350px;
-      right: 280px;
+      right: 0px;
+    }
     
-    }
-    .image img:nth-child(9) {
-      position: absolute;
-      top: 350px;
-      left: 680px;
-    }
-    .image img:nth-child(10) {
-      position: absolute;
-      top: 250px;
-      right: 500px;
-    }
-    .image img:nth-child(11) {
+    #unitedstates {
       position: absolute;
       top: 300px;
-      right: 800px;
+      left: 10px;
     }
-    .image img:nth-child(12) {
+    
+    #china {
       position: absolute;
-      top: 460px;
-      left: 400px;
+      top: 40vh;
+      right: 25vw;
     }
-    .image img:nth-child(13) {
+    
+    #unitedkingdom {
       position: absolute;
-      top: 380px;
-      left: 730px;
+      top: 30vh;
+      left: 40vw;
     }
-    .image img:nth-child(14) {
+    
+    #canada {
       position: absolute;
-      top: 550px;
-      left: 470px;
+      top: 270px;
+      left: 60px;
+    }
+    #australia {
+      position: absolute;
+      top: 420px;
+      right: -30px;
+    }
+
+    #japan {
+      position: absolute;
+      top: 300px;
+      right: -20px;
+    }
+
+    #france {
+      position: absolute;
+      top: 330px;
+      left: 38vw;
+    }
+    #russia {
+      position: absolute;
+      top: 300px;
+      right: 30px;
+    }
+    #germany {
+      position: absolute;
+      top: 34vh;
+      right: 45vw;
+    }
+    #mexico {
+      position: absolute;
+      top: 370px;
+      left: 40px;
+    }
+    #spain {
+      position: absolute;
+      top: 45vh;
+      left: 44vw;
+    }
+    #brazil {
+      position: absolute;
+      top: 420px;
+      left: 50px;
     }
     .image img:hover {
       transform: scale(1.07);
     }
-
     .weather-info {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: 80%; /* 또는 원하는 너비로 조정 */
-      max-width: 300px; /* 예시로 지정한 최대 너비 */
+      width: 10%; /* 변경된 너비 */
+      max-width: 50px; /* 변경된 최대 너비 */
       z-index: 9999;
     }
+    
 
     .falling-image {
-      position: absolute;
+      position: relative;
       animation: fall 1s linear forwards;
       width: 120px; 
       height: 120px; 

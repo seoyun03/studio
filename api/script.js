@@ -159,27 +159,6 @@ document.querySelector('.image img:nth-child(14)').addEventListener('click', fun
 
 
 
-let leftPan = document.querySelector(".pan-left");
-let rightPan = document.querySelector(".pan-right");
-let map = document.querySelector(".map-container");
-
-const panMap = (dir) => {
-  var currentTransform = window.getComputedStyle(map).transform;
-  var matrix = currentTransform.match(/^matrix\((.+)\)$/);
-  var currentTranslateX = matrix ? parseFloat(matrix[1].split(", ")[4]) : 0;
-  var newTranslateX = dir == "left" ? currentTranslateX + 50 : currentTranslateX - 50; // Move 50px to the left
-
-  map.style.transform = "translateX(" + newTranslateX + "px)";
-};
-
-leftPan.addEventListener("click", () => {
-  panMap("left");
-});
-
-rightPan.addEventListener("click", () => {
-  panMap("right");
-});
-
 
 let fallingAnimationInterval;
 
@@ -398,3 +377,4 @@ function animateMap() {
     requestId = requestAnimationFrame(animateMap);
   }
 }
+
