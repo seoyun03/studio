@@ -164,16 +164,14 @@ let fallingAnimationInterval;
 function startFallingAnimation(country) {
   const images = {
     "unitedkingdom": [
-      "../api/assets/egg1.png",
-      "../api/assets/egg2.png",
-      "../api/assets/egg3.png",
-      "../api/assets/egg4.png",
+      "../api/assets/soup1.png",
+      "../api/assets/soup2.png",
+      "../api/assets/soup3.png"
     ],
     "france": [
-      "../api/assets/egg1.png",
-      "../api/assets/egg2.png",
-      "../api/assets/egg3.png",
-      "../api/assets/egg4.png",
+      "../api/assets/soup1.png",
+      "../api/assets/soup2.png",
+      "../api/assets/soup3.png"
     ],    
     "southkorea": [
       "../api/assets/egg1.png",
@@ -188,9 +186,10 @@ function startFallingAnimation(country) {
       "../api/assets/egg4.png",
     ],
     "japan": [
-      "../api/assets/soup1.png",
-      "../api/assets/soup2.png",
-      "../api/assets/soup3.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ],
     "unitedstates": [
       "../api/assets/egg1.png",
@@ -223,20 +222,21 @@ function startFallingAnimation(country) {
       "../api/assets/soup3.png"
     ],
     "china": [
+      "../api/assets/soup1.png",
+      "../api/assets/soup2.png",
+      "../api/assets/soup3.png"
+    ],
+    "australia": [
       "../api/assets/egg1.png",
       "../api/assets/egg2.png",
       "../api/assets/egg3.png",
       "../api/assets/egg4.png",
     ],
-    "australia": [
-      "../api/assets/soup1.png",
-      "../api/assets/soup2.png",
-      "../api/assets/soup3.png"
-    ],
     "spain": [
-      "../api/assets/meatball2.png",
-      "../api/assets/meatball3.png",
-      "../api/assets/pasta1.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ],
     "brazil": [
       "../api/assets/egg1.png",
