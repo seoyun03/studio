@@ -14,7 +14,7 @@ body {
 .right img {
   width: 40px; /* 원하는 너비로 조절 */
   height: auto; /* 비율을 유지하면서 너비에 맞게 자동으로 높이를 조절 */
-  margin-top: 390px;
+  margin-top: 500px;
   margin-left: 1000px;
 }
 
@@ -76,7 +76,7 @@ body {
       .right img {
         width: 18px; /* 원하는 너비로 조절 */
         height: auto; /* 비율을 유지하면서 너비에 맞게 자동으로 높이를 조절 */
-        margin-top: 322px;
+        margin-top: 318px;
         margin-left: 320px;
       }
 
