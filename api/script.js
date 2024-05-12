@@ -186,10 +186,9 @@ function startFallingAnimation(country) {
       "../api/assets/egg4.png",
     ],
     "japan": [
-      "../api/assets/egg1.png",
-      "../api/assets/egg2.png",
-      "../api/assets/egg3.png",
-      "../api/assets/egg4.png",
+      "../api/assets/meatball2.png",
+      "../api/assets/meatball3.png",
+      "../api/assets/pasta1.png",
     ],
     "unitedstates": [
       "../api/assets/egg1.png",
@@ -212,9 +211,10 @@ function startFallingAnimation(country) {
       "../api/assets/ice5.png"
     ],
     "germany": [
-      "../api/assets/soup1.png",
-      "../api/assets/soup2.png",
-      "../api/assets/soup3.png"
+      "../api/assets/egg1.png",
+      "../api/assets/egg2.png",
+      "../api/assets/egg3.png",
+      "../api/assets/egg4.png",
     ],
     "mexico": [
       "../api/assets/soup1.png",
@@ -227,16 +227,14 @@ function startFallingAnimation(country) {
       "../api/assets/soup3.png"
     ],
     "australia": [
-      "../api/assets/egg1.png",
-      "../api/assets/egg2.png",
-      "../api/assets/egg3.png",
-      "../api/assets/egg4.png",
+      "../api/assets/soup1.png",
+      "../api/assets/soup2.png",
+      "../api/assets/soup3.png"
     ],
     "spain": [
-      "../api/assets/egg1.png",
-      "../api/assets/egg2.png",
-      "../api/assets/egg3.png",
-      "../api/assets/egg4.png",
+      "../api/assets/soup1.png",
+      "../api/assets/soup2.png",
+      "../api/assets/soup3.png"
     ],
     "brazil": [
       "../api/assets/egg1.png",
