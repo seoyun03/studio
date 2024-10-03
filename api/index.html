@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&amp;display=swap" rel="stylesheet">
+    <title>jsondata</title>
+
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://use.typekit.net/hwg1ouh.css">  
+
+  </head>
+  <body>
+
+    
+    <div class="background" id="mapContainer">
+      <img src="../api/assets/map.png" id="map" class="image">
+      <div class="image">
+        <img id="california" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('california')">
+        <img id="southkorea" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('southkorea')">
+        <img id="unitedstates" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('unitedstates')">
+        <img id="china" src="../api/assets/soup.png" onclick="toggleWeatherInfo('china')">
+        <img id="unitedkingdom" src="../api/assets/soup.png" onclick="startFallingAnimation('unitedkingdom')">
+        <img id="canada" src="../api/assets/icecream.png" onclick="toggleWeatherInfo('canada')">
+        <img id="australia" src="../api/assets/soup.png" onclick="toggleWeatherInfo('australia')">
+        <img id="japan" src="../api/assets/meatball.png" onclick="toggleWeatherInfo('japan')">
+        <img id="france" src="../api/assets/soup.png" onclick="startFallingAnimation('france')">
+        <img id="russia" src="../api/assets/icecream.png" onclick="toggleWeatherInfo('russia')">
+        <img id="germany" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('germany')">
+        <img id="mexico" src="../api/assets/soup.png" onclick="toggleWeatherInfo('mexico')">
+        <img id="spain" src="../api/assets/soup.png" onclick="toggleWeatherInfo('spain')">
+        <img id="brazil" src="../api/assets/sunnysideup.png" onclick="toggleWeatherInfo('brazil')">
+      </div>
+    </div>
+  
+    <div class="bar"></div>
+    <audio id="clickSound">
+      <source src="../api/assets/click.mov" type="audio/mpeg">
+    </audio>
+    
+    <div id="clock"></div>
+
+    <div class="button" onclick="toggleBox()">
+      <img src="../api/assets/arrow.png">
+    </div>
+    <div class="button1">
+     <a href="../api/openpage/index.html">
+      <img src="../api/assets/arrow1.png">
+     </a>
+    </div>
+    
+    <div class="box" id="box" style="display: none;">
+      <div class="newtab"></div>
+      <div class="tab-item">
+        <img src="../api/assets/soup.png" class="tab-image">
+        <p class="tab-text">GLOOMY</p>
+      </div>
+      <div class="tab-item">
+        <img src="../api/assets/sunnysideup.png" class="tab-image">
+        <p class="tab-text">SUNNY</p>
+      </div>
+      <div class="tab-item">
+        <img src="../api/assets/meatball.png" class="tab-image">
+        <p class="tab-text">RAINY</p>
+      </div>
+      <div class="tab-item">
+        <img src="../api/assets/icecream.png" class="tab-image">
+        <p class="tab-text">FREEZING</p>
+      </div>
+    </div>
+    
+
+    <div class="falling-images-container"></div>
+
+    <div class="none">
+      <img id="donut" src="../api/assets/donut.png">
+      <img id="donut1" src="../api/assets/donut.png">
+      <img id="jelly" src="../api/assets/jelly.png">
+      <img id="jelly1" src="../api/assets/jelly.png">
+      <img id="banana" src="../api/assets/banana.png">
+      <img id="banana1" src="../api/assets/banana.png">
+    </div>
+    
+   
+
+
+    
+ <div class="weather-info">
+      <div class="california-info" style="display: none;">
+        <span class="close-btn california-close-btn" onclick="closePopup(this)"></span>
+      <h2>CALIFORNIA</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="southkorea-info" style="display: none;">
+      <span class="close-btn southkorea-close-btn" onclick="closePopup(this)"></span>
+      <h2>SOUTH KOREA</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="unitedstates-info" style="display: none;">
+      <span class="close-btn unitedstates-close-btn" onclick="closePopup(this)"></span>      <h2>UNITED STATES</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="china-info" style="display: none;">
+      <span class="close-btn china-close-btn" onclick="closePopup(this)"></span>      <h2>CHINA</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="unitedkingdom-info" style="display: none;">
+      <span class="close-btn unitedkingdom-close-btn" onclick="closePopup(this)"></span>      <h2>UNITED KINGDOM</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="canada-info" style="display: none;">
+      <span class="close-btn canada-close-btn" onclick="closePopup(this)"></span>      <h2>CANADA</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="australia-info" style="display: none;">
+      <span class="close-btn australia-close-btn" onclick="closePopup(this)"></span>      <h2>AUSTRALIA</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="japan-info" style="display: none;">
+      <span class="close-btn japan-close-btn" onclick="closePopup(this)"></span>      <h2>JAPAN</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="france-info" style="display: none;">
+      <span class="close-btn france-close-btn" onclick="closePopup(this)"></span>      <h2>FRANCE</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="russia-info" style="display: none;">
+      <span class="close-btn russia-close-btn" onclick="closePopup(this)"></span>      <h2>RUSSIA</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="germany-info" style="display: none;">
+      <span class="close-btn germany-close-btn" onclick="closePopup(this)"></span>      <h2>GERMANY</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="mexico-info" style="display: none;">
+      <span class="close-btn mexico-close-btn" onclick="closePopup(this)"></span>      <h2>MEXICO</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="spain-info" style="display: none;">
+      <span class="close-btn spain-close-btn" onclick="closePopup(this)"></span>      <h2>SPAIN</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+    <div class="brazil-info" style="display: none;">
+      <span class="close-btn brazil-close-btn" onclick="closePopup(this)"></span>      <h2>BRAZIL</h2>
+      <p>TEMP: <span class="temperature"></span>℃</p>
+      <p>RH: <span class="humidity"></span>%</p>
+      <p>WEP: <span class="weather"></span></p>
+    </div>
+  </div>
+    
+    
+    
+  </body>
+</html>
+<script type="text/javascript" src="./script.js" defer>
+</script>
