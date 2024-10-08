@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>In the Clouds</title>
+
+    <link rel="stylesheet" type="text/css" href="./main.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/zqi0pcx.css" />
+
+    <script type="text/javascript" src="./script.js" defer></script>
+  </head>
+  <body>
+    <div id="abovePhotoBooth">
+      <div id="title">Capture the Clouds</div>
+      <div id="countdown">2:00</div>
+    </div>
+
+    <div id="photoBooth">
+      <div class="video-container">
+        <video id="video" autoplay playsinline></video>
+        <img id="capture" class="capture" src="../two/images/button.png" alt="Capture">
+      </div>
+    </div>
+
+    <!-- 추가된 img 요소 -->
+    <div id="capturedImageContainer">
+      <img id="photo" alt="Captured Photo">
+    </div>
+    
+    <!-- 버튼 컨테이너 추가 -->
+    <div id="buttonContainer" style="display: flex; gap: 10px; justify-content: center;">
+      <button id="retakeButton">Re-take</button>
+      <button id="saveButton">Save</button>
+      
+    </div>
+
+  </body>
+</html>
