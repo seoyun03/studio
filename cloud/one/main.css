@@ -1,0 +1,60 @@
+html{
+  margin: 0;
+  font-size: 10px;
+  font-family: arial;
+  box-sizing: border-box;
+}
+
+body{
+  font-size: 1.6rem;
+  background-color: rgb(0, 0, 0);
+  margin: 0;
+}
+
+
+@media screen and (max-width: 375px) {
+
+  .grid-container {
+    display: flex;
+    flex-direction: column; /* 열을 세로로 정렬 */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 부모 요소가 화면 전체 높이를 차지하도록 설정 */
+    gap: 20px; /* 각 열 간격 */
+  }
+  
+  .grid-item {
+    display: flex;
+    flex-direction: column; /* 이미지들을 세로로 배열 */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .grid-item img {
+    max-width: 80%;
+    height: auto;
+    filter: blur(1px); /* 이미지 내부를 약간 블러 처리 */
+    margin-bottom: 10px; /* 이미지 사이 간격을 설정 */
+    display: none; /* 처음에는 이미지를 숨김 */
+  }
+
+  .bottom-left-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;  /* 중복된 font-size 선언을 제거해야 함 */
+    position: fixed;
+    left: 30%;
+    bottom: 15%;
+    color: rgb(255, 208, 0);
+}
+
+  .bottom-right-text {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;  /* 중복된 font-size 선언을 제거해야 함 */
+    position: fixed;
+    right: 30%;
+    bottom: 15%;
+    color: rgb(255, 208, 0);
+  }
+  
+}
+
