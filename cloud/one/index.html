@@ -3,31 +3,35 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <title>Interative Grid</title>
-
+    <title>In the Clouds</title>
     <link rel="stylesheet" type="text/css" href="../one/main.css" />
+    <link href="https://fonts.cdnfonts.com/css/calvino-grande-trial" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/hwg1ouh.css">
+    <script type="text/javascript" src="../one/script.js" defer></script>
   </head>
   <body>
-    <div class="grid-container">
-      <div class="grid-item" id="column1">
-        <img src="../one/assets/18.jpg" alt="image1" />
-        <img src="../one/assets/9.jpg" alt="image2" />
-        <img src="../one/assets/20.jpg" alt="image3" />
-        <img src="../one/assets/12.jpg" alt="image4" />
-      </div>
-      <div class="grid-item" id="column2">
-        <img src="../one/assets/15.jpg" alt="image4" />
-        <img src="../one/assets/10.jpg" alt="image5" />
-        <img src="../one/assets/21.jpg" alt="image6" />
-        <img src="../one/assets/1.jpg" alt="image7" />
+
+    <div>
+      <img src="../one/images/1.jpg" alt="이미지" class="fade-in-image" id="image">    
+    </div>
+  
+    <div class="text">what do you see?</div>
+
+    <div class="loader-container">
+      <div id="loading-text">0%</div>
+      <div class="loading-bar-background">
+        <div class="loading-bar"></div>
       </div>
     </div>
-    
-    <a href="../two/index.html" class="bottom-left-text">CAPTURE</a>
-    <a href="../three/index.html" class="bottom-right-text">SHARE</a>
+  
+    <div class="button-container">
+      <button class="custom-button">Dog</button>
+      <button class="custom-button">Cat</button>
+      <button class="custom-button">Sheep</button>
+      <button class="custom-button">Hippopotamus</button>
+    </div>
+    <div id="stat-result" class="stat-result"></div>
 
-      <script type="text/javascript" src="../one/script.js" defer></script>
   
   </body>
 </html>
