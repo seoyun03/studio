@@ -98,7 +98,7 @@ img {
 .loading-bar {
   height: 100%;
   width: 0%; 
-  background-color: #d6e6ff; /* 로딩 바의 색상 */
+  background-color: #c3daff; /* 로딩 바의 색상 */
   transition: width 0.3s ease-in-out; /* 너비 변화 시 애니메이션 */
 }
 
@@ -186,7 +186,7 @@ img {
   position: fixed; /* Keeps the button fixed to the screen even when scrolling */
   bottom: 60px; /* 20px from the bottom */
   right: 20px; /* 20px from the right */
-  padding: 10px 24px;
+  padding: 10px 24.3px;
   font-family: 'PP Neue Montreal', sans-serif;
   font-size: 13px;
   font-weight: 500;
