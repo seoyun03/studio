@@ -13,17 +13,27 @@ body {
 }
 
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 .spotlight {
-  width: 750px; /* 스포트라이트 크기 */
+  width: 750px;
   height: 750px;
   background: radial-gradient(circle, rgb(120, 156, 228) 20%, rgba(128, 163, 231, 0.5) 60%, rgba(128, 163, 231, 0) 100%);
-  border-radius: 50%; /* 원 모양 */
+  border-radius: 50%;
   position: absolute;
-  pointer-events: none; /* 원을 클릭하지 못하게 설정 */
-  transform: translate(-50%, -50%); /* 커서 중앙에 위치 */
-  filter: blur(50px); /* 블러를 통해 부드러운 빛 효과 */
-  z-index: -999; /* Keep this behind content but above the background */
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(50px);
+  z-index: -999;
   border-radius: 60% 40% 30% 50% / 50% 60% 40% 30%;
+  transition: background 0.5s ease;
+}
+
+.dark-mode .spotlight {
+  background: radial-gradient(circle, rgb(120, 156, 228) 20%, rgba(128, 163, 231, 0.5) 60%, rgba(128, 163, 231, 0) 100%);
 }
 
 img {
@@ -132,3 +142,24 @@ img {
   color: rgb(0, 0, 0);
 }
 
+.dark-mode .question,
+.dark-mode #fun-fact,
+.dark-mode #loading-text,
+.dark-mode .button-container,
+.dark-mode .stat-result {
+  color: white;
+}
+
+#darkModeToggle {
+  position: fixed; /* Keeps the button fixed to the screen even when scrolling */
+  bottom: 20px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #333; /* Dark button background */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 1000; /* Ensures the button stays on top */
+}

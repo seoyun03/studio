@@ -307,3 +307,11 @@ function displayRandomFact() {
 // Call the function to display a random fact on page load
 window.onload = displayRandomFact;
 
+document.addEventListener('DOMContentLoaded', () => {
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
+
+  darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+  });
+});
