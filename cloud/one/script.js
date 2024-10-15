@@ -1,165 +1,137 @@
 window.addEventListener('load', () => {
   const images = [
     { 
-      src: '../one/images/1.jpg', 
-      topAnswer: 'Dog', 
-      statistics: { Dog: 40, Cat: 30, Sheep: 20, Hippo: 10 }, 
-      options: ['Dog', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What shape do you see in this cloud?' 
+      "src": "../one/images/1.jpg", 
+      "topAnswer": "chameleon", 
+      "statistics": { "Dog": 20, "chameleon": 50, "Sheep": 20, "lizard": 10 }, 
+      "options": ["Dog", "chameleon", "Sheep", "lizard"],
+      "question": "What shape do you see in this cloud?" 
     },
     { 
-      src: '../one/images/2.jpg', 
-      topAnswer: 'Cat', 
-      statistics: { Dog: 25, Cat: 50, Elephant: 15, Lion: 10 }, 
-      options: ['Dog', 'Cat', 'Elephant', 'Lion'],
-      question: 'What feeling does this cloud give you?' 
+      "src": "../one/images/2.jpg", 
+      "topAnswer": "teddy_bear", 
+      "statistics": { "teddy_bear": 50, "scull": 10, "baby": 25, "bird": 15 }, 
+      "options": ["teddy_bear", "scull", "baby", "bird"],
+      "question": "Can you recognize a familiar shape in this cloud?" 
     },
     { 
-      src: '../one/images/3.jpg', 
-      topAnswer: 'Sheep', 
-      statistics: { Giraffe: 20, Cat: 10, Sheep: 50, Tiger: 20 }, 
-      options: ['Giraffe', 'Cat', 'Sheep', 'Tiger'],
-      question: 'Does this cloud evoke a memory?' 
+      "src": "../one/images/3.jpg", 
+      "topAnswer": "aligator", 
+      "statistics": { "penguin": 10, "Tiger": 10, "aligator": 60, "Sheep": 20 }, 
+      "options": ["penguin", "aligator", "Sheep", "Tiger"],
+      "question": "What figure do you see in this cloud?" 
     },
     { 
-      src: '../one/images/4.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What animal or object comes to mind?' 
+      "src": "../one/images/4.jpg", 
+      "topAnswer": "rat", 
+      "statistics": { "seal": 5, "seagull": 5, "leaf": 25, "rat": 65 }, 
+      "options": ["seal", "rat", "leaf", "seagull"],
+      "question": "What animal or object comes to mind?" 
     },
     { 
-      src: '../one/images/5.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What part of nature does this cloud resemble?' 
+      "src": "../one/images/5.jpg", 
+      "topAnswer": "rabbit", 
+      "statistics": { "rabbit": 50, "cat": 20, "dust": 10, "flower": 20 }, 
+      "options": ["dust", "cat", "rabbit", "flower"],
+      "question": "What image appears in this cloud?" 
     },    
     { 
-      src: '../one/images/6.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'Can you spot a familiar shape?' 
+      "src": "../one/images/6.jpg", 
+      "topAnswer": "dog", 
+      "statistics": { "car": 5, "heart": 5, "face": 25, "dog": 65 }, 
+      "options": ["dog", "face", "heart", "car"],
+      "question": "Can you spot a familiar shape?" 
     },    
     { 
-      src: '../one/images/7.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'If this cloud had an emotion, what would it be?' 
+      "src": "../one/images/7.jpg", 
+      "topAnswer": "fox", 
+      "statistics": { "fox": 50, "seahorse": 20, "cat": 15, "starfish": 15 }, 
+      "options": ["fox", "starfish", "cat", "seahorse"],
+      "question": "Does this cloud resemble any familiar object?" 
     },    
     { 
-      src: '../one/images/8.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'If this cloud were a piece of art, what would the title be?' 
+      "src": "../one/images/8.jpg", 
+      "topAnswer": "Airplane", 
+      "statistics": { "eagle": 5, "angel": 10, "Rocket": 20, "Airplane": 65 }, 
+      "options": ["Airplane", "Rocket", "angel", "eagle"],
+      "question": "What do you see in this cloud?" 
     },    
     { 
-      src: '../one/images/9.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What would you name this cloud shape?' 
+      "src": "../one/images/9.jpg", 
+      "topAnswer": "fish", 
+      "statistics": { "fish": 50, "whale": 20, "feather": 15, "flower": 15 }, 
+      "options": ["feather", "whale", "flower", "fish"],
+      "question": "What shape comes to mind?" 
     },    
     { 
-      src: '../one/images/10.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What fantasy creature could this be?' 
+      "src": "../one/images/10.jpg", 
+      "topAnswer": "Seahorse", 
+      "statistics": { "Fairy": 5, "Unicorn": 10, "Mermaid": 20, "Seahorse": 65 }, 
+      "options": ["Seahorse", "Mermaid", "Unicorn", "Fairy"],
+      "question": "What image is in this cloud?" 
     },
     { 
-      src: '../one/images/11.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What emotion does this cloud seem to have?' 
+      "src": "../one/images/11.jpg", 
+      "topAnswer": "Dreamy", 
+      "statistics": { "Isolated": 5, "lovely": 10, "Calm": 20, "Dreamy": 65 }, 
+      "options": ["lovely", "Calm", "Dreamy", "Isolated"],
+      "question": "What emotion does this cloud seem to have?" 
     },
     { 
-      src: '../one/images/12.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'Does this cloud look like it’s moving or still?' 
-    },    
-    { 
-      src: '../one/images/13.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'If this cloud were a part of a dream you’ve had, what was happening?' 
+      "src": "../one/images/14.jpg", 
+      "topAnswer": "lama", 
+      "statistics": { "rabbit": 5, "lama": 50, "Sheep": 20, "Hippo": 25 }, 
+      "options": ["rabbit", "lama", "Sheep", "Hippo"],
+      "question": "What shape do you see in this cloud?" 
     },
     { 
-      src: '../one/images/14.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'If you could jump into this cloud, where would it take you?' 
+      "src": "../one/images/15.jpg", 
+      "topAnswer": "popcorn", 
+      "statistics": { "popcorn": 50, "flower": 20, "fish_egg": 20, "bubble": 10 }, 
+      "options": ["popcorn", "flower", "fish_egg", "bubble"],
+      "question": "Can you spot a familiar shape?" 
     },
     { 
-      src: '../one/images/15.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'Does this cloud look like something you’ve seen before?' 
+      "src": "../one/images/16.jpg", 
+      "topAnswer": "Coastline", 
+      "statistics": { "Desert": 5, "Ocean": 10, "Forest": 20, "Coastline": 65 }, 
+      "options": ["Desert", "Ocean", "Forest", "Coastline"],
+      "question": "Which landscape does this cloud remind you of?" 
     },
     { 
-      src: '../one/images/16.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What artwork does this cloud remind you of?' 
+      "src": "../one/images/17.jpg", 
+      "topAnswer": "pac_man", 
+      "statistics": { "pac_man": 50, "Dragon": 20, "flower": 15, "Angel": 15 }, 
+      "options": ["pac_man", "Dragon", "flower", "Angel"],
+      "question": "What kind of object might live on this cloud?" 
     },
     { 
-      src: '../one/images/17.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What kind of creature might live on this cloud?' 
+      "src": "../one/images/18.jpg", 
+      "topAnswer": "seal", 
+      "statistics": { "seal": 50, "Bird": 20, "Boat": 15, "Caterpillar": 15 }, 
+      "options": ["seal", "Bird", "Boat", "Caterpillar"],
+      "question": "Can you spot a familiar shape?" 
     },
     { 
-      src: '../one/images/18.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'Does this cloud look like something from another planet?' 
+      "src": "../one/images/19.jpg", 
+      "topAnswer": "shrimp", 
+      "statistics": { "shrimp": 50, "seahorse": 20, "baby": 15, "tulip": 15 }, 
+      "options": ["shrimp", "seahorse", "baby", "tulip"],
+      "question": "What does this cloud look like to you?" 
     },
     { 
-      src: '../one/images/19.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What would this cloud taste like if it were food?' 
+      "src": "../one/images/20.jpg", 
+      "topAnswer": "hippo", 
+      "statistics": { "Face": 5, "person": 10, "Car": 20, "hippo": 65 }, 
+      "options": ["Face", "person", "Car", "hippo"],
+      "question": "Can you spot a familiar shape?" 
     },
     { 
-      src: '../one/images/20.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'If this cloud had eyes, what would it be looking at?' 
-    },
-    { 
-      src: '../one/images/21.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What hidden treasure might be inside this cloud?' 
-    },
-    { 
-      src: '../one/images/22.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What creature might live on top of this cloud?' 
-    },
-    { 
-      src: '../one/images/23.jpg', 
-      topAnswer: 'Hippo', 
-      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
-      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
-      question: 'What kind of puzzle could you solve using this cloud?' 
+      "src": "../one/images/22.jpg", 
+      "topAnswer": "otter", 
+      "statistics": { "otter": 50, "baby": 20, "fish": 15, "dog": 15 }, 
+      "options": ["otter", "baby", "fish", "dog"],
+      "question": "What shape do you see in this cloud?" 
     }
   ];
 
@@ -207,13 +179,7 @@ window.addEventListener('load', () => {
         // Display the fixed percentage for the selected animal
         const percentage = currentStatistics[animal] || 0;
 
-        // Update the stat result text
-        statResult.innerText = `*${animal} was chosen by ${percentage}% of people`;
-
-        // Check if the answer is the top answer for the current image
-        if (randomImage.topAnswer === animal) {
-          statResult.innerText += ' - This is the top answer!';
-        }
+        statResult.innerHTML = `*${animal} was chosen by <span style="font-weight: 800;">${percentage}%</span> of people`;
 
         // Uncheck all other checkboxes except the one just checked
         checkboxes.forEach((cb) => {
@@ -230,7 +196,11 @@ window.addEventListener('load', () => {
       }
     });
   });
+  
 
+
+
+  
   // 로딩 애니메이션 부분
   let currentPercent = 0;
   const loadingText = document.getElementById("loading-text");
@@ -266,3 +236,74 @@ window.addEventListener('load', () => {
 
   requestAnimationFrame(updateLoading);
 });
+
+
+
+// 스포트라이트 원 요소 선택
+const spotlight = document.createElement('div');
+spotlight.classList.add('spotlight');
+document.body.appendChild(spotlight);
+
+let mouseX = 0, mouseY = 0; // 마우스의 현재 위치
+let spotlightX = 0, spotlightY = 0; // 스포트라이트의 현재 위치
+
+// 마우스 움직임을 감지하여 목표 위치 업데이트
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+// 스포트라이트를 부드럽게 따라가게 하기 위한 애니메이션 함수
+function animateSpotlight() {
+  // 스포트라이트 위치를 목표 위치로 부드럽게 이동
+  spotlightX += (mouseX - spotlightX) * 0.1;
+  spotlightY += (mouseY - spotlightY) * 0.1;
+
+  // 스포트라이트 위치 업데이트
+  spotlight.style.left = `${spotlightX}px`;
+  spotlight.style.top = `${spotlightY}px`;
+
+  // 다음 프레임에서 애니메이션을 계속 실행
+  requestAnimationFrame(animateSpotlight);
+}
+
+// 애니메이션 시작
+animateSpotlight();
+
+
+// Array of fun cloud facts
+const funFacts = [
+  "A cloud can weigh as much as 100 elephants!",
+  "There's a cloud in space that's colder than outer space itself.",
+  "Lenticular clouds look just like UFOs.",
+  "Clouds can move faster than race cars in storms.",
+  "Some clouds are so lazy, they just sit still all day.",
+  "Mammatus clouds look like brains in the sky.",
+  "Fog is just a cloud that’s too lazy to float.",
+  "Ever seen a cloud shaped like a dinosaur? You're not alone!",
+  "Clouds can hold millions of gallons of water—then dump it all at once.",
+  "Clouds can travel up to 100 mph on a windy day.",
+  "The heaviest cloud weighs around 1.1 million pounds.",
+  "“Morning Glory” clouds in Australia can stretch over 600 miles.",
+  "Some clouds glow at night, making them the party clouds.",
+  "Cumulonimbus clouds are like the skyscrapers of the sky.",
+  "Clouds in space? Yes, they exist!",
+  "Ever had a cloud follow you? No? Just me?",
+  "Noctilucent clouds glow, making them sky’s night lights.",
+  "Clouds can be art critics—they only show colors at sunrise and sunset.",
+  "The fluffiest clouds are mostly made of air, not cotton candy.",
+  "Stratus clouds are the blanket hogs of the sky."
+];
+
+// Function to display a random fun fact
+function displayRandomFact() {
+  // Get a random index from the array
+  const randomIndex = Math.floor(Math.random() * funFacts.length);
+  
+  // Set the innerHTML of the fun-fact div to the selected fact
+  document.getElementById('fun-fact').innerHTML = `<strong>Fun Fact:</strong> ${funFacts[randomIndex]}`;
+}
+
+// Call the function to display a random fact on page load
+window.onload = displayRandomFact;
+
