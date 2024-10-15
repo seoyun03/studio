@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function displayRandomFact() {
     // Get a random fun fact
     const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
-    funFactElement.innerHTML = `<strong>Fun Fact:</strong> ${randomFact}`;
+    funFactElement.innerHTML = `<span>Fun Fact: &nbsp;&nbsp;</span>${randomFact}`;
   }
 
   // Initial random image and fun fact load
