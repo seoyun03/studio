@@ -9,7 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-family: "aktiv-grotesk", sans-serif;
+  font-family: 'PP Neue Montreal', sans-serif;                                       
   font-weight: 500;
   font-style: normal;
   text-transform: uppercase;
@@ -17,12 +17,14 @@ body {
 }
 
 img {
-  width: 500px;
-  height: 300px; /* 정사각형 크기로 설정 */
-  margin-bottom: 60%;
-  margin-left: -500px; /* 이미지를 왼쪽으로 이동 */
+  width: 600px;
+  height: 600px; /* 정사각형 크기로 설정 */
+  margin-bottom: 50%;
+  margin-left: -650px; /* 이미지를 왼쪽으로 이동 */
+  margin-top: 50px; /* 이미지를 아래로 내리기 위해 추가 */
   object-fit: cover; /* 이미지 비율 유지 */
 }
+
 
 .fade-in-image {
   opacity: 0;
@@ -61,23 +63,24 @@ img {
 }
 */
 
-.text {
+.question {
   font-size: 70px;
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 15%; 
-  left: 50%; 
+  top: 26%; 
+  left: 70%; 
   transform: translate(-50%, -50%); 
+  max-width: 100%;
 }
 
 .loader-container {
   position: absolute;
-  bottom: 40px; 
+  top: 40px; 
   left: 50%;
   transform: translateX(-50%); 
   text-align: center;
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PP Neue Montreal', sans-serif;                                             
   color: rgb(255, 255, 255);
   width: 80%; 
   max-width: 1200px; 
@@ -97,38 +100,32 @@ img {
   background-color: #d6e6ff; /* 로딩 바의 색상 */
   transition: width 0.3s ease-in-out; /* 너비 변화 시 애니메이션 */
 }
+
 #loading-text {
   color: black; /* 텍스트 색상을 검정색으로 설정 */
 }
 
 
-
 .button-container {
-  display: grid;
-  grid-template-columns: repeat(2, 100px);
-  grid-template-rows: repeat(2, 50px);
-  gap: 30px;
-  margin-right: 20%; /* 이미지를 기준으로 오른쪽에 배치 */
   position: absolute;
-  right: 70px; /* 이미지 오른쪽에 위치시키기 위해 조정 */
-  top: 45%;
+  right: 27%;
+  top: 50%;
   transform: translateY(-50%);
-}
-
-.custom-button {
-  width: 100px;
-  height: 50px;
-  font-size: 14px;
-  background-color: #9b9797;
-  border: none; /* 테두리를 없앰 */
-  cursor: pointer;
+  background: none; /* 배경을 없앰 */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: 'PP Neue Montreal', sans-serif;                                               
+  font-size: 16px;
+  width: 300px; /* 고정된 너비 설정 */
 }
 
 .stat-result {
+  font-family: 'PP Neue Montreal', sans-serif;                                               
   font-size: 16px;
-  bottom: 300px; 
-  left: 69%;
-  transform: translateX(-50%); 
+  position: absolute; /* 부모 요소를 기준으로 위치 설정 */
+  top: 69%; /* button-container의 중간 높이에 정렬 */
+  left: 55.4%; /* .button-container 왼쪽에 위치 */
+  transform: translateY(-50%); 
   text-align: center;
-  position: fixed;
 }

@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>In the Clouds</title>
     <link rel="stylesheet" type="text/css" href="../one/main.css" />
-    <link href="https://fonts.cdnfonts.com/css/calvino-grande-trial" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.typekit.net/hwg1ouh.css">
+    <link href="https://fonts.cdnfonts.com/css/pp-neue-montreal" rel="stylesheet">
     <script type="text/javascript" src="../one/script.js" defer></script>
   </head>
   <body>
@@ -15,7 +14,8 @@
       <img src="../one/images/1.jpg" alt="이미지" class="fade-in-image" id="image">    
     </div>
   
-    <div class="text">what do you see?</div>
+    <div id="question" class="question"></div>
+
 
     <div class="loader-container">
       <div id="loading-text">0%</div>
@@ -25,12 +25,26 @@
     </div>
   
     <div class="button-container">
-      <button class="custom-button">Dog</button>
-      <button class="custom-button">Cat</button>
-      <button class="custom-button">Sheep</button>
-      <button class="custom-button">Hippo</button>
+      <label>
+        <input type="checkbox" class="custom-checkbox" data-animal="Dog">
+        Dog
+      </label>
+      <label>
+        <input type="checkbox" class="custom-checkbox" data-animal="Cat">
+        Cat
+      </label>
+      <label>
+        <input type="checkbox" class="custom-checkbox" data-animal="Sheep">
+        Sheep
+      </label>
+      <label>
+        <input type="checkbox" class="custom-checkbox" data-animal="Hippo">
+        Hippo
+      </label>
     </div>
     <div id="stat-result" class="stat-result"></div>
+
+
 
   
   </body>

@@ -1,82 +1,243 @@
 window.addEventListener('load', () => {
   const images = [
-    { src: '../one/images/1.jpg', location: 'New York - Flatiron', date: '2024-09-02', time: '16:18' },
-    { src: '../one/images/2.jpg', location: 'New York - Chelsea', date: '2024-09-05', time: '14:00' },
-    { src: '../one/images/3.jpg', location: 'New Jersey - Ridgefield', date: '2024-09-02', time: '17:46' },
-    { src: '../one/images/4.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-02', time: '17:03' },
-    { src: '../one/images/5.jpg', location: 'New York - Chelsea', date: '2024-09-09', time: '15:49' },
-    { src: '../one/images/6.jpg', location: 'Jersey City - Newport', date: '2024-09-08', time: '16:27' },
-    { src: '../one/images/7.jpg', location: 'New York - Soho', date: '2024-09-08', time: '15:56' },
-    { src: '../one/images/8.jpg', location: 'New Jersey - Secaucus', date: '2024-09-02', time: '17:43' },
-    { src: '../one/images/9.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-02', time: '17:03' },
-    { src: '../one/images/10.jpg', location: 'Jersey City - Newport', date: '2024-09-08', time: '16:26' },
-    { src: '../one/images/11.jpg', location: 'New York - Soho', date: '2024-09-08', time: '14:51' },
-    { src: '../one/images/12.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-02', time: '17:29' },
-    { src: '../one/images/13.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-02', time: '17:03' },
-    { src: '../one/images/14.jpg', location: 'New York - Flatiron', date: '2024-09-02', time: '15:39' },
-    { src: '../one/images/15.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-02', time: '17:14' },
-    { src: '../one/images/16.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-02', time: '17:37' },
-    { src: '../one/images/17.jpg', location: 'New York - Chelsea', date: '2024-09-08', time: '15:30' },
-    { src: '../one/images/18.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-20', time: '10:34' },
-    { src: '../one/images/19.jpg', location: 'Jersey City - Newport', date: '2024-09-08', time: '16:27' },
-    { src: '../one/images/20.jpg', location: 'New York - Flatiron', date: '2024-09-02', time: '15:36' },
-    { src: '../one/images/21.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-20', time: '10:34' },
-    { src: '../one/images/22.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-20', time: '12:15' },
-    { src: '../one/images/23.jpg', location: 'New Jersey - Journal Sq', date: '2024-09-20', time: '14:25' }
+    { 
+      src: '../one/images/1.jpg', 
+      topAnswer: 'Dog', 
+      statistics: { Dog: 40, Cat: 30, Sheep: 20, Hippo: 10 }, 
+      options: ['Dog', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What shape do you see in this cloud?' 
+    },
+    { 
+      src: '../one/images/2.jpg', 
+      topAnswer: 'Cat', 
+      statistics: { Dog: 25, Cat: 50, Elephant: 15, Lion: 10 }, 
+      options: ['Dog', 'Cat', 'Elephant', 'Lion'],
+      question: 'What feeling does this cloud give you?' 
+    },
+    { 
+      src: '../one/images/3.jpg', 
+      topAnswer: 'Sheep', 
+      statistics: { Giraffe: 20, Cat: 10, Sheep: 50, Tiger: 20 }, 
+      options: ['Giraffe', 'Cat', 'Sheep', 'Tiger'],
+      question: 'Does this cloud evoke a memory?' 
+    },
+    { 
+      src: '../one/images/4.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What animal or object comes to mind?' 
+    },
+    { 
+      src: '../one/images/5.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What part of nature does this cloud resemble?' 
+    },    
+    { 
+      src: '../one/images/6.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'Can you spot a familiar shape?' 
+    },    
+    { 
+      src: '../one/images/7.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'If this cloud had an emotion, what would it be?' 
+    },    
+    { 
+      src: '../one/images/8.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'If this cloud were a piece of art, what would the title be?' 
+    },    
+    { 
+      src: '../one/images/9.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What would you name this cloud shape?' 
+    },    
+    { 
+      src: '../one/images/10.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What fantasy creature could this be?' 
+    },
+    { 
+      src: '../one/images/11.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What emotion does this cloud seem to have?' 
+    },
+    { 
+      src: '../one/images/12.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'Does this cloud look like it’s moving or still?' 
+    },    
+    { 
+      src: '../one/images/13.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'If this cloud were a part of a dream you’ve had, what was happening?' 
+    },
+    { 
+      src: '../one/images/14.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'If you could jump into this cloud, where would it take you?' 
+    },
+    { 
+      src: '../one/images/15.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'Does this cloud look like something you’ve seen before?' 
+    },
+    { 
+      src: '../one/images/16.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What artwork does this cloud remind you of?' 
+    },
+    { 
+      src: '../one/images/17.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What kind of creature might live on this cloud?' 
+    },
+    { 
+      src: '../one/images/18.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'Does this cloud look like something from another planet?' 
+    },
+    { 
+      src: '../one/images/19.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What would this cloud taste like if it were food?' 
+    },
+    { 
+      src: '../one/images/20.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'If this cloud had eyes, what would it be looking at?' 
+    },
+    { 
+      src: '../one/images/21.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What hidden treasure might be inside this cloud?' 
+    },
+    { 
+      src: '../one/images/22.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What creature might live on top of this cloud?' 
+    },
+    { 
+      src: '../one/images/23.jpg', 
+      topAnswer: 'Hippo', 
+      statistics: { Bear: 5, Cat: 10, Sheep: 20, Hippo: 65 }, 
+      options: ['Bear', 'Cat', 'Sheep', 'Hippo'],
+      question: 'What kind of puzzle could you solve using this cloud?' 
+    }
   ];
 
-  const image = document.getElementById('image');
+  const imageElement = document.getElementById('image');
+  const statResult = document.getElementById('stat-result');
+  const buttonContainer = document.querySelector('.button-container');
+  const questionElement = document.getElementById('question');
 
   // Select a random image
   const randomImage = images[Math.floor(Math.random() * images.length)];
-  image.src = randomImage.src;
-  image.classList.add('show');
-});
+  imageElement.src = randomImage.src;
+  imageElement.classList.add('show');
 
-document.addEventListener('DOMContentLoaded', () => {
-  const buttons = document.querySelectorAll('.custom-button');
-  const statResult = document.getElementById('stat-result');
+  // Display the question for the selected image
+  questionElement.innerText = randomImage.question;
 
-  buttons.forEach((button) => {
-    button.addEventListener('click', () => {
-      // Randomly generate statistics for each option
-      const dogPercent = Math.floor(Math.random() * 101);
-      const catPercent = Math.floor(Math.random() * (100 - dogPercent + 1));
-      const sheepPercent = Math.floor(Math.random() * (100 - dogPercent - catPercent + 1));
-      const hippoPercent = 100 - dogPercent - catPercent - sheepPercent;
+  // Store current image statistics and options to display on click
+  const currentStatistics = randomImage.statistics;
+  const currentOptions = randomImage.options;
 
-      // Determine which animal was selected
-      const selectedAnimal = button.getAttribute('data-animal');
-      let selectedPercent;
+  // Clear existing buttons
+  buttonContainer.innerHTML = '';
 
-      switch (selectedAnimal) {
-        case 'dog':
-          selectedPercent = dogPercent;
-          break;
-        case 'cat':
-          selectedPercent = catPercent;
-          break;
-        case 'sheep':
-          selectedPercent = sheepPercent;
-          break;
-        case 'hippo':
-          selectedPercent = hippoPercent;
-          break;
+  // Create checkboxes dynamically based on the current options
+  currentOptions.forEach((option) => {
+    const label = document.createElement('label');
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.className = 'custom-checkbox';
+    checkbox.dataset.animal = option;
+
+    label.appendChild(checkbox);
+    label.appendChild(document.createTextNode(` ${option}`));
+    buttonContainer.appendChild(label);
+  });
+
+  // Event listener for dynamically created checkboxes
+  const checkboxes = document.querySelectorAll('.custom-checkbox');
+
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        const animal = checkbox.dataset.animal;
+
+        // Display the fixed percentage for the selected animal
+        const percentage = currentStatistics[animal] || 0;
+
+        // Update the stat result text
+        statResult.innerText = `*${animal} was chosen by ${percentage}% of people`;
+
+        // Check if the answer is the top answer for the current image
+        if (randomImage.topAnswer === animal) {
+          statResult.innerText += ' - This is the top answer!';
+        }
+
+        // Uncheck all other checkboxes except the one just checked
+        checkboxes.forEach((cb) => {
+          if (cb !== checkbox) {
+            cb.checked = false;
+          }
+        });
+      } else {
+        // If all checkboxes are unchecked, clear the result
+        const checkedCheckboxes = Array.from(checkboxes).filter(cb => cb.checked);
+        if (checkedCheckboxes.length === 0) {
+          statResult.innerText = '';
+        }
       }
-
-      // Update the stat result text
-      statResult.innerText = `${selectedAnimal} ${selectedPercent}% of people chose this option.`;
     });
   });
-});
 
-document.addEventListener("DOMContentLoaded", () => {
+  // 로딩 애니메이션 부분
   let currentPercent = 0;
   const loadingText = document.getElementById("loading-text");
   const loadingBar = document.querySelector(".loading-bar");
 
   const startTime = Date.now();
-  const duration = 30000; // 30 seconds
+  const duration = 60000; // 60 seconds (로딩 시간을 1분으로 설정)
 
   function updateLoading() {
     const elapsedTime = Date.now() - startTime;
