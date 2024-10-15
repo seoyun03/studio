@@ -64,7 +64,7 @@ img {
   font-family: 'PP Neue Montreal', sans-serif;
   font-size: 18px;
   position: fixed; /* 화면에 고정된 위치 설정 */
-  top: 16%; /* 화면 상단에서 15% 떨어진 위치 */
+  top: 14%; /* 화면 상단에서 15% 떨어진 위치 */
   left: 50%;
   transform: translateX(-50%); /* 수평으로 가운데 정렬 */
   text-align: center;
