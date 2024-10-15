@@ -51,9 +51,9 @@ img {
   font-size: 36px;
   color: rgb(0, 0, 0);
   position: absolute;
-  top: 33%; /* 고정된 위치 설정 */
+  top: 33.3%; /* 고정된 위치 설정 */
   left: 50%; /* 고정된 위치 설정 */
-  max-width: 40%; /* 너비 조정 */
+  max-width: 35%; /* 너비 조정 */
   text-align: left; /* 왼쪽 정렬 */
   white-space: normal; /* 텍스트가 길어지면 줄 바꿈되도록 설정 */
   z-index: 1; /* Ensure it's above the background */
@@ -185,7 +185,7 @@ img {
 
 #refresh {
   position: fixed; /* Keeps the button fixed to the screen even when scrolling */
-  bottom: 60px; /* 20px from the bottom */
+  bottom: 65px; /* 20px from the bottom */
   right: 20px; /* 20px from the right */
   padding: 10px 24.3px;
   font-family: 'PP Neue Montreal', sans-serif;
