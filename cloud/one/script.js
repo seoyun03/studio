@@ -165,6 +165,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const randomButton = document.getElementById('refresh');
   const funFactElement = document.getElementById('fun-fact');
   const darkModeToggle = document.getElementById('darkModeToggle');
+  let isDarkMode = false; // Initial state
+
   const body = document.body;
 
   // Loading bar elements
@@ -285,11 +287,16 @@ document.addEventListener('DOMContentLoaded', () => {
     loadRandomImage(); // Loads a new random image and updates the fun fact
   });
 
-  // Dark mode toggle
-  darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
+  darkModeToggle.addEventListener('click', function() {
+    isDarkMode = !isDarkMode; // Toggle state
+    if (isDarkMode) {
+      darkModeToggle.textContent = 'Light Mode'; // Change button text to 'Light Mode'
+      document.body.classList.add('dark-mode'); // Add dark mode class (optional)
+    } else {
+      darkModeToggle.textContent = 'Dark Mode'; // Change button text to 'Dark Mode'
+      document.body.classList.remove('dark-mode'); // Remove dark mode class (optional)
+    }
   });
-  
 });
 
 // 스포트라이트 원 요소 선택
