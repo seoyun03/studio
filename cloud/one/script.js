@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+document.addEventListener('DOMContentLoaded', () => {
   const images = [
     { 
       "src": "../one/images/1.jpg", 
@@ -135,109 +135,162 @@ window.addEventListener('load', () => {
     }
   ];
 
+  const funFacts = [
+    "A cloud can weigh as much as 100 elephants!",
+    "There's a cloud in space that's colder than outer space itself.",
+    "Lenticular clouds look just like UFOs.",
+    "Clouds can move faster than race cars in storms.",
+    "Some clouds are so lazy, they just sit still all day.",
+    "Mammatus clouds look like brains in the sky.",
+    "Fog is just a cloud that’s too lazy to float.",
+    "Ever seen a cloud shaped like a dinosaur? You're not alone!",
+    "Clouds can hold millions of gallons of water—then dump it all at once.",
+    "Clouds can travel up to 100 mph on a windy day.",
+    "The heaviest cloud weighs around 1.1 million pounds.",
+    "“Morning Glory” clouds in Australia can stretch over 600 miles.",
+    "Some clouds glow at night, making them the party clouds.",
+    "Cumulonimbus clouds are like the skyscrapers of the sky.",
+    "Clouds in space? Yes, they exist!",
+    "Ever had a cloud follow you? No? Just me?",
+    "Noctilucent clouds glow, making them sky’s night lights.",
+    "Clouds can be art critics—they only show colors at sunrise and sunset.",
+    "The fluffiest clouds are mostly made of air, not cotton candy.",
+    "Stratus clouds are the blanket hogs of the sky."
+  ];
+
   const imageElement = document.getElementById('image');
   const statResult = document.getElementById('stat-result');
   const buttonContainer = document.querySelector('.button-container');
   const questionElement = document.getElementById('question');
+  const randomButton = document.getElementById('refresh');
+  const funFactElement = document.getElementById('fun-fact');
+  const darkModeToggle = document.getElementById('darkModeToggle');
+  const body = document.body;
 
-  // Select a random image
-  const randomImage = images[Math.floor(Math.random() * images.length)];
-  imageElement.src = randomImage.src;
-  imageElement.classList.add('show');
+  // Loading bar elements
+  const loadingText = document.getElementById('loading-text');
+  const loadingBar = document.querySelector('.loading-bar');
+  let loadingComplete = false; // Track if the loading is already complete
 
-  // Display the question for the selected image
-  questionElement.innerText = randomImage.question;
-
-  // Store current image statistics and options to display on click
-  const currentStatistics = randomImage.statistics;
-  const currentOptions = randomImage.options;
-
-  // Clear existing buttons
-  buttonContainer.innerHTML = '';
-
-  // Create checkboxes dynamically based on the current options
-  currentOptions.forEach((option) => {
-    const label = document.createElement('label');
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.className = 'custom-checkbox';
-    checkbox.dataset.animal = option;
-
-    label.appendChild(checkbox);
-    label.appendChild(document.createTextNode(` ${option}`));
-    buttonContainer.appendChild(label);
-  });
-
-  // Event listener for dynamically created checkboxes
-  const checkboxes = document.querySelectorAll('.custom-checkbox');
-
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        const animal = checkbox.dataset.animal;
-
-        // Display the fixed percentage for the selected animal
-        const percentage = currentStatistics[animal] || 0;
-
-        statResult.innerHTML = `*${animal} was chosen by <span style="font-weight: 800;">${percentage}%</span> of people`;
-
-        // Uncheck all other checkboxes except the one just checked
-        checkboxes.forEach((cb) => {
-          if (cb !== checkbox) {
-            cb.checked = false;
-          }
-        });
-      } else {
-        // If all checkboxes are unchecked, clear the result
-        const checkedCheckboxes = Array.from(checkboxes).filter(cb => cb.checked);
-        if (checkedCheckboxes.length === 0) {
-          statResult.innerText = '';
-        }
-      }
-    });
-  });
-  
-
-
-
-  
-  // 로딩 애니메이션 부분
-  let currentPercent = 0;
-  const loadingText = document.getElementById("loading-text");
-  const loadingBar = document.querySelector(".loading-bar");
-
-  const startTime = Date.now();
-  const duration = 60000; // 60 seconds (로딩 시간을 1분으로 설정)
-
-  function updateLoading() {
-    const elapsedTime = Date.now() - startTime;
-    const progress = Math.min(elapsedTime / duration, 1); // progress from 0 to 1
-
-    // 속도를 가변적으로 만들기 위해 이징 함수 사용 (예: easeInOut)
-    const easedProgress = easeInOutQuad(progress);
-
-    // 로딩 퍼센트를 계산
-    currentPercent = Math.floor(easedProgress * 100);
-    loadingText.innerText = `LOADING ${currentPercent}%`;
-
-    // 로딩 바의 너비 업데이트
-    loadingBar.style.width = `${currentPercent}%`;
-
-    // 로딩이 100%에 도달하지 않으면 계속 호출
-    if (currentPercent < 100) {
-      requestAnimationFrame(updateLoading);
-    }
-  }
-
-  // 이징 함수 (느리게 시작해서 빠르게 끝남)
+  // Easing function for smooth, non-linear progress (easeInOutQuad)
   function easeInOutQuad(t) {
-    return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+    return t < 0.5 ? 1.5 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
   }
 
-  requestAnimationFrame(updateLoading);
+  // Function to simulate loading progress with varying speed
+  function startLoading(duration = 30000) { // Increased duration to 12 seconds
+    if (loadingComplete) return; // Don't start loading if already complete
+
+    let currentPercent = 0;
+    const startTime = Date.now();
+
+    // Function to update loading bar with easing
+    function updateLoading() {
+      const elapsedTime = Date.now() - startTime;
+      const t = Math.min(elapsedTime / duration, 1); // Normalized time (0 to 1)
+      
+      // Apply easing function to simulate varying speed
+      const progress = easeInOutQuad(t);
+
+      currentPercent = Math.floor(progress * 100);
+      loadingText.innerText = `LOADING ${currentPercent}%`;
+
+      // Update the width of the loading bar
+      loadingBar.style.width = `${currentPercent}%`;
+
+      if (currentPercent < 100) {
+        requestAnimationFrame(updateLoading); // Continue updating until complete
+      } else {
+        loadingComplete = true; // Mark the loading as complete
+      }
+    }
+
+    requestAnimationFrame(updateLoading); // Start the loading animation
+  }
+
+  // Function to load a random image and update the content
+  function loadRandomImage() {
+    // Select a random image
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+
+    // Set image source and question
+    imageElement.src = randomImage.src;
+    imageElement.classList.add('show');
+    questionElement.innerText = randomImage.question;
+
+    // Store current image statistics and options
+    const currentStatistics = randomImage.statistics;
+    const currentOptions = randomImage.options;
+
+    // Clear existing buttons
+    buttonContainer.innerHTML = '';
+
+    // Create checkboxes dynamically based on the current options
+    currentOptions.forEach((option) => {
+      const label = document.createElement('label');
+      const checkbox = document.createElement('input');
+      checkbox.type = 'checkbox';
+      checkbox.className = 'custom-checkbox';
+      checkbox.dataset.animal = option;
+
+      label.appendChild(checkbox);
+      label.appendChild(document.createTextNode(` ${option}`));
+      buttonContainer.appendChild(label);
+    });
+
+    // Event listener for dynamically created checkboxes
+    const checkboxes = document.querySelectorAll('.custom-checkbox');
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+          const animal = checkbox.dataset.animal;
+
+          // Display the fixed percentage for the selected animal
+          const percentage = currentStatistics[animal] || 0;
+          statResult.innerHTML = `*${animal} was chosen by <span style="font-weight: 800;">${percentage}%</span> of people`;
+
+          // Uncheck all other checkboxes except the one just checked
+          checkboxes.forEach((cb) => {
+            if (cb !== checkbox) {
+              cb.checked = false;
+            }
+          });
+        } else {
+          // Clear the result if all checkboxes are unchecked
+          const checkedCheckboxes = Array.from(checkboxes).filter(cb => cb.checked);
+          if (checkedCheckboxes.length === 0) {
+            statResult.innerText = '';
+          }
+        }
+      });
+    });
+
+    // Update the fun fact
+    displayRandomFact();
+  }
+
+  // Function to display a random fun fact
+  function displayRandomFact() {
+    // Get a random fun fact
+    const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+    funFactElement.innerHTML = `<strong>Fun Fact:</strong> ${randomFact}`;
+  }
+
+  // Initial random image and fun fact load
+  startLoading(); // Start the loading only on initial page load
+  loadRandomImage();
+
+  // Event listener for the "Random" button to load another image and fun fact
+  randomButton.addEventListener('click', () => {
+    loadRandomImage(); // Loads a new random image and updates the fun fact
+  });
+
+  // Dark mode toggle
+  darkModeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+  });
+  
 });
-
-
 
 // 스포트라이트 원 요소 선택
 const spotlight = document.createElement('div');
@@ -259,7 +312,7 @@ function animateSpotlight() {
   spotlightX += (mouseX - spotlightX) * 0.1;
   spotlightY += (mouseY - spotlightY) * 0.1;
 
-  // 스포트라이트 위치 업데이트
+  // 스포트라이트 위치 업데이트 (템플릿 리터럴로 변경)
   spotlight.style.left = `${spotlightX}px`;
   spotlight.style.top = `${spotlightY}px`;
 
@@ -269,49 +322,3 @@ function animateSpotlight() {
 
 // 애니메이션 시작
 animateSpotlight();
-
-
-// Array of fun cloud facts
-const funFacts = [
-  "A cloud can weigh as much as 100 elephants!",
-  "There's a cloud in space that's colder than outer space itself.",
-  "Lenticular clouds look just like UFOs.",
-  "Clouds can move faster than race cars in storms.",
-  "Some clouds are so lazy, they just sit still all day.",
-  "Mammatus clouds look like brains in the sky.",
-  "Fog is just a cloud that’s too lazy to float.",
-  "Ever seen a cloud shaped like a dinosaur? You're not alone!",
-  "Clouds can hold millions of gallons of water—then dump it all at once.",
-  "Clouds can travel up to 100 mph on a windy day.",
-  "The heaviest cloud weighs around 1.1 million pounds.",
-  "“Morning Glory” clouds in Australia can stretch over 600 miles.",
-  "Some clouds glow at night, making them the party clouds.",
-  "Cumulonimbus clouds are like the skyscrapers of the sky.",
-  "Clouds in space? Yes, they exist!",
-  "Ever had a cloud follow you? No? Just me?",
-  "Noctilucent clouds glow, making them sky’s night lights.",
-  "Clouds can be art critics—they only show colors at sunrise and sunset.",
-  "The fluffiest clouds are mostly made of air, not cotton candy.",
-  "Stratus clouds are the blanket hogs of the sky."
-];
-
-// Function to display a random fun fact
-function displayRandomFact() {
-  // Get a random index from the array
-  const randomIndex = Math.floor(Math.random() * funFacts.length);
-  
-  // Set the innerHTML of the fun-fact div to the selected fact
-  document.getElementById('fun-fact').innerHTML = `<strong>Fun Fact:</strong> ${funFacts[randomIndex]}`;
-}
-
-// Call the function to display a random fact on page load
-window.onload = displayRandomFact;
-
-document.addEventListener('DOMContentLoaded', () => {
-  const darkModeToggle = document.getElementById('darkModeToggle');
-  const body = document.body;
-
-  darkModeToggle.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-  });
-});

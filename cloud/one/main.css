@@ -26,14 +26,14 @@ body {
   position: absolute;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  filter: blur(50px);
+  filter: blur(45px);
   z-index: -999;
   border-radius: 60% 40% 30% 50% / 50% 60% 40% 30%;
   transition: background 0.5s ease;
 }
 
 .dark-mode .spotlight {
-  background: radial-gradient(circle, rgb(120, 156, 228) 20%, rgba(128, 163, 231, 0.5) 60%, rgba(128, 163, 231, 0) 100%);
+  background: radial-gradient(circle, rgb(74, 121, 216) 20%, rgba(128, 163, 231, 0.5) 60%, rgba(128, 163, 231, 0) 100%);
 }
 
 img {
@@ -109,6 +109,13 @@ img {
   
 }
 
+.dark-mode .loading-bar-background {
+  background-color: rgba(255, 255, 255, 0.3); /* Lighter background for dark mode */
+}
+
+.dark-mode .loading-bar {
+  background-color: #d6e6ff;
+}
 
 .button-container {
   position: absolute;
@@ -154,12 +161,49 @@ img {
   position: fixed; /* Keeps the button fixed to the screen even when scrolling */
   bottom: 20px; /* 20px from the bottom */
   right: 20px; /* 20px from the right */
-  padding: 10px 20px;
-  font-size: 16px;
+  padding: 10px 15px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
   background-color: #333; /* Dark button background */
   color: white; /* Button text color */
   border: none;
-  border-radius: 5px;
   cursor: pointer;
   z-index: 1000; /* Ensures the button stays on top */
+  text-transform: uppercase;
 }
+
+.dark-mode #darkModeToggle {
+  background-color: white; /* Light background in dark mode */
+  color: black; /* Dark text in dark mode */
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#refresh {
+  position: fixed; /* Keeps the button fixed to the screen even when scrolling */
+  bottom: 60px; /* 20px from the bottom */
+  right: 20px; /* 20px from the right */
+  padding: 10px 24px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #333; /* Dark button background */
+  color: white; /* Button text color */
+  border: none;
+  cursor: pointer;
+  z-index: 1000; /* Ensures the button stays on top */
+  text-transform: uppercase;
+}
+
+.dark-mode #refresh {
+  background-color: white; /* Light background in dark mode */
+  color: black; /* Dark text in dark mode */
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
